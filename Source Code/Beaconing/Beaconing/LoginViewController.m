@@ -30,6 +30,13 @@
 }
 
 - (IBAction)loginUser:(id)sender {
+    _MainStoryboard = [UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]];
+    AdminDashboardViewController *_adminUser = [_MainStoryboard instantiateViewControllerWithIdentifier:@"AdminController"];
+    UINavigationController *_navigationController = [[UINavigationController alloc]initWithRootViewController:_adminUser];
+    [self presentViewController:_navigationController animated:YES completion:Nil];
+    return;
+    
+    
     NSString *_urlString = LoginUser;
     ServiceCallAPI *_serviceAPI = [[ServiceCallAPI alloc]initWithService:_urlString];
     _serviceAPI.apiDelegate=self;

@@ -39,6 +39,9 @@
 		00306C831AC17BC800A7217F /* splash-bg.png in Resources */ = {isa = PBXBuildFile; fileRef = 00306C801AC17BC800A7217F /* splash-bg.png */; };
 		00306C841AC17BC800A7217F /* Splash-screen.png in Resources */ = {isa = PBXBuildFile; fileRef = 00306C811AC17BC800A7217F /* Splash-screen.png */; };
 		0099BD651AC2DB8300F82851 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0099BD641AC2DB8300F82851 /* LoginViewController.m */; };
+		00A9A8A81AC3E4C300D4A439 /* SearchBeaconViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 00A9A8A71AC3E4C300D4A439 /* SearchBeaconViewController.m */; };
+		00A9A8B41AC40FFF00D4A439 /* BeaconManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 00A9A8B21AC40FFF00D4A439 /* BeaconManager.m */; };
+		00A9A8B81AC4103100D4A439 /* BeaconObj.m in Sources */ = {isa = PBXBuildFile; fileRef = 00A9A8B71AC4103100D4A439 /* BeaconObj.m */; };
 		4F380D8D1ABDC7E400F5AF89 /* NormalUserViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F380D8C1ABDC7E400F5AF89 /* NormalUserViewController.m */; };
 		4F7F01B61AB3E9B700019BF3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F7F01B51AB3E9B700019BF3 /* main.m */; };
 		4F7F01B91AB3E9B700019BF3 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F7F01B81AB3E9B700019BF3 /* AppDelegate.m */; };
@@ -116,6 +119,13 @@
 		00306C811AC17BC800A7217F /* Splash-screen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Splash-screen.png"; sourceTree = "<group>"; };
 		0099BD631AC2DB8300F82851 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LoginViewController.h; path = Beaconing/LoginViewController.h; sourceTree = "<group>"; };
 		0099BD641AC2DB8300F82851 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LoginViewController.m; path = Beaconing/LoginViewController.m; sourceTree = "<group>"; };
+		00A9A8A61AC3E4C300D4A439 /* SearchBeaconViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SearchBeaconViewController.h; path = Beaconing/SearchBeaconViewController.h; sourceTree = "<group>"; };
+		00A9A8A71AC3E4C300D4A439 /* SearchBeaconViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SearchBeaconViewController.m; path = Beaconing/SearchBeaconViewController.m; sourceTree = "<group>"; };
+		00A9A8B11AC40FFF00D4A439 /* BeaconManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BeaconManager.h; sourceTree = "<group>"; };
+		00A9A8B21AC40FFF00D4A439 /* BeaconManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BeaconManager.m; sourceTree = "<group>"; };
+		00A9A8B31AC40FFF00D4A439 /* BeaconConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BeaconConstants.h; sourceTree = "<group>"; };
+		00A9A8B61AC4103100D4A439 /* BeaconObj.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BeaconObj.h; sourceTree = "<group>"; };
+		00A9A8B71AC4103100D4A439 /* BeaconObj.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BeaconObj.m; sourceTree = "<group>"; };
 		4F380D8B1ABDC7E400F5AF89 /* NormalUserViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NormalUserViewController.h; path = Beaconing/NormalUserViewController.h; sourceTree = "<group>"; };
 		4F380D8C1ABDC7E400F5AF89 /* NormalUserViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NormalUserViewController.m; path = Beaconing/NormalUserViewController.m; sourceTree = "<group>"; };
 		4F7F01B01AB3E9B700019BF3 /* Beaconing.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Beaconing.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -158,6 +168,7 @@
 		000855111AB6992A00E0C566 /* ModelClasses */ = {
 			isa = PBXGroup;
 			children = (
+				00A9A8B51AC4103100D4A439 /* DataModels */,
 				0008550E1AB6961600E0C566 /* ServiceCallAPI.h */,
 				0008550F1AB6961600E0C566 /* ServiceCallAPI.m */,
 				000855121AB69A5700E0C566 /* Services.h */,
@@ -257,6 +268,8 @@
 				4F7F01DD1AB3F95800019BF3 /* AdminDashboardViewController.m */,
 				4F380D8B1ABDC7E400F5AF89 /* NormalUserViewController.h */,
 				4F380D8C1ABDC7E400F5AF89 /* NormalUserViewController.m */,
+				00A9A8A61AC3E4C300D4A439 /* SearchBeaconViewController.h */,
+				00A9A8A71AC3E4C300D4A439 /* SearchBeaconViewController.m */,
 			);
 			name = ViewControllers;
 			path = ..;
@@ -269,6 +282,33 @@
 				4F7F01B81AB3E9B700019BF3 /* AppDelegate.m */,
 			);
 			name = AppDelegate;
+			sourceTree = "<group>";
+		};
+		00A9A8AF1AC40FFF00D4A439 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				00A9A8B01AC40FFF00D4A439 /* Beacon */,
+				00A9A8B31AC40FFF00D4A439 /* BeaconConstants.h */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		00A9A8B01AC40FFF00D4A439 /* Beacon */ = {
+			isa = PBXGroup;
+			children = (
+				00A9A8B11AC40FFF00D4A439 /* BeaconManager.h */,
+				00A9A8B21AC40FFF00D4A439 /* BeaconManager.m */,
+			);
+			path = Beacon;
+			sourceTree = "<group>";
+		};
+		00A9A8B51AC4103100D4A439 /* DataModels */ = {
+			isa = PBXGroup;
+			children = (
+				00A9A8B61AC4103100D4A439 /* BeaconObj.h */,
+				00A9A8B71AC4103100D4A439 /* BeaconObj.m */,
+			);
+			path = DataModels;
 			sourceTree = "<group>";
 		};
 		4F7F01A71AB3E9B700019BF3 = {
@@ -292,6 +332,7 @@
 		4F7F01B21AB3E9B700019BF3 /* Beaconing */ = {
 			isa = PBXGroup;
 			children = (
+				00A9A8AF1AC40FFF00D4A439 /* Utilities */,
 				00A9A8A51AC3DE6100D4A439 /* AppDelegate */,
 				00306C6A1AC17B7E00A7217F /* Image files */,
 				000855131AB6BB8100E0C566 /* AFNetworkLibrary */,
@@ -453,6 +494,7 @@
 				000855101AB6961600E0C566 /* ServiceCallAPI.m in Sources */,
 				0008553F1AB6BBA600E0C566 /* AFURLConnectionOperation.m in Sources */,
 				000855481AB6BBA600E0C566 /* UIProgressView+AFNetworking.m in Sources */,
+				00A9A8B81AC4103100D4A439 /* BeaconObj.m in Sources */,
 				0008553C1AB6BBA600E0C566 /* AFHTTPSessionManager.m in Sources */,
 				000855401AB6BBA600E0C566 /* AFURLRequestSerialization.m in Sources */,
 				4F7F01B91AB3E9B700019BF3 /* AppDelegate.m in Sources */,
@@ -460,8 +502,10 @@
 				000855471AB6BBA600E0C566 /* UIImageView+AFNetworking.m in Sources */,
 				4F7F01DB1AB3F46500019BF3 /* RegisterUserViewController.m in Sources */,
 				4F7F01B61AB3E9B700019BF3 /* main.m in Sources */,
+				00A9A8B41AC40FFF00D4A439 /* BeaconManager.m in Sources */,
 				000855451AB6BBA600E0C566 /* UIAlertView+AFNetworking.m in Sources */,
 				0008554A1AB6BBA600E0C566 /* UIWebView+AFNetworking.m in Sources */,
+				00A9A8A81AC3E4C300D4A439 /* SearchBeaconViewController.m in Sources */,
 				000855441AB6BBA600E0C566 /* UIActivityIndicatorView+AFNetworking.m in Sources */,
 				0008553B1AB6BBA600E0C566 /* AFHTTPRequestOperationManager.m in Sources */,
 				000855491AB6BBA600E0C566 /* UIRefreshControl+AFNetworking.m in Sources */,

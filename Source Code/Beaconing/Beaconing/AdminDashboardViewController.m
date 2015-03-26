@@ -7,8 +7,10 @@
 //
 
 #import "AdminDashboardViewController.h"
+#import "SearchBeaconViewController.h"
 
 @interface AdminDashboardViewController ()
+- (IBAction)onTapAddBeacon:(id)sender;
 
 @end
 
@@ -29,6 +31,8 @@
     [self.navigationController dismissViewControllerAnimated:YES completion:Nil];
 }
 
+
+
 /*
 #pragma mark - Navigation
 
@@ -39,4 +43,11 @@
 }
 */
 
+- (IBAction)onTapAddBeacon:(id)sender {
+    
+    UIStoryboard *mainStoryboard = [UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]];
+    SearchBeaconViewController *_searchBeaconVC = [mainStoryboard instantiateViewControllerWithIdentifier:@"SearchBeaconViewController"];
+    UINavigationController *_navigationController = [[UINavigationController alloc]initWithRootViewController:_searchBeaconVC];
+    [self presentViewController:_navigationController animated:YES completion:Nil];
+}
 @end
