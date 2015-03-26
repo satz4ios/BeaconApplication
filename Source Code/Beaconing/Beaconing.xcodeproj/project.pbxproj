@@ -114,27 +114,27 @@
 		00306C7F1AC17BC800A7217F /* Signup.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Signup.png; sourceTree = "<group>"; };
 		00306C801AC17BC800A7217F /* splash-bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "splash-bg.png"; sourceTree = "<group>"; };
 		00306C811AC17BC800A7217F /* Splash-screen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Splash-screen.png"; sourceTree = "<group>"; };
-		0099BD631AC2DB8300F82851 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
-		0099BD641AC2DB8300F82851 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
-		4F380D8B1ABDC7E400F5AF89 /* NormalUserViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NormalUserViewController.h; sourceTree = "<group>"; };
-		4F380D8C1ABDC7E400F5AF89 /* NormalUserViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NormalUserViewController.m; sourceTree = "<group>"; };
+		0099BD631AC2DB8300F82851 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LoginViewController.h; path = Beaconing/LoginViewController.h; sourceTree = "<group>"; };
+		0099BD641AC2DB8300F82851 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LoginViewController.m; path = Beaconing/LoginViewController.m; sourceTree = "<group>"; };
+		4F380D8B1ABDC7E400F5AF89 /* NormalUserViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NormalUserViewController.h; path = Beaconing/NormalUserViewController.h; sourceTree = "<group>"; };
+		4F380D8C1ABDC7E400F5AF89 /* NormalUserViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NormalUserViewController.m; path = Beaconing/NormalUserViewController.m; sourceTree = "<group>"; };
 		4F7F01B01AB3E9B700019BF3 /* Beaconing.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Beaconing.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4F7F01B41AB3E9B700019BF3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4F7F01B51AB3E9B700019BF3 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		4F7F01B71AB3E9B700019BF3 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		4F7F01B81AB3E9B700019BF3 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		4F7F01BA1AB3E9B700019BF3 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		4F7F01BB1AB3E9B700019BF3 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		4F7F01BA1AB3E9B700019BF3 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ViewController.h; path = Beaconing/ViewController.h; sourceTree = "<group>"; };
+		4F7F01BB1AB3E9B700019BF3 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = ViewController.m; path = Beaconing/ViewController.m; sourceTree = "<group>"; };
 		4F7F01BE1AB3E9B700019BF3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4F7F01C01AB3E9B700019BF3 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		4F7F01C31AB3E9B700019BF3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		4F7F01C91AB3E9B700019BF3 /* BeaconingTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BeaconingTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4F7F01CE1AB3E9B700019BF3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4F7F01CF1AB3E9B700019BF3 /* BeaconingTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BeaconingTests.m; sourceTree = "<group>"; };
-		4F7F01D91AB3F46500019BF3 /* RegisterUserViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisterUserViewController.h; sourceTree = "<group>"; };
-		4F7F01DA1AB3F46500019BF3 /* RegisterUserViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegisterUserViewController.m; sourceTree = "<group>"; };
-		4F7F01DC1AB3F95800019BF3 /* AdminDashboardViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AdminDashboardViewController.h; sourceTree = "<group>"; };
-		4F7F01DD1AB3F95800019BF3 /* AdminDashboardViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AdminDashboardViewController.m; sourceTree = "<group>"; };
+		4F7F01D91AB3F46500019BF3 /* RegisterUserViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RegisterUserViewController.h; path = Beaconing/RegisterUserViewController.h; sourceTree = "<group>"; };
+		4F7F01DA1AB3F46500019BF3 /* RegisterUserViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RegisterUserViewController.m; path = Beaconing/RegisterUserViewController.m; sourceTree = "<group>"; };
+		4F7F01DC1AB3F95800019BF3 /* AdminDashboardViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AdminDashboardViewController.h; path = Beaconing/AdminDashboardViewController.h; sourceTree = "<group>"; };
+		4F7F01DD1AB3F95800019BF3 /* AdminDashboardViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AdminDashboardViewController.m; path = Beaconing/AdminDashboardViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -244,6 +244,33 @@
 			name = "Image files";
 			sourceTree = "<group>";
 		};
+		00A9A8A41AC3DE2C00D4A439 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				4F7F01BA1AB3E9B700019BF3 /* ViewController.h */,
+				4F7F01BB1AB3E9B700019BF3 /* ViewController.m */,
+				0099BD631AC2DB8300F82851 /* LoginViewController.h */,
+				0099BD641AC2DB8300F82851 /* LoginViewController.m */,
+				4F7F01D91AB3F46500019BF3 /* RegisterUserViewController.h */,
+				4F7F01DA1AB3F46500019BF3 /* RegisterUserViewController.m */,
+				4F7F01DC1AB3F95800019BF3 /* AdminDashboardViewController.h */,
+				4F7F01DD1AB3F95800019BF3 /* AdminDashboardViewController.m */,
+				4F380D8B1ABDC7E400F5AF89 /* NormalUserViewController.h */,
+				4F380D8C1ABDC7E400F5AF89 /* NormalUserViewController.m */,
+			);
+			name = ViewControllers;
+			path = ..;
+			sourceTree = "<group>";
+		};
+		00A9A8A51AC3DE6100D4A439 /* AppDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				4F7F01B71AB3E9B700019BF3 /* AppDelegate.h */,
+				4F7F01B81AB3E9B700019BF3 /* AppDelegate.m */,
+			);
+			name = AppDelegate;
+			sourceTree = "<group>";
+		};
 		4F7F01A71AB3E9B700019BF3 = {
 			isa = PBXGroup;
 			children = (
@@ -265,21 +292,11 @@
 		4F7F01B21AB3E9B700019BF3 /* Beaconing */ = {
 			isa = PBXGroup;
 			children = (
+				00A9A8A51AC3DE6100D4A439 /* AppDelegate */,
 				00306C6A1AC17B7E00A7217F /* Image files */,
 				000855131AB6BB8100E0C566 /* AFNetworkLibrary */,
+				00A9A8A41AC3DE2C00D4A439 /* ViewControllers */,
 				000855111AB6992A00E0C566 /* ModelClasses */,
-				4F7F01B71AB3E9B700019BF3 /* AppDelegate.h */,
-				4F7F01B81AB3E9B700019BF3 /* AppDelegate.m */,
-				4F7F01BA1AB3E9B700019BF3 /* ViewController.h */,
-				4F7F01BB1AB3E9B700019BF3 /* ViewController.m */,
-				0099BD631AC2DB8300F82851 /* LoginViewController.h */,
-				0099BD641AC2DB8300F82851 /* LoginViewController.m */,
-				4F7F01D91AB3F46500019BF3 /* RegisterUserViewController.h */,
-				4F7F01DA1AB3F46500019BF3 /* RegisterUserViewController.m */,
-				4F7F01DC1AB3F95800019BF3 /* AdminDashboardViewController.h */,
-				4F7F01DD1AB3F95800019BF3 /* AdminDashboardViewController.m */,
-				4F380D8B1ABDC7E400F5AF89 /* NormalUserViewController.h */,
-				4F380D8C1ABDC7E400F5AF89 /* NormalUserViewController.m */,
 				4F7F01BD1AB3E9B700019BF3 /* Main.storyboard */,
 				4F7F01C01AB3E9B700019BF3 /* Images.xcassets */,
 				4F7F01C21AB3E9B700019BF3 /* LaunchScreen.xib */,

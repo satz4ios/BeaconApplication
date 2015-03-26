@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>6ECCFCDB-1D4A-40B9-8115-A88C04868A3C</string>
+	<key>IDESourceControlProjectName</key>
+	<string>Beaconing</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>AAB934AA0BF33B2BE4079FEBBFB0AC2163AD4077</key>
+		<string>https://github.com/satz4ios/BeaconApplication.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>Source Code/Beaconing/Beaconing.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>AAB934AA0BF33B2BE4079FEBBFB0AC2163AD4077</key>
+		<string>../../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/satz4ios/BeaconApplication.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>AAB934AA0BF33B2BE4079FEBBFB0AC2163AD4077</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>AAB934AA0BF33B2BE4079FEBBFB0AC2163AD4077</string>
+			<key>IDESourceControlWCCName</key>
+			<string>BeaconApplication</string>
+		</dict>
+	</array>
+</dict>
+</plist>
