@@ -10,6 +10,8 @@
 @interface ViewController : UIViewController
 -(IBAction)loginClick:(id)sender;
 - (IBAction)registerClick:(id)sender;
+@property (weak, nonatomic) IBOutlet UIButton *signUpBtn;
+@property (weak, nonatomic) IBOutlet UIButton *loginBtn;
 
 @end
 

@@ -14,7 +14,8 @@
 
 @interface LoginViewController () {
     UIStoryboard *_MainStoryboard;
-
+    NSAttributedString *_underlineString;
+    BOOL rememberCliked;
 }
 
 @end
@@ -24,6 +25,24 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    [_emailIdTxtFld setValue:[UIColor whiteColor]
+                  forKeyPath:@"_placeholderLabel.textColor"];
+    [_passWrdTxtFld setValue:[UIColor whiteColor]
+                  forKeyPath:@"_placeholderLabel.textColor"];
+    [_emailIdTxtFld setFont:[UIFont fontWithName:@"Raleway-Medium" size:18] ];
+    [_passWrdTxtFld setFont:[UIFont fontWithName:@"Raleway-Medium" size:18] ];
+    [_emailIdTxtFld setValue:[UIFont fontWithName:@"Raleway-Medium" size: 18] forKeyPath:@"_placeholderLabel.font"];
+    [_passWrdTxtFld setValue:[UIFont fontWithName:@"Raleway-Medium" size: 18] forKeyPath:@"_placeholderLabel.font"];
+    _emailIdTxtFld.layer.cornerRadius=8.0;
+    _passWrdTxtFld.layer.cornerRadius=8.0;
+    _loginBtn.titleLabel.font = [UIFont fontWithName:@"Raleway-SemiBold" size:22];
+    [_rememberMELbl setFont:[UIFont fontWithName:@"Raleway-Medium" size:15]];
+    NSMutableAttributedString *attributedString = [[NSMutableAttributedString alloc] init];
+    [attributedString appendAttributedString:[[NSAttributedString alloc] initWithString:[NSString stringWithFormat:@"%@",_forgotPwdBtn.titleLabel.text]
+                                                                             attributes:@{NSUnderlineStyleAttributeName: @(NSUnderlineStyleSingle)
+                                                                                          }]];
+    [_forgotPwdBtn.titleLabel setAttributedText:attributedString];
+    [_forgotPwdBtn.titleLabel setFont:[UIFont fontWithName:@"Raleway-Medium" size:15]];
 }
 - (IBAction)back:(id)sender {
     [self dismissViewControllerAnimated:YES completion:nil];
@@ -76,7 +95,11 @@
 -(void)recievedServiceCallWithError:(NSError *)ErrorMessage {
     
 }
-
+-(BOOL)textFieldShouldReturn:(UITextField *)textField {
+    
+    [textField resignFirstResponder];
+    return YES;
+}
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
@@ -92,4 +115,18 @@
 }
 */
 
+- (IBAction)forgotPwdClick:(id)sender {
+}
+- (IBAction)rememberMeClick:(id)sender {
+    
+    if (rememberCliked) {
+        rememberCliked=NO;
+        [_checkBoxBtn setBackgroundImage:[UIImage imageNamed:@"RememberMeVsbImage"] forState:UIControlStateNormal];
+
+    } else {
+        rememberCliked=YES;
+        [_checkBoxBtn setBackgroundImage:[UIImage imageNamed:@"RememberMeActImage"] forState:UIControlStateNormal];
+    }
+    
+}
 @end

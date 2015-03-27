@@ -42,6 +42,9 @@
 		00A9A8A81AC3E4C300D4A439 /* SearchBeaconViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 00A9A8A71AC3E4C300D4A439 /* SearchBeaconViewController.m */; };
 		00A9A8B41AC40FFF00D4A439 /* BeaconManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 00A9A8B21AC40FFF00D4A439 /* BeaconManager.m */; };
 		00A9A8B81AC4103100D4A439 /* BeaconObj.m in Sources */ = {isa = PBXBuildFile; fileRef = 00A9A8B71AC4103100D4A439 /* BeaconObj.m */; };
+		00E14DAA1AC51F2C00153155 /* Raleway-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 00E14DA81AC51F2C00153155 /* Raleway-Medium.ttf */; };
+		00E14DAB1AC51F2C00153155 /* Raleway-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 00E14DA91AC51F2C00153155 /* Raleway-Regular.ttf */; };
+		00E14DAD1AC5327100153155 /* Raleway-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 00E14DAC1AC5327100153155 /* Raleway-SemiBold.ttf */; };
 		4F380D8D1ABDC7E400F5AF89 /* NormalUserViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F380D8C1ABDC7E400F5AF89 /* NormalUserViewController.m */; };
 		4F7F01B61AB3E9B700019BF3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F7F01B51AB3E9B700019BF3 /* main.m */; };
 		4F7F01B91AB3E9B700019BF3 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F7F01B81AB3E9B700019BF3 /* AppDelegate.m */; };
@@ -126,6 +129,9 @@
 		00A9A8B31AC40FFF00D4A439 /* BeaconConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BeaconConstants.h; sourceTree = "<group>"; };
 		00A9A8B61AC4103100D4A439 /* BeaconObj.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BeaconObj.h; sourceTree = "<group>"; };
 		00A9A8B71AC4103100D4A439 /* BeaconObj.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BeaconObj.m; sourceTree = "<group>"; };
+		00E14DA81AC51F2C00153155 /* Raleway-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Raleway-Medium.ttf"; sourceTree = "<group>"; };
+		00E14DA91AC51F2C00153155 /* Raleway-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Raleway-Regular.ttf"; sourceTree = "<group>"; };
+		00E14DAC1AC5327100153155 /* Raleway-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Raleway-SemiBold.ttf"; sourceTree = "<group>"; };
 		4F380D8B1ABDC7E400F5AF89 /* NormalUserViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NormalUserViewController.h; path = Beaconing/NormalUserViewController.h; sourceTree = "<group>"; };
 		4F380D8C1ABDC7E400F5AF89 /* NormalUserViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NormalUserViewController.m; path = Beaconing/NormalUserViewController.m; sourceTree = "<group>"; };
 		4F7F01B01AB3E9B700019BF3 /* Beaconing.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Beaconing.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -168,6 +174,9 @@
 		000855111AB6992A00E0C566 /* ModelClasses */ = {
 			isa = PBXGroup;
 			children = (
+				00E14DA81AC51F2C00153155 /* Raleway-Medium.ttf */,
+				00E14DA91AC51F2C00153155 /* Raleway-Regular.ttf */,
+				00E14DAC1AC5327100153155 /* Raleway-SemiBold.ttf */,
 				00A9A8B51AC4103100D4A439 /* DataModels */,
 				0008550E1AB6961600E0C566 /* ServiceCallAPI.h */,
 				0008550F1AB6961600E0C566 /* ServiceCallAPI.m */,
@@ -452,6 +461,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				00E14DAD1AC5327100153155 /* Raleway-SemiBold.ttf in Resources */,
 				00306C771AC17BBC00A7217F /* login-icon.png in Resources */,
 				00306C751AC17BBC00A7217F /* back.png in Resources */,
 				00306C781AC17BBC00A7217F /* Login.png in Resources */,
@@ -460,10 +470,12 @@
 				00306C791AC17BBC00A7217F /* Logo.png in Resources */,
 				00306C7E1AC17BBC00A7217F /* txt-field.png in Resources */,
 				00306C7C1AC17BBC00A7217F /* signup-btn.png in Resources */,
+				00E14DAA1AC51F2C00153155 /* Raleway-Medium.ttf in Resources */,
 				00306C761AC17BBC00A7217F /* login-btn.png in Resources */,
 				4F7F01C41AB3E9B700019BF3 /* LaunchScreen.xib in Resources */,
 				00306C7B1AC17BBC00A7217F /* remember-me-visible.png in Resources */,
 				4F7F01C11AB3E9B700019BF3 /* Images.xcassets in Resources */,
+				00E14DAB1AC51F2C00153155 /* Raleway-Regular.ttf in Resources */,
 				00306C841AC17BC800A7217F /* Splash-screen.png in Resources */,
 				00306C7D1AC17BBC00A7217F /* signup-icon.png in Resources */,
 				00306C7A1AC17BBC00A7217F /* remember-me-active.png in Resources */,

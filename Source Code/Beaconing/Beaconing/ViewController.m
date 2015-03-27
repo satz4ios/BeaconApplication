@@ -23,6 +23,9 @@
     _MainStoryboard = [UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]];
 
     [self.navigationController setNavigationBarHidden:YES animated:YES];
+    _loginBtn.titleLabel.font = [UIFont fontWithName:@"Raleway-SemiBold" size:22];
+    _signUpBtn.titleLabel.font = [UIFont fontWithName:@"Raleway-SemiBold" size:22];
+
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
 }
