@@ -165,6 +165,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				00FC033E1AC5247D00DA9598 /* CoreBluetooth.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -279,6 +280,8 @@
 				4F380D8C1ABDC7E400F5AF89 /* NormalUserViewController.m */,
 				00A9A8A61AC3E4C300D4A439 /* SearchBeaconViewController.h */,
 				00A9A8A71AC3E4C300D4A439 /* SearchBeaconViewController.m */,
+				00A9A8BC1AC42F9D00D4A439 /* ConfigureBeaconViewController.h */,
+				00A9A8BD1AC42F9D00D4A439 /* ConfigureBeaconViewController.m */,
 			);
 			name = ViewControllers;
 			path = ..;
@@ -323,6 +326,7 @@
 		4F7F01A71AB3E9B700019BF3 = {
 			isa = PBXGroup;
 			children = (
+				00FC033D1AC5247D00DA9598 /* CoreBluetooth.framework */,
 				4F7F01B21AB3E9B700019BF3 /* Beaconing */,
 				4F7F01CC1AB3E9B700019BF3 /* BeaconingTests */,
 				4F7F01B11AB3E9B700019BF3 /* Products */,
@@ -523,6 +527,7 @@
 				000855491AB6BBA600E0C566 /* UIRefreshControl+AFNetworking.m in Sources */,
 				4F380D8D1ABDC7E400F5AF89 /* NormalUserViewController.m in Sources */,
 				0008553E1AB6BBA600E0C566 /* AFSecurityPolicy.m in Sources */,
+				00A9A8BE1AC42F9D00D4A439 /* ConfigureBeaconViewController.m in Sources */,
 				000855411AB6BBA600E0C566 /* AFURLResponseSerialization.m in Sources */,
 				0008553A1AB6BBA600E0C566 /* AFHTTPRequestOperation.m in Sources */,
 			);
