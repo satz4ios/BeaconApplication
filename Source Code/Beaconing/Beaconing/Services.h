@@ -29,5 +29,7 @@
 
 #define RegisterUser                     (Beaconing_API_Endpoint_Host @"registration.php");
 #define LoginUser                        (Beaconing_API_Endpoint_Host @"login.php");
+#define AddBeacon                        (Beaconing_API_Endpoint_Host @"beaconconfig.php");
+
 
 #endif

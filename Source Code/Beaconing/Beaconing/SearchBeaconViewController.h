@@ -8,7 +8,8 @@
 
 #import <UIKit/UIKit.h>
 #import "BeaconManager.h"
+#import <CoreBluetooth/CoreBluetooth.h>
 
-@interface SearchBeaconViewController : UIViewController<BeaconManagerDelegate>
+@interface SearchBeaconViewController : UIViewController<BeaconManagerDelegate,CBCentralManagerDelegate>
 
 @end

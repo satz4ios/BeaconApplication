@@ -644,6 +644,134 @@
             </objects>
             <point key="canvasLocation" x="1230" y="1844"/>
         </scene>
+        <!--Configure Beacon View Controller-->
+        <scene sceneID="mRB-H3-2DD">
+            <objects>
+                <viewController storyboardIdentifier="ConfigureBeaconViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="HV4-Al-zFi" customClass="ConfigureBeaconViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="5c4-PX-etH"/>
+                        <viewControllerLayoutGuide type="bottom" id="rdz-Aq-dMa"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="XPP-aB-C0O">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6lO-TQ-ecm">
+                                <rect key="frame" x="0.0" y="20" width="600" height="44"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YLQ-d9-9NF">
+                                        <rect key="frame" x="550" y="6" width="30" height="30"/>
+                                        <state key="normal" title="Add">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="onTapAddBtn:" destination="HV4-Al-zFi" eventType="touchUpInside" id="cof-Uk-Rbg"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="78e-6N-jac">
+                                        <rect key="frame" x="16" y="7" width="35" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="35" id="IJz-aC-Mec"/>
+                                            <constraint firstAttribute="height" constant="30" id="bDZ-jI-Mqq"/>
+                                        </constraints>
+                                        <state key="normal" backgroundImage="Backbtnimage">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="backClick:" destination="HV4-Al-zFi" eventType="touchUpInside" id="WKX-BG-OIA"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="YLQ-d9-9NF" secondAttribute="trailing" constant="20" id="0zs-ia-0fw"/>
+                                    <constraint firstAttribute="centerY" secondItem="78e-6N-jac" secondAttribute="centerY" id="Nbn-xC-cT6"/>
+                                    <constraint firstAttribute="height" constant="44" id="jlu-mh-2Dw"/>
+                                    <constraint firstAttribute="centerY" secondItem="YLQ-d9-9NF" secondAttribute="centerY" constant="1" id="k97-Ah-DHW"/>
+                                    <constraint firstItem="78e-6N-jac" firstAttribute="leading" secondItem="6lO-TQ-ecm" secondAttribute="leading" constant="16" id="tHJ-27-9xt"/>
+                                </constraints>
+                            </view>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="UUID" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Qav-E3-J0y">
+                                <rect key="frame" x="66" y="100" width="468" height="45"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="7Mw-ku-nZK"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Mahor" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Is4-hZ-fYq">
+                                <rect key="frame" x="66" y="165" width="468" height="45"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="b6H-dQ-6lH"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Minor" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="oRG-vB-PoU">
+                                <rect key="frame" x="66" y="230" width="468" height="45"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="d0r-ZN-2vx"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Tag" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="a4n-Q9-cKC">
+                                <rect key="frame" x="66" y="295" width="468" height="45"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="mC6-u8-yfX"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="HV4-Al-zFi" id="1eO-3c-Q3Y"/>
+                                </connections>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Desc" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7YO-kV-Naf">
+                                <rect key="frame" x="66" y="360" width="468" height="45"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="A31-Ok-DpF"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="HV4-Al-zFi" id="YLI-0s-UYS"/>
+                                </connections>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="6lO-TQ-ecm" firstAttribute="width" secondItem="XPP-aB-C0O" secondAttribute="width" id="5SP-tU-G9b"/>
+                            <constraint firstItem="7YO-kV-Naf" firstAttribute="top" secondItem="a4n-Q9-cKC" secondAttribute="bottom" constant="20" id="JWW-07-Uwj"/>
+                            <constraint firstItem="Is4-hZ-fYq" firstAttribute="leading" secondItem="XPP-aB-C0O" secondAttribute="leadingMargin" constant="50" id="Msl-ZA-rdm"/>
+                            <constraint firstItem="Qav-E3-J0y" firstAttribute="leading" secondItem="XPP-aB-C0O" secondAttribute="leadingMargin" constant="50" id="Twu-F6-nwc"/>
+                            <constraint firstItem="Is4-hZ-fYq" firstAttribute="top" secondItem="Qav-E3-J0y" secondAttribute="bottom" constant="20" id="UM3-Ba-4ld"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="a4n-Q9-cKC" secondAttribute="trailing" constant="50" id="ZSh-Ft-5PL"/>
+                            <constraint firstItem="6lO-TQ-ecm" firstAttribute="top" secondItem="5c4-PX-etH" secondAttribute="bottom" id="aBV-V1-aeb"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="7YO-kV-Naf" secondAttribute="trailing" constant="50" id="c27-b4-GMZ"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Is4-hZ-fYq" secondAttribute="trailing" constant="50" id="gLH-AG-c55"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Qav-E3-J0y" secondAttribute="trailing" constant="50" id="jHd-vR-fXm"/>
+                            <constraint firstItem="7YO-kV-Naf" firstAttribute="leading" secondItem="XPP-aB-C0O" secondAttribute="leadingMargin" constant="50" id="jTv-i6-Mko"/>
+                            <constraint firstAttribute="centerX" secondItem="6lO-TQ-ecm" secondAttribute="centerX" id="k4j-PZ-Fvt"/>
+                            <constraint firstItem="a4n-Q9-cKC" firstAttribute="top" secondItem="oRG-vB-PoU" secondAttribute="bottom" constant="20" id="mRd-po-19T"/>
+                            <constraint firstItem="a4n-Q9-cKC" firstAttribute="leading" secondItem="XPP-aB-C0O" secondAttribute="leadingMargin" constant="50" id="piL-uB-Ojw"/>
+                            <constraint firstItem="oRG-vB-PoU" firstAttribute="leading" secondItem="XPP-aB-C0O" secondAttribute="leadingMargin" constant="50" id="qMc-Sk-KUH"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="oRG-vB-PoU" secondAttribute="trailing" constant="50" id="ta0-ot-2fd"/>
+                            <constraint firstItem="oRG-vB-PoU" firstAttribute="top" secondItem="Is4-hZ-fYq" secondAttribute="bottom" constant="20" id="u97-ud-dcb"/>
+                            <constraint firstItem="Qav-E3-J0y" firstAttribute="top" secondItem="6lO-TQ-ecm" secondAttribute="bottom" constant="36" id="vpm-tw-ptJ"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="beaconDescTxtField" destination="7YO-kV-Naf" id="QEu-ag-tgK"/>
+                        <outlet property="beaconTagTxtField" destination="a4n-Q9-cKC" id="YMq-HB-onw"/>
+                        <outlet property="majorTxtField" destination="Is4-hZ-fYq" id="c6A-k3-ARf"/>
+                        <outlet property="minorTxtField" destination="oRG-vB-PoU" id="1C0-Mo-kAk"/>
+                        <outlet property="uuidTxtField" destination="Qav-E3-J0y" id="51q-WW-sw3"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4zM-Yt-rhI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2041" y="1891"/>
+        </scene>
         <!--Normal User View Controller-->
         <scene sceneID="sSi-KT-W04">
             <objects>

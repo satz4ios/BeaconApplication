@@ -42,6 +42,8 @@
 		00A9A8A81AC3E4C300D4A439 /* SearchBeaconViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 00A9A8A71AC3E4C300D4A439 /* SearchBeaconViewController.m */; };
 		00A9A8B41AC40FFF00D4A439 /* BeaconManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 00A9A8B21AC40FFF00D4A439 /* BeaconManager.m */; };
 		00A9A8B81AC4103100D4A439 /* BeaconObj.m in Sources */ = {isa = PBXBuildFile; fileRef = 00A9A8B71AC4103100D4A439 /* BeaconObj.m */; };
+		00A9A8BE1AC42F9D00D4A439 /* ConfigureBeaconViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 00A9A8BD1AC42F9D00D4A439 /* ConfigureBeaconViewController.m */; };
+		00FC033E1AC5247D00DA9598 /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 00FC033D1AC5247D00DA9598 /* CoreBluetooth.framework */; };
 		4F380D8D1ABDC7E400F5AF89 /* NormalUserViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F380D8C1ABDC7E400F5AF89 /* NormalUserViewController.m */; };
 		4F7F01B61AB3E9B700019BF3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F7F01B51AB3E9B700019BF3 /* main.m */; };
 		4F7F01B91AB3E9B700019BF3 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F7F01B81AB3E9B700019BF3 /* AppDelegate.m */; };
@@ -126,6 +128,9 @@
 		00A9A8B31AC40FFF00D4A439 /* BeaconConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BeaconConstants.h; sourceTree = "<group>"; };
 		00A9A8B61AC4103100D4A439 /* BeaconObj.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BeaconObj.h; sourceTree = "<group>"; };
 		00A9A8B71AC4103100D4A439 /* BeaconObj.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BeaconObj.m; sourceTree = "<group>"; };
+		00A9A8BC1AC42F9D00D4A439 /* ConfigureBeaconViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ConfigureBeaconViewController.h; path = Beaconing/ConfigureBeaconViewController.h; sourceTree = "<group>"; };
+		00A9A8BD1AC42F9D00D4A439 /* ConfigureBeaconViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ConfigureBeaconViewController.m; path = Beaconing/ConfigureBeaconViewController.m; sourceTree = "<group>"; };
+		00FC033D1AC5247D00DA9598 /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = System/Library/Frameworks/CoreBluetooth.framework; sourceTree = SDKROOT; };
 		4F380D8B1ABDC7E400F5AF89 /* NormalUserViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NormalUserViewController.h; path = Beaconing/NormalUserViewController.h; sourceTree = "<group>"; };
 		4F380D8C1ABDC7E400F5AF89 /* NormalUserViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NormalUserViewController.m; path = Beaconing/NormalUserViewController.m; sourceTree = "<group>"; };
 		4F7F01B01AB3E9B700019BF3 /* Beaconing.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Beaconing.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -159,6 +164,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				00FC033E1AC5247D00DA9598 /* CoreBluetooth.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -270,6 +276,8 @@
 				4F380D8C1ABDC7E400F5AF89 /* NormalUserViewController.m */,
 				00A9A8A61AC3E4C300D4A439 /* SearchBeaconViewController.h */,
 				00A9A8A71AC3E4C300D4A439 /* SearchBeaconViewController.m */,
+				00A9A8BC1AC42F9D00D4A439 /* ConfigureBeaconViewController.h */,
+				00A9A8BD1AC42F9D00D4A439 /* ConfigureBeaconViewController.m */,
 			);
 			name = ViewControllers;
 			path = ..;
@@ -314,6 +322,7 @@
 		4F7F01A71AB3E9B700019BF3 = {
 			isa = PBXGroup;
 			children = (
+				00FC033D1AC5247D00DA9598 /* CoreBluetooth.framework */,
 				4F7F01B21AB3E9B700019BF3 /* Beaconing */,
 				4F7F01CC1AB3E9B700019BF3 /* BeaconingTests */,
 				4F7F01B11AB3E9B700019BF3 /* Products */,
@@ -511,6 +520,7 @@
 				000855491AB6BBA600E0C566 /* UIRefreshControl+AFNetworking.m in Sources */,
 				4F380D8D1ABDC7E400F5AF89 /* NormalUserViewController.m in Sources */,
 				0008553E1AB6BBA600E0C566 /* AFSecurityPolicy.m in Sources */,
+				00A9A8BE1AC42F9D00D4A439 /* ConfigureBeaconViewController.m in Sources */,
 				000855411AB6BBA600E0C566 /* AFURLResponseSerialization.m in Sources */,
 				0008553A1AB6BBA600E0C566 /* AFHTTPRequestOperation.m in Sources */,
 			);

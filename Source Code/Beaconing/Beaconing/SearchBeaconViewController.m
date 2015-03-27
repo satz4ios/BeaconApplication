@@ -8,13 +8,17 @@
 
 #import "SearchBeaconViewController.h"
 #import "BeaconObj.h"
+#import "ConfigureBeaconViewController.h"
 
-@interface SearchBeaconViewController ()
+@interface SearchBeaconViewController ()<UITableViewDataSource,UITableViewDelegate>
 
 @property (strong,nonatomic) BeaconManager *beaconMgr;
 
 @property (strong,nonatomic) NSMutableArray *searchedBeacons;
 @property (weak, nonatomic) IBOutlet UITableView *beaconListTv;
+
+@property (strong,nonatomic) CBCentralManager *bluetoothManager;
+
 
 @end
 
@@ -38,18 +42,27 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (IBAction)backClick:(id)sender {
-    [self.navigationController dismissViewControllerAnimated:YES completion:Nil];
-}
-
 -(void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
     
     
     self.navigationController.navigationBar.hidden = YES;
     
+    [self detectBluetoothWithOSAlert:YES];
     
-    [self.beaconMgr startMonitoringKontactBeacons];
+    
+    for (int idx =0; idx<5; idx++) {
+        BeaconObj *tempObj = [[BeaconObj alloc] init];
+        tempObj.Uuid = @"123";
+        tempObj.majorId = @"123";
+        tempObj.minorId = @"123";
+        
+        [self.searchedBeacons addObject:tempObj];
+    }
+    
+    [self.beaconListTv reloadData];
+    
+
 }
 
 -(void)viewWillDisappear:(BOOL)animated{
@@ -57,6 +70,13 @@
     
         [self.beaconMgr stopMonitoringAndRangingKontactBeacons];
 }
+
+
+- (IBAction)backClick:(id)sender {
+    [self.navigationController dismissViewControllerAnimated:YES completion:Nil];
+}
+
+
 
 /*
 #pragma mark - Navigation
@@ -72,7 +92,7 @@
 #pragma mark TableView delegates
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    return 5;
+    //return 5;
     return [self.searchedBeacons count];
 }
 
@@ -81,11 +101,8 @@
     
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"beaconListCell"];
 
-    //BeaconObj *tempObj = [self.searchedBeacons objectAtIndex:[indexPath row]];
-    BeaconObj *tempObj = [[BeaconObj alloc] init];
-    tempObj.Uuid = @"123";
-    tempObj.majorId = @"123";
-    tempObj.minorId = @"123";
+    BeaconObj *tempObj = [self.searchedBeacons objectAtIndex:[indexPath row]];
+    
     
     UILabel *uuidLbl = (UILabel*) [cell viewWithTag:100];
     UILabel *majorLbl = (UILabel*) [cell viewWithTag:200];
@@ -102,6 +119,19 @@
     return cell;
 }
 
+
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+
+    UIStoryboard *mainStoryboard = [UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]];
+    ConfigureBeaconViewController *configBeacon = [mainStoryboard instantiateViewControllerWithIdentifier:@"ConfigureBeaconViewController"];
+    [configBeacon setSelectedBeacon:[self.searchedBeacons objectAtIndex:[indexPath row]]];
+    
+    UINavigationController *_navigationController = [[UINavigationController alloc]initWithRootViewController:configBeacon];
+    [self presentViewController:_navigationController animated:YES completion:Nil];
+    
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    
+}
 
 #pragma mark beacon mgr delegates
 -(void)beaconManager:(BeaconManager*)beaconMgr didEnterRegion:(CLRegion*)region{
@@ -148,7 +178,72 @@
 }
 - (void)beaconManager:(BeaconManager *)beaconMgr didDetermineState:(CLRegionState)state forRegion:(CLRegion *)region{
     
-} 
+}
+
+
+-(void)detectBluetoothWithOSAlert:(BOOL)isAlertNeeded
+{
+    if ([CBCentralManager class]) {
+        
+        // Put on main queue so we can call UIAlertView from delegate callbacks.
+        
+        
+        if (isAlertNeeded) {
+            self.bluetoothManager = [[CBCentralManager alloc] initWithDelegate:self queue:dispatch_get_main_queue()] ;
+        }
+        else{
+            self.bluetoothManager = [[CBCentralManager alloc] initWithDelegate:self
+                                                                         queue:nil
+                                                                       options:
+                                     [NSDictionary dictionaryWithObject:[NSNumber numberWithInt:0]
+                                                                 forKey:CBCentralManagerOptionShowPowerAlertKey]];
+            
+        }
+        
+    } else {
+        
+        NSLog(@"Core bluetooth not supported");
+    }
+}
+
+
+- (void)centralManagerDidUpdateState:(CBCentralManager *)central
+{
+    NSString *stateString = [[NSString alloc] init];
+    
+    
+    switch(central.state)
+    {
+        case CBCentralManagerStateResetting:
+            stateString = @"The connection with the system service was momentarily lost, update imminent.";
+            break;
+        case CBCentralManagerStateUnsupported:
+            stateString = @"The platform doesn't support Bluetooth Low Energy.";
+            break;
+        case CBCentralManagerStateUnauthorized:
+            stateString = @"The app is not authorized to use Bluetooth Low Energy.";
+            break;
+        case CBCentralManagerStatePoweredOff:{
+            
+            stateString = @"Bluetooth is currently powered off.Please switch it on from settings";
+    
+        }
+            break;
+        case CBCentralManagerStatePoweredOn:{
+            
+            stateString = @"Bluetooth is currently powered on and available to use.";
+            [self.beaconMgr startMonitoringKontactBeacons];
+        }
+            break;
+        default:
+            stateString = @"State unknown, update imminent.";
+            break;
+    }
+    
+    NSLog(@"%@",stateString);
+    
+}
+
 
 
 @end
