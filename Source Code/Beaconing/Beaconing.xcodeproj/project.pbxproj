@@ -42,6 +42,8 @@
 		00A9A8A81AC3E4C300D4A439 /* SearchBeaconViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 00A9A8A71AC3E4C300D4A439 /* SearchBeaconViewController.m */; };
 		00A9A8B41AC40FFF00D4A439 /* BeaconManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 00A9A8B21AC40FFF00D4A439 /* BeaconManager.m */; };
 		00A9A8B81AC4103100D4A439 /* BeaconObj.m in Sources */ = {isa = PBXBuildFile; fileRef = 00A9A8B71AC4103100D4A439 /* BeaconObj.m */; };
+		00A9A8BE1AC42F9D00D4A439 /* ConfigureBeaconViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 00A9A8BD1AC42F9D00D4A439 /* ConfigureBeaconViewController.m */; };
+		00FC033E1AC5247D00DA9598 /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 00FC033D1AC5247D00DA9598 /* CoreBluetooth.framework */; };
 		00E14DAA1AC51F2C00153155 /* Raleway-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 00E14DA81AC51F2C00153155 /* Raleway-Medium.ttf */; };
 		00E14DAB1AC51F2C00153155 /* Raleway-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 00E14DA91AC51F2C00153155 /* Raleway-Regular.ttf */; };
 		00E14DAD1AC5327100153155 /* Raleway-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 00E14DAC1AC5327100153155 /* Raleway-SemiBold.ttf */; };
@@ -129,6 +131,9 @@
 		00A9A8B31AC40FFF00D4A439 /* BeaconConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BeaconConstants.h; sourceTree = "<group>"; };
 		00A9A8B61AC4103100D4A439 /* BeaconObj.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BeaconObj.h; sourceTree = "<group>"; };
 		00A9A8B71AC4103100D4A439 /* BeaconObj.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BeaconObj.m; sourceTree = "<group>"; };
+		00A9A8BC1AC42F9D00D4A439 /* ConfigureBeaconViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ConfigureBeaconViewController.h; path = Beaconing/ConfigureBeaconViewController.h; sourceTree = "<group>"; };
+		00A9A8BD1AC42F9D00D4A439 /* ConfigureBeaconViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ConfigureBeaconViewController.m; path = Beaconing/ConfigureBeaconViewController.m; sourceTree = "<group>"; };
+		00FC033D1AC5247D00DA9598 /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = System/Library/Frameworks/CoreBluetooth.framework; sourceTree = SDKROOT; };
 		00E14DA81AC51F2C00153155 /* Raleway-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Raleway-Medium.ttf"; sourceTree = "<group>"; };
 		00E14DA91AC51F2C00153155 /* Raleway-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Raleway-Regular.ttf"; sourceTree = "<group>"; };
 		00E14DAC1AC5327100153155 /* Raleway-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Raleway-SemiBold.ttf"; sourceTree = "<group>"; };
