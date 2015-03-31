@@ -11,6 +11,7 @@
 #import "Services.h"
 #import "AdminDashboardViewController.h"
 #import "NormalUserViewController.h"
+#import <QuartzCore/QuartzCore.h>
 @interface ViewController () {
     UIStoryboard *_MainStoryboard;
 }
@@ -25,6 +26,8 @@
     [self.navigationController setNavigationBarHidden:YES animated:YES];
     _loginBtn.titleLabel.font = [UIFont fontWithName:@"Raleway-SemiBold" size:22];
     _signUpBtn.titleLabel.font = [UIFont fontWithName:@"Raleway-SemiBold" size:22];
+    _loginBtn.layer.cornerRadius=6.0;
+    _signUpBtn.layer.cornerRadius=6.0;
 
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.

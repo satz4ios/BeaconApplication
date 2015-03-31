@@ -8,17 +8,19 @@
 
 #import <UIKit/UIKit.h>
 #import "ServiceCallAPI.h"
-@interface RegisterUserViewController : UIViewController<APIserviceProto,UITextFieldDelegate,UIAlertViewDelegate> {
+#import "UICustomActionSheet.h"
+#import "MBProgressHUD.h"
+@interface RegisterUserViewController : UIViewController<APIserviceProto,UITextFieldDelegate,UIAlertViewDelegate,UIActionSheetDelegate,UICustomActionSheetDelegate,MBProgressHUDDelegate> {
     IBOutlet UISegmentedControl *segmentedControl;
 
 }
 - (IBAction)back:(id)sender;
 @property (weak, nonatomic) IBOutlet UIButton *registerButton;
-@property (weak, nonatomic) IBOutlet UITextField *fNameFld;
-@property (weak, nonatomic) IBOutlet UITextField *lNameFld;
+@property (weak, nonatomic) IBOutlet UITextField *userNameFld;
 @property (weak, nonatomic) IBOutlet UITextField *emailId;
 @property (weak, nonatomic) IBOutlet UITextField *passwrdFld;
 @property (weak, nonatomic) IBOutlet UITextField *cPasswrdFld;
+@property (weak, nonatomic) IBOutlet UITextField *userTypeFld;
 @property (strong, nonatomic) IBOutlet UISegmentedControl * segmentedControl;
 @property (weak, nonatomic) IBOutlet UITextField *businesNameFld;
 @property (weak, nonatomic) IBOutlet UITextField *contactFld;

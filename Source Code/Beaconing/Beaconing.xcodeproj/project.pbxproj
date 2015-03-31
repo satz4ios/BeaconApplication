@@ -38,15 +38,18 @@
 		00306C821AC17BC800A7217F /* Signup.png in Resources */ = {isa = PBXBuildFile; fileRef = 00306C7F1AC17BC800A7217F /* Signup.png */; };
 		00306C831AC17BC800A7217F /* splash-bg.png in Resources */ = {isa = PBXBuildFile; fileRef = 00306C801AC17BC800A7217F /* splash-bg.png */; };
 		00306C841AC17BC800A7217F /* Splash-screen.png in Resources */ = {isa = PBXBuildFile; fileRef = 00306C811AC17BC800A7217F /* Splash-screen.png */; };
+		008EE12D1ACA7F04009DCAA8 /* UICustomActionSheet.m in Sources */ = {isa = PBXBuildFile; fileRef = 008EE12A1ACA7F04009DCAA8 /* UICustomActionSheet.m */; };
+		008EE12E1ACA7F04009DCAA8 /* UIImageEffects.m in Sources */ = {isa = PBXBuildFile; fileRef = 008EE12C1ACA7F04009DCAA8 /* UIImageEffects.m */; };
+		008EE1311ACAA935009DCAA8 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 008EE1301ACAA935009DCAA8 /* MBProgressHUD.m */; };
 		0099BD651AC2DB8300F82851 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0099BD641AC2DB8300F82851 /* LoginViewController.m */; };
 		00A9A8A81AC3E4C300D4A439 /* SearchBeaconViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 00A9A8A71AC3E4C300D4A439 /* SearchBeaconViewController.m */; };
 		00A9A8B41AC40FFF00D4A439 /* BeaconManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 00A9A8B21AC40FFF00D4A439 /* BeaconManager.m */; };
 		00A9A8B81AC4103100D4A439 /* BeaconObj.m in Sources */ = {isa = PBXBuildFile; fileRef = 00A9A8B71AC4103100D4A439 /* BeaconObj.m */; };
 		00A9A8BE1AC42F9D00D4A439 /* ConfigureBeaconViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 00A9A8BD1AC42F9D00D4A439 /* ConfigureBeaconViewController.m */; };
-		00FC033E1AC5247D00DA9598 /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 00FC033D1AC5247D00DA9598 /* CoreBluetooth.framework */; };
 		00E14DAA1AC51F2C00153155 /* Raleway-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 00E14DA81AC51F2C00153155 /* Raleway-Medium.ttf */; };
 		00E14DAB1AC51F2C00153155 /* Raleway-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 00E14DA91AC51F2C00153155 /* Raleway-Regular.ttf */; };
 		00E14DAD1AC5327100153155 /* Raleway-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 00E14DAC1AC5327100153155 /* Raleway-SemiBold.ttf */; };
+		00FC033E1AC5247D00DA9598 /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 00FC033D1AC5247D00DA9598 /* CoreBluetooth.framework */; };
 		4F380D8D1ABDC7E400F5AF89 /* NormalUserViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F380D8C1ABDC7E400F5AF89 /* NormalUserViewController.m */; };
 		4F7F01B61AB3E9B700019BF3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F7F01B51AB3E9B700019BF3 /* main.m */; };
 		4F7F01B91AB3E9B700019BF3 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F7F01B81AB3E9B700019BF3 /* AppDelegate.m */; };
@@ -122,6 +125,12 @@
 		00306C7F1AC17BC800A7217F /* Signup.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Signup.png; sourceTree = "<group>"; };
 		00306C801AC17BC800A7217F /* splash-bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "splash-bg.png"; sourceTree = "<group>"; };
 		00306C811AC17BC800A7217F /* Splash-screen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Splash-screen.png"; sourceTree = "<group>"; };
+		008EE1291ACA7F04009DCAA8 /* UICustomActionSheet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UICustomActionSheet.h; sourceTree = "<group>"; };
+		008EE12A1ACA7F04009DCAA8 /* UICustomActionSheet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UICustomActionSheet.m; sourceTree = "<group>"; };
+		008EE12B1ACA7F04009DCAA8 /* UIImageEffects.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIImageEffects.h; sourceTree = "<group>"; };
+		008EE12C1ACA7F04009DCAA8 /* UIImageEffects.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIImageEffects.m; sourceTree = "<group>"; };
+		008EE12F1ACAA935009DCAA8 /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
+		008EE1301ACAA935009DCAA8 /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
 		0099BD631AC2DB8300F82851 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LoginViewController.h; path = Beaconing/LoginViewController.h; sourceTree = "<group>"; };
 		0099BD641AC2DB8300F82851 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LoginViewController.m; path = Beaconing/LoginViewController.m; sourceTree = "<group>"; };
 		00A9A8A61AC3E4C300D4A439 /* SearchBeaconViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SearchBeaconViewController.h; path = Beaconing/SearchBeaconViewController.h; sourceTree = "<group>"; };
@@ -133,10 +142,10 @@
 		00A9A8B71AC4103100D4A439 /* BeaconObj.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BeaconObj.m; sourceTree = "<group>"; };
 		00A9A8BC1AC42F9D00D4A439 /* ConfigureBeaconViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ConfigureBeaconViewController.h; path = Beaconing/ConfigureBeaconViewController.h; sourceTree = "<group>"; };
 		00A9A8BD1AC42F9D00D4A439 /* ConfigureBeaconViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ConfigureBeaconViewController.m; path = Beaconing/ConfigureBeaconViewController.m; sourceTree = "<group>"; };
-		00FC033D1AC5247D00DA9598 /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = System/Library/Frameworks/CoreBluetooth.framework; sourceTree = SDKROOT; };
 		00E14DA81AC51F2C00153155 /* Raleway-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Raleway-Medium.ttf"; sourceTree = "<group>"; };
 		00E14DA91AC51F2C00153155 /* Raleway-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Raleway-Regular.ttf"; sourceTree = "<group>"; };
 		00E14DAC1AC5327100153155 /* Raleway-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Raleway-SemiBold.ttf"; sourceTree = "<group>"; };
+		00FC033D1AC5247D00DA9598 /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = System/Library/Frameworks/CoreBluetooth.framework; sourceTree = SDKROOT; };
 		4F380D8B1ABDC7E400F5AF89 /* NormalUserViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NormalUserViewController.h; path = Beaconing/NormalUserViewController.h; sourceTree = "<group>"; };
 		4F380D8C1ABDC7E400F5AF89 /* NormalUserViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NormalUserViewController.m; path = Beaconing/NormalUserViewController.m; sourceTree = "<group>"; };
 		4F7F01B01AB3E9B700019BF3 /* Beaconing.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Beaconing.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -304,6 +313,12 @@
 		00A9A8AF1AC40FFF00D4A439 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				008EE12F1ACAA935009DCAA8 /* MBProgressHUD.h */,
+				008EE1301ACAA935009DCAA8 /* MBProgressHUD.m */,
+				008EE1291ACA7F04009DCAA8 /* UICustomActionSheet.h */,
+				008EE12A1ACA7F04009DCAA8 /* UICustomActionSheet.m */,
+				008EE12B1ACA7F04009DCAA8 /* UIImageEffects.h */,
+				008EE12C1ACA7F04009DCAA8 /* UIImageEffects.m */,
 				00A9A8B01AC40FFF00D4A439 /* Beacon */,
 				00A9A8B31AC40FFF00D4A439 /* BeaconConstants.h */,
 			);
@@ -508,6 +523,7 @@
 			files = (
 				000855421AB6BBA600E0C566 /* AFURLSessionManager.m in Sources */,
 				4F7F01BC1AB3E9B700019BF3 /* ViewController.m in Sources */,
+				008EE12D1ACA7F04009DCAA8 /* UICustomActionSheet.m in Sources */,
 				4F7F01DE1AB3F95800019BF3 /* AdminDashboardViewController.m in Sources */,
 				0008553D1AB6BBA600E0C566 /* AFNetworkReachabilityManager.m in Sources */,
 				0099BD651AC2DB8300F82851 /* LoginViewController.m in Sources */,
@@ -520,8 +536,10 @@
 				000855401AB6BBA600E0C566 /* AFURLRequestSerialization.m in Sources */,
 				4F7F01B91AB3E9B700019BF3 /* AppDelegate.m in Sources */,
 				000855461AB6BBA600E0C566 /* UIButton+AFNetworking.m in Sources */,
+				008EE1311ACAA935009DCAA8 /* MBProgressHUD.m in Sources */,
 				000855471AB6BBA600E0C566 /* UIImageView+AFNetworking.m in Sources */,
 				4F7F01DB1AB3F46500019BF3 /* RegisterUserViewController.m in Sources */,
+				008EE12E1ACA7F04009DCAA8 /* UIImageEffects.m in Sources */,
 				4F7F01B61AB3E9B700019BF3 /* main.m in Sources */,
 				00A9A8B41AC40FFF00D4A439 /* BeaconManager.m in Sources */,
 				000855451AB6BBA600E0C566 /* UIAlertView+AFNetworking.m in Sources */,
@@ -593,7 +611,8 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Vivekananda Vasipalli (47FNXB8M8H)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Vivekananda Vasipalli (47FNXB8M8H)";
 				COPY_PHASE_STRIP = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -610,9 +629,10 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				PROVISIONING_PROFILE = "c3b22a07-b725-45b4-9e71-2a3c38e514c4";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -635,7 +655,8 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Vivekananda Vasipalli (47FNXB8M8H)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Vivekananda Vasipalli (47FNXB8M8H)";
 				COPY_PHASE_STRIP = NO;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -646,8 +667,9 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
+				PROVISIONING_PROFILE = "c3b22a07-b725-45b4-9e71-2a3c38e514c4";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
@@ -659,10 +681,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Vivekananda Vasipalli (47FNXB8M8H)";
 				INFOPLIST_FILE = Beaconing/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "c3b22a07-b725-45b4-9e71-2a3c38e514c4";
 			};
 			name = Debug;
 		};
@@ -671,10 +695,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Vivekananda Vasipalli (47FNXB8M8H)";
 				INFOPLIST_FILE = Beaconing/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "c3b22a07-b725-45b4-9e71-2a3c38e514c4";
 			};
 			name = Release;
 		};
