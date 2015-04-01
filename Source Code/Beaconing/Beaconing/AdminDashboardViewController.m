@@ -47,7 +47,7 @@
     
     UIStoryboard *mainStoryboard = [UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]];
     SearchBeaconViewController *_searchBeaconVC = [mainStoryboard instantiateViewControllerWithIdentifier:@"SearchBeaconViewController"];
-    UINavigationController *_navigationController = [[UINavigationController alloc]initWithRootViewController:_searchBeaconVC];
-    [self presentViewController:_navigationController animated:YES completion:Nil];
+    [self.navigationController pushViewController:_searchBeaconVC animated:YES];
+    
 }
 @end
