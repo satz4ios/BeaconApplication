@@ -29,7 +29,6 @@
 		00306C761AC17BBC00A7217F /* login-btn.png in Resources */ = {isa = PBXBuildFile; fileRef = 00306C6C1AC17BBC00A7217F /* login-btn.png */; };
 		00306C771AC17BBC00A7217F /* login-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 00306C6D1AC17BBC00A7217F /* login-icon.png */; };
 		00306C781AC17BBC00A7217F /* Login.png in Resources */ = {isa = PBXBuildFile; fileRef = 00306C6E1AC17BBC00A7217F /* Login.png */; };
-		00306C791AC17BBC00A7217F /* Logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 00306C6F1AC17BBC00A7217F /* Logo.png */; };
 		00306C7A1AC17BBC00A7217F /* remember-me-active.png in Resources */ = {isa = PBXBuildFile; fileRef = 00306C701AC17BBC00A7217F /* remember-me-active.png */; };
 		00306C7B1AC17BBC00A7217F /* remember-me-visible.png in Resources */ = {isa = PBXBuildFile; fileRef = 00306C711AC17BBC00A7217F /* remember-me-visible.png */; };
 		00306C7C1AC17BBC00A7217F /* signup-btn.png in Resources */ = {isa = PBXBuildFile; fileRef = 00306C721AC17BBC00A7217F /* signup-btn.png */; };
@@ -42,6 +41,9 @@
 		008EE12E1ACA7F04009DCAA8 /* UIImageEffects.m in Sources */ = {isa = PBXBuildFile; fileRef = 008EE12C1ACA7F04009DCAA8 /* UIImageEffects.m */; };
 		008EE1311ACAA935009DCAA8 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 008EE1301ACAA935009DCAA8 /* MBProgressHUD.m */; };
 		0099BD651AC2DB8300F82851 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0099BD641AC2DB8300F82851 /* LoginViewController.m */; };
+		00A90C1B1ACBB11C00209F4F /* Logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 00A90C1A1ACBB11C00209F4F /* Logo.png */; };
+		00A90C1D1ACBB6DF00209F4F /* Splash-screen-bg.png in Resources */ = {isa = PBXBuildFile; fileRef = 00A90C1C1ACBB6DF00209F4F /* Splash-screen-bg.png */; };
+		00A90C211ACBC32E00209F4F /* Launch Screen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 00A90C201ACBC32E00209F4F /* Launch Screen.xib */; };
 		00A9A8A81AC3E4C300D4A439 /* SearchBeaconViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 00A9A8A71AC3E4C300D4A439 /* SearchBeaconViewController.m */; };
 		00A9A8B41AC40FFF00D4A439 /* BeaconManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 00A9A8B21AC40FFF00D4A439 /* BeaconManager.m */; };
 		00A9A8B81AC4103100D4A439 /* BeaconObj.m in Sources */ = {isa = PBXBuildFile; fileRef = 00A9A8B71AC4103100D4A439 /* BeaconObj.m */; };
@@ -56,7 +58,6 @@
 		4F7F01BC1AB3E9B700019BF3 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F7F01BB1AB3E9B700019BF3 /* ViewController.m */; };
 		4F7F01BF1AB3E9B700019BF3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4F7F01BD1AB3E9B700019BF3 /* Main.storyboard */; };
 		4F7F01C11AB3E9B700019BF3 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4F7F01C01AB3E9B700019BF3 /* Images.xcassets */; };
-		4F7F01C41AB3E9B700019BF3 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4F7F01C21AB3E9B700019BF3 /* LaunchScreen.xib */; };
 		4F7F01D01AB3E9B700019BF3 /* BeaconingTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F7F01CF1AB3E9B700019BF3 /* BeaconingTests.m */; };
 		4F7F01DB1AB3F46500019BF3 /* RegisterUserViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F7F01DA1AB3F46500019BF3 /* RegisterUserViewController.m */; };
 		4F7F01DE1AB3F95800019BF3 /* AdminDashboardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F7F01DD1AB3F95800019BF3 /* AdminDashboardViewController.m */; };
@@ -116,7 +117,6 @@
 		00306C6C1AC17BBC00A7217F /* login-btn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "login-btn.png"; sourceTree = "<group>"; };
 		00306C6D1AC17BBC00A7217F /* login-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "login-icon.png"; sourceTree = "<group>"; };
 		00306C6E1AC17BBC00A7217F /* Login.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Login.png; sourceTree = "<group>"; };
-		00306C6F1AC17BBC00A7217F /* Logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Logo.png; sourceTree = "<group>"; };
 		00306C701AC17BBC00A7217F /* remember-me-active.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "remember-me-active.png"; sourceTree = "<group>"; };
 		00306C711AC17BBC00A7217F /* remember-me-visible.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "remember-me-visible.png"; sourceTree = "<group>"; };
 		00306C721AC17BBC00A7217F /* signup-btn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "signup-btn.png"; sourceTree = "<group>"; };
@@ -133,6 +133,9 @@
 		008EE1301ACAA935009DCAA8 /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
 		0099BD631AC2DB8300F82851 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LoginViewController.h; path = Beaconing/LoginViewController.h; sourceTree = "<group>"; };
 		0099BD641AC2DB8300F82851 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LoginViewController.m; path = Beaconing/LoginViewController.m; sourceTree = "<group>"; };
+		00A90C1A1ACBB11C00209F4F /* Logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Logo.png; sourceTree = "<group>"; };
+		00A90C1C1ACBB6DF00209F4F /* Splash-screen-bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Splash-screen-bg.png"; sourceTree = "<group>"; };
+		00A90C201ACBC32E00209F4F /* Launch Screen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = "Launch Screen.xib"; path = "../Launch Screen.xib"; sourceTree = "<group>"; };
 		00A9A8A61AC3E4C300D4A439 /* SearchBeaconViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SearchBeaconViewController.h; path = Beaconing/SearchBeaconViewController.h; sourceTree = "<group>"; };
 		00A9A8A71AC3E4C300D4A439 /* SearchBeaconViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SearchBeaconViewController.m; path = Beaconing/SearchBeaconViewController.m; sourceTree = "<group>"; };
 		00A9A8B11AC40FFF00D4A439 /* BeaconManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BeaconManager.h; sourceTree = "<group>"; };
@@ -157,7 +160,6 @@
 		4F7F01BB1AB3E9B700019BF3 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = ViewController.m; path = Beaconing/ViewController.m; sourceTree = "<group>"; };
 		4F7F01BE1AB3E9B700019BF3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4F7F01C01AB3E9B700019BF3 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		4F7F01C31AB3E9B700019BF3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		4F7F01C91AB3E9B700019BF3 /* BeaconingTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BeaconingTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4F7F01CE1AB3E9B700019BF3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4F7F01CF1AB3E9B700019BF3 /* BeaconingTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BeaconingTests.m; sourceTree = "<group>"; };
@@ -262,6 +264,8 @@
 		00306C6A1AC17B7E00A7217F /* Image files */ = {
 			isa = PBXGroup;
 			children = (
+				00A90C1C1ACBB6DF00209F4F /* Splash-screen-bg.png */,
+				00A90C1A1ACBB11C00209F4F /* Logo.png */,
 				00306C7F1AC17BC800A7217F /* Signup.png */,
 				00306C801AC17BC800A7217F /* splash-bg.png */,
 				00306C811AC17BC800A7217F /* Splash-screen.png */,
@@ -269,7 +273,6 @@
 				00306C6C1AC17BBC00A7217F /* login-btn.png */,
 				00306C6D1AC17BBC00A7217F /* login-icon.png */,
 				00306C6E1AC17BBC00A7217F /* Login.png */,
-				00306C6F1AC17BBC00A7217F /* Logo.png */,
 				00306C701AC17BBC00A7217F /* remember-me-active.png */,
 				00306C711AC17BBC00A7217F /* remember-me-visible.png */,
 				00306C721AC17BBC00A7217F /* signup-btn.png */,
@@ -372,8 +375,8 @@
 				00A9A8A41AC3DE2C00D4A439 /* ViewControllers */,
 				000855111AB6992A00E0C566 /* ModelClasses */,
 				4F7F01BD1AB3E9B700019BF3 /* Main.storyboard */,
+				00A90C201ACBC32E00209F4F /* Launch Screen.xib */,
 				4F7F01C01AB3E9B700019BF3 /* Images.xcassets */,
-				4F7F01C21AB3E9B700019BF3 /* LaunchScreen.xib */,
 				4F7F01B31AB3E9B700019BF3 /* Supporting Files */,
 			);
 			path = Beaconing;
@@ -490,13 +493,13 @@
 				00306C751AC17BBC00A7217F /* back.png in Resources */,
 				00306C781AC17BBC00A7217F /* Login.png in Resources */,
 				4F7F01BF1AB3E9B700019BF3 /* Main.storyboard in Resources */,
+				00A90C1D1ACBB6DF00209F4F /* Splash-screen-bg.png in Resources */,
 				00306C831AC17BC800A7217F /* splash-bg.png in Resources */,
-				00306C791AC17BBC00A7217F /* Logo.png in Resources */,
 				00306C7E1AC17BBC00A7217F /* txt-field.png in Resources */,
 				00306C7C1AC17BBC00A7217F /* signup-btn.png in Resources */,
 				00E14DAA1AC51F2C00153155 /* Raleway-Medium.ttf in Resources */,
 				00306C761AC17BBC00A7217F /* login-btn.png in Resources */,
-				4F7F01C41AB3E9B700019BF3 /* LaunchScreen.xib in Resources */,
+				00A90C1B1ACBB11C00209F4F /* Logo.png in Resources */,
 				00306C7B1AC17BBC00A7217F /* remember-me-visible.png in Resources */,
 				4F7F01C11AB3E9B700019BF3 /* Images.xcassets in Resources */,
 				00E14DAB1AC51F2C00153155 /* Raleway-Regular.ttf in Resources */,
@@ -504,6 +507,7 @@
 				00306C7D1AC17BBC00A7217F /* signup-icon.png in Resources */,
 				00306C7A1AC17BBC00A7217F /* remember-me-active.png in Resources */,
 				00306C821AC17BC800A7217F /* Signup.png in Resources */,
+				00A90C211ACBC32E00209F4F /* Launch Screen.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -581,14 +585,6 @@
 				4F7F01BE1AB3E9B700019BF3 /* Base */,
 			);
 			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		4F7F01C21AB3E9B700019BF3 /* LaunchScreen.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				4F7F01C31AB3E9B700019BF3 /* Base */,
-			);
-			name = LaunchScreen.xib;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

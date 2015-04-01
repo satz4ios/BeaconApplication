@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6724" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6711"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="480" height="480"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="splash-bg.png" translatesAutoresizingMaskIntoConstraints="NO" id="S9w-vc-cgV">
+                    <rect key="frame" x="0.0" y="0.0" width="480" height="480"/>
+                </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Logo" translatesAutoresizingMaskIntoConstraints="NO" id="fJf-Fw-l6z">
+                    <rect key="frame" x="120" y="149" width="240" height="182"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="240" id="FcA-GF-6YV"/>
+                        <constraint firstAttribute="height" constant="182" id="gj9-aM-Aht"/>
+                    </constraints>
+                </imageView>
+            </subviews>
+            <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="S9w-vc-cgV" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="6ux-M3-jlt"/>
+                <constraint firstItem="S9w-vc-cgV" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="Fon-Oe-4gA"/>
+                <constraint firstAttribute="centerY" secondItem="fJf-Fw-l6z" secondAttribute="centerY" id="XEM-kH-5lv"/>
+                <constraint firstAttribute="bottom" secondItem="S9w-vc-cgV" secondAttribute="bottom" id="ZUb-eu-aF5"/>
+                <constraint firstItem="fJf-Fw-l6z" firstAttribute="centerX" secondItem="S9w-vc-cgV" secondAttribute="centerX" id="inj-9P-rKY"/>
+                <constraint firstAttribute="trailing" secondItem="S9w-vc-cgV" secondAttribute="trailing" id="lJ4-U8-b2L"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="404" y="445"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="Logo" width="815" height="632"/>
+        <image name="splash-bg.png" width="1242" height="2048"/>
+    </resources>
+</document>
