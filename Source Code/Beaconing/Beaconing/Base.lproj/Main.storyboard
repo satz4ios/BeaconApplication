@@ -51,12 +51,12 @@
                                     <constraint firstAttribute="width" constant="26" id="Rny-ij-FHx"/>
                                 </constraints>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="LogoImages" translatesAutoresizingMaskIntoConstraints="NO" id="5t9-Pf-VrA">
-                                <rect key="frame" x="180" y="169" width="240" height="175"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Logo" translatesAutoresizingMaskIntoConstraints="NO" id="5t9-Pf-VrA">
+                                <rect key="frame" x="180" y="169" width="242" height="185"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="175" id="Rg1-Z4-lYC"/>
-                                    <constraint firstAttribute="width" constant="240" id="aax-o3-L9Z"/>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="240" id="xOb-35-OPN"/>
+                                    <constraint firstAttribute="height" constant="185" id="Rg1-Z4-lYC"/>
+                                    <constraint firstAttribute="width" constant="242" id="aax-o3-L9Z"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="242" id="xOb-35-OPN"/>
                                 </constraints>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="signup-icon.png" translatesAutoresizingMaskIntoConstraints="NO" id="4xq-9g-c7a">
@@ -73,7 +73,7 @@
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="cdm-Sp-aB1" secondAttribute="bottom" constant="29" id="2ji-jI-PIi"/>
                             <constraint firstAttribute="trailingMargin" secondItem="gKH-4O-aVK" secondAttribute="trailing" constant="95" id="3Y3-af-oL1"/>
                             <constraint firstAttribute="trailing" secondItem="5X8-TG-heu" secondAttribute="trailing" id="8q8-wN-GqN"/>
-                            <constraint firstItem="5t9-Pf-VrA" firstAttribute="centerX" secondItem="5X8-TG-heu" secondAttribute="centerX" id="9ig-J4-Ald"/>
+                            <constraint firstItem="5t9-Pf-VrA" firstAttribute="centerX" secondItem="5X8-TG-heu" secondAttribute="centerX" constant="1" id="9ig-J4-Ald"/>
                             <constraint firstItem="Tom-Ly-Icg" firstAttribute="leading" secondItem="gKH-4O-aVK" secondAttribute="trailing" constant="-43" id="BoL-s0-Aq2"/>
                             <constraint firstItem="5X8-TG-heu" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="EVD-x9-S3i"/>
                             <constraint firstItem="cdm-Sp-aB1" firstAttribute="height" secondItem="Tom-Ly-Icg" secondAttribute="height" id="GE5-K1-riw"/>
@@ -130,11 +130,11 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="LoginBgImages" translatesAutoresizingMaskIntoConstraints="NO" id="sUo-h7-mHE">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="LogoImages" translatesAutoresizingMaskIntoConstraints="NO" id="O1i-Cs-fDf">
-                                <rect key="frame" x="180" y="41" width="240" height="175"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Logo" translatesAutoresizingMaskIntoConstraints="NO" id="O1i-Cs-fDf">
+                                <rect key="frame" x="180" y="41" width="240" height="182"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="lessThanOrEqual" constant="240" id="1Ss-3w-aHy"/>
-                                    <constraint firstAttribute="height" constant="175" id="eL2-Z6-obB"/>
+                                    <constraint firstAttribute="height" constant="182" id="eL2-Z6-obB"/>
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WdB-CB-MOC">
@@ -695,7 +695,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gpI-QS-1Ky" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1230" y="1844"/>
+            <point key="canvasLocation" x="1172" y="1733"/>
         </scene>
         <!--Configure Beacon View Controller-->
         <scene sceneID="mRB-H3-2DD">
@@ -824,7 +824,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4zM-Yt-rhI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2041" y="1891"/>
+            <point key="canvasLocation" x="2201" y="1733"/>
         </scene>
         <!--Normal User View Controller-->
         <scene sceneID="sSi-KT-W04">
@@ -880,7 +880,7 @@
         <image name="Backbtnimage" width="52" height="55"/>
         <image name="LoginBgImages" width="1242" height="2048"/>
         <image name="LoginButtonImages" width="528" height="140"/>
-        <image name="LogoImages" width="724" height="522"/>
+        <image name="Logo" width="815" height="632"/>
         <image name="RememberMeVsbImage" width="70" height="70"/>
         <image name="SignUpButtonImages" width="528" height="140"/>
         <image name="login-icon.png" width="70" height="80"/>
