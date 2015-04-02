@@ -45,22 +45,23 @@
 -(void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
     
+    self.beaconListTv.tableFooterView = [[UIView alloc] initWithFrame:CGRectZero];
     
     self.navigationController.navigationBar.hidden = YES;
     
     [self detectBluetoothWithOSAlert:YES];
     
-    
-    for (int idx =0; idx<5; idx++) {
-        BeaconObj *tempObj = [[BeaconObj alloc] init];
-        tempObj.Uuid = @"123";
-        tempObj.majorId = @"123";
-        tempObj.minorId = @"123";
-        
-        [self.searchedBeacons addObject:tempObj];
-    }
-    
-    [self.beaconListTv reloadData];
+//    
+//    for (int idx =0; idx<5; idx++) {
+//        BeaconObj *tempObj = [[BeaconObj alloc] init];
+//        tempObj.Uuid = @"123-123-asdasassd-123-asdaads";
+//        tempObj.majorId = @"123";
+//        tempObj.minorId = @"123";
+//        
+//        [self.searchedBeacons addObject:tempObj];
+//    }
+//    
+//    [self.beaconListTv reloadData];
     
 
 }
@@ -98,6 +99,8 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     
+    [tableView setBackgroundColor:[UIColor clearColor]];
+    
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"beaconListCell"];
 
     BeaconObj *tempObj = [self.searchedBeacons objectAtIndex:[indexPath row]];
@@ -107,15 +110,68 @@
     UILabel *majorLbl = (UILabel*) [cell viewWithTag:200];
     UILabel *minorLbl = (UILabel*) [cell viewWithTag:300];
     
-    NSString *uuidVal = [NSString stringWithFormat:@"UUID : %@",tempObj.Uuid];
-    NSString *majorVal = [NSString stringWithFormat:@"Major : %@",tempObj.majorId];
-    NSString *minorVal = [NSString stringWithFormat:@"Minor : %@",tempObj.minorId];
+   // NSString *uuidVal = [NSString stringWithFormat:@"UUID : %@",tempObj.Uuid];
+    //NSString *majorVal = [NSString stringWithFormat:@"Major : %@",tempObj.majorId];
+    //NSString *minorVal = [NSString stringWithFormat:@"Minor : %@",tempObj.minorId];
     
     
-    [uuidLbl setText:uuidVal];
     
-    [majorLbl setText:majorVal];
-    [minorLbl setText:minorVal];
+
+    UIFont *mediumFont = [UIFont fontWithName:@"Raleway-Medium" size:15];
+    //UIFont *regularFont = [UIFont fontWithName:@"Raleway-Regular" size:15];
+    UIFont *regularFont = [UIFont fontWithName:@"Raleway" size:15];
+    
+    NSString *uuidText = @"UUID : ";
+    NSMutableAttributedString *uuidAttString=[[NSMutableAttributedString alloc] initWithString:uuidText];
+    NSInteger _stringLength=[uuidText length];
+    [uuidAttString addAttribute:NSFontAttributeName value:mediumFont range:NSMakeRange(0, _stringLength)];
+    
+    
+    NSString *uuidVal = [NSString stringWithFormat:@"%@",tempObj.Uuid];
+    NSMutableAttributedString *uuidAttString1=[[NSMutableAttributedString alloc] initWithString:uuidVal];
+    _stringLength=[uuidVal length];
+    
+    [uuidAttString1 addAttribute:NSFontAttributeName value:regularFont range:NSMakeRange(0, _stringLength)];
+    [uuidAttString appendAttributedString:uuidAttString1];
+
+    
+    NSString *majorText = @"Major : ";
+    NSMutableAttributedString *majorAttString=[[NSMutableAttributedString alloc] initWithString:majorText];
+    _stringLength=[majorText length];
+    [uuidAttString addAttribute:NSFontAttributeName value:mediumFont range:NSMakeRange(0, _stringLength)];
+    
+    
+    NSString *majorVal = [NSString stringWithFormat:@"%@",tempObj.majorId];
+    NSMutableAttributedString *majorAttString1=[[NSMutableAttributedString alloc] initWithString:majorVal];
+    _stringLength=[majorVal length];
+    
+    [majorAttString1 addAttribute:NSFontAttributeName value:regularFont range:NSMakeRange(0, _stringLength)];
+    [majorAttString appendAttributedString:majorAttString1];
+    
+    
+    NSString *minorText = @"Minor : ";
+    NSMutableAttributedString *minorAttString=[[NSMutableAttributedString alloc] initWithString:minorText];
+    _stringLength=[minorText length];
+    [minorAttString addAttribute:NSFontAttributeName value:mediumFont range:NSMakeRange(0, _stringLength)];
+    
+    
+    NSString *minorVal = [NSString stringWithFormat:@"%@",tempObj.minorId];
+    NSMutableAttributedString *minorAttString1=[[NSMutableAttributedString alloc] initWithString:minorVal];
+    _stringLength=[minorVal length];
+    
+    [minorAttString1 addAttribute:NSFontAttributeName value:regularFont range:NSMakeRange(0, _stringLength)];
+    [minorAttString appendAttributedString:minorAttString1];
+    
+    
+    
+    [uuidLbl setAttributedText:uuidAttString];
+    [majorLbl setAttributedText:majorAttString];
+    [minorLbl setAttributedText:minorAttString];
+    
+    //[uuidLbl setText:uuidVal];
+    
+   // [majorLbl setText:majorVal];
+    //[minorLbl setText:minorVal];
     
     
     return cell;
@@ -133,6 +189,10 @@
     
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+    return 60.0;
 }
 
 #pragma mark beacon mgr delegates

@@ -26,6 +26,8 @@
         <mutableArray key="Raleway-SemiBold.ttf">
             <string>Raleway-SemiBold</string>
             <string>Raleway-SemiBold</string>
+            <string>Raleway-SemiBold</string>
+            <string>Raleway-SemiBold</string>
         </mutableArray>
     </customFonts>
     <scenes>
@@ -549,6 +551,9 @@
                                 <state key="normal" title="Add Beacons">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="onTapAddBeacon:" destination="m4m-Nm-320" eventType="touchUpInside" id="WTa-W9-sqP"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mge-ld-Ujx">
                                 <rect key="frame" x="357" y="31" width="227" height="32"/>
@@ -566,6 +571,9 @@
                                 <state key="normal" title="Configure Beacons">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="onTapConfigureBeaconBtn:" destination="m4m-Nm-320" eventType="touchUpInside" id="3pD-KN-qhy"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r2g-jR-lLs">
                                 <rect key="frame" x="204" y="276" width="193" height="30"/>
@@ -641,11 +649,11 @@
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Add Beacon" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yff-4a-1ij">
                                         <rect key="frame" x="254" y="12" width="92" height="19"/>
                                         <fontDescription key="fontDescription" name="Raleway-SemiBold" family="Raleway" pointSize="16"/>
-                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
-                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" red="0.1960784314" green="0.7725490196" blue="0.60392156860000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="s1k-wR-87o" secondAttribute="trailing" constant="19" id="JcH-c3-WWO"/>
                                     <constraint firstAttribute="centerY" secondItem="Yff-4a-1ij" secondAttribute="centerY" id="JfT-NM-J2H"/>
@@ -659,15 +667,16 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="tiN-2b-cDa">
                                 <rect key="frame" x="0.0" y="64" width="600" height="536"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="beaconListCell" rowHeight="50" id="tz6-kZ-JfL">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="beaconListCell" rowHeight="60" id="tz6-kZ-JfL">
                                         <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="tz6-kZ-JfL" id="ipA-ED-IB6">
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" tag="100" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LWO-0a-6mk">
-                                                    <rect key="frame" x="10" y="5" width="580" height="18"/>
+                                                    <rect key="frame" x="10" y="10" width="580" height="18"/>
                                                     <fontDescription key="fontDescription" name="Raleway-Medium" family="Raleway" pointSize="15"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
@@ -685,13 +694,14 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
+                                            <color key="backgroundColor" red="0.95294117647058818" green="0.95686274509803915" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <constraints>
                                                 <constraint firstAttribute="bottomMargin" secondItem="fIo-E5-U0t" secondAttribute="bottom" constant="-2" id="6iI-w8-UMX"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="fIo-E5-U0t" secondAttribute="trailing" constant="2" id="7e7-hv-ySq"/>
                                                 <constraint firstItem="LWO-0a-6mk" firstAttribute="leading" secondItem="ipA-ED-IB6" secondAttribute="leadingMargin" constant="2" id="Ezi-I1-044"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="LWO-0a-6mk" secondAttribute="trailing" constant="2" id="Kjj-R5-p8T"/>
                                                 <constraint firstItem="bLR-Y1-tN9" firstAttribute="leading" secondItem="ipA-ED-IB6" secondAttribute="leadingMargin" constant="2" id="l6e-cZ-yOb"/>
-                                                <constraint firstItem="LWO-0a-6mk" firstAttribute="top" secondItem="ipA-ED-IB6" secondAttribute="topMargin" constant="-3" id="lul-tX-Fqg"/>
+                                                <constraint firstItem="LWO-0a-6mk" firstAttribute="top" secondItem="ipA-ED-IB6" secondAttribute="topMargin" constant="2" id="lul-tX-Fqg"/>
                                                 <constraint firstAttribute="bottomMargin" secondItem="bLR-Y1-tN9" secondAttribute="bottom" constant="-2" id="xfM-hn-Pfb"/>
                                             </constraints>
                                         </tableViewCellContentView>
@@ -847,9 +857,18 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6lO-TQ-ecm">
                                 <rect key="frame" x="0.0" y="20" width="600" height="44"/>
                                 <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add Beacon" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bBZ-SK-Zj9">
+                                        <rect key="frame" x="254" y="12" width="92" height="19"/>
+                                        <fontDescription key="fontDescription" name="Raleway-SemiBold" family="Raleway" pointSize="16"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YLQ-d9-9NF">
-                                        <rect key="frame" x="550" y="6" width="30" height="30"/>
-                                        <state key="normal" title="Add">
+                                        <rect key="frame" x="530" y="5" width="50" height="32"/>
+                                        <color key="backgroundColor" red="1" green="0.71372549019607845" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" name="Raleway-SemiBold" family="Raleway" pointSize="17"/>
+                                        <state key="normal" title="  Add  ">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
@@ -870,10 +889,12 @@
                                         </connections>
                                     </button>
                                 </subviews>
-                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" red="0.1960784314" green="0.7725490196" blue="0.60392156860000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="YLQ-d9-9NF" secondAttribute="trailing" constant="20" id="0zs-ia-0fw"/>
+                                    <constraint firstAttribute="centerY" secondItem="bBZ-SK-Zj9" secondAttribute="centerY" id="5up-87-qpz"/>
                                     <constraint firstAttribute="centerY" secondItem="78e-6N-jac" secondAttribute="centerY" id="Nbn-xC-cT6"/>
+                                    <constraint firstAttribute="centerX" secondItem="bBZ-SK-Zj9" secondAttribute="centerX" id="fv8-iX-Vq8"/>
                                     <constraint firstAttribute="height" constant="44" id="jlu-mh-2Dw"/>
                                     <constraint firstAttribute="centerY" secondItem="YLQ-d9-9NF" secondAttribute="centerY" constant="1" id="k97-Ah-DHW"/>
                                     <constraint firstItem="78e-6N-jac" firstAttribute="leading" secondItem="6lO-TQ-ecm" secondAttribute="leading" constant="16" id="tHJ-27-9xt"/>
