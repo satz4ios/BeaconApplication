@@ -45,5 +45,7 @@
 		<string>UIInterfaceOrientationPortrait</string>
 		<string>UIInterfaceOrientationPortraitUpsideDown</string>
 	</array>
+	<key>NSLocationAlwaysUsageDescription</key>
+	<string>requestAlwaysAuthorization</string>
 </dict>
 </plist>

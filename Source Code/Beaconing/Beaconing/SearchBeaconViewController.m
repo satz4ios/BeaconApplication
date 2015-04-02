@@ -73,7 +73,8 @@
 
 
 - (IBAction)backClick:(id)sender {
-    [self.navigationController dismissViewControllerAnimated:YES completion:Nil];
+    //[self.navigationController dismissViewControllerAnimated:YES completion:Nil];
+    [self.navigationController popViewControllerAnimated:YES];
 }
 
 
@@ -123,14 +124,29 @@
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
 
     UIStoryboard *mainStoryboard = [UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]];
-    ConfigureBeaconViewController *configBeacon = [mainStoryboard instantiateViewControllerWithIdentifier:@"ConfigureBeaconViewController"];
-    [configBeacon setSelectedBeacon:[self.searchedBeacons objectAtIndex:[indexPath row]]];
-    
-    UINavigationController *_navigationController = [[UINavigationController alloc]initWithRootViewController:configBeacon];
-    [self presentViewController:_navigationController animated:YES completion:Nil];
+    ConfigureBeaconViewController *_configBeacon = [mainStoryboard instantiateViewControllerWithIdentifier:@"ConfigureBeaconViewController"];
+    [_configBeacon setSelectedBeacon:[self.searchedBeacons objectAtIndex:[indexPath row]]];
+
+    [self.navigationController pushViewController:_configBeacon animated:YES];
+//    UINavigationController *_navigationController = [[UINavigationController alloc]initWithRootViewController:configBeacon];
+//    [self presentViewController:_navigationController animated:YES completion:Nil];
     
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     
+}
+
+
+- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return YES;
+}
+
+- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    if(editingStyle == UITableViewCellEditingStyleDelete)
+    {
+        NSLog(@"I deleted a cell!");
+    }
 }
 
 #pragma mark beacon mgr delegates
@@ -153,7 +169,7 @@
         
         CLBeacon *beacon = (CLBeacon*)obj;
         
-        if (beacon.proximity == CLProximityImmediate || beacon.proximity == CLProximityImmediate ) {
+        if (beacon.proximity == CLProximityImmediate || beacon.proximity == CLProximityNear ) {
             
             BeaconObj *tempObj = [[BeaconObj alloc] init];
             
@@ -161,7 +177,25 @@
             [tempObj setMajorId:[NSString stringWithFormat:@"%@",[beacon major]]];
             [tempObj setMinorId:[NSString stringWithFormat:@"%@",[beacon minor]]];
             
-            if (![self.searchedBeacons containsObject:tempObj]) {
+
+            __weak SearchBeaconViewController *_weakSelf = self;
+            
+            __block BOOL isAlreadyPresent = NO;
+            
+            [self.searchedBeacons enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
+                
+
+                if ([[obj Uuid] isEqualToString:[tempObj Uuid]] &&
+                    [[obj majorId] isEqualToString:[tempObj majorId]] &&
+                    [[obj minorId] isEqualToString:[tempObj minorId]]
+                    ) {
+                    
+                    isAlreadyPresent = YES;
+                }
+                
+            }];
+            
+            if (!isAlreadyPresent) {
                 [self.searchedBeacons addObject:tempObj];
                 [self.beaconListTv reloadData];
             }

@@ -9,10 +9,13 @@
 #import "ConfigureBeaconViewController.h"
 
 #import "Services.h"
+#import "MBProgressHUD.h"
 
 
 
-@interface ConfigureBeaconViewController ()
+@interface ConfigureBeaconViewController (){
+
+}
 
 @property (weak, nonatomic) IBOutlet UITextField *uuidTxtField;
 @property (weak, nonatomic) IBOutlet UITextField *majorTxtField;
@@ -20,6 +23,11 @@
 @property (weak, nonatomic) IBOutlet UITextField *minorTxtField;
 @property (weak, nonatomic) IBOutlet UITextField *beaconTagTxtField;
 @property (weak, nonatomic) IBOutlet UITextField *beaconDescTxtField;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *actionBtn;
+
+
+@property (strong,nonatomic) MBProgressHUD *actiivityView;
+
 - (IBAction)onTapAddBtn:(id)sender;
 
 @end
@@ -52,7 +60,8 @@
 
 
 - (IBAction)backClick:(id)sender {
-    [self.navigationController dismissViewControllerAnimated:YES completion:Nil];
+    //[self.navigationController dismissViewControllerAnimated:YES completion:Nil];
+        [self.navigationController popViewControllerAnimated:YES];
 }
 
 
@@ -83,14 +92,15 @@
     [_paramsDict setValue:@"1" forKey:@"createdBy"];
     
     [_serviceAPI sendHttpRequestServiceWithParameters:_paramsDict];
-}
+}  
 
 
 #pragma mark APIserviceProto delegates
 
 -(void)recievedServiceCallData:(NSDictionary *)dictionary{
 
-   // NSString *errorCode = dictionary[@"errorCode"];
+
+    [_actiivityView hide:YES];
     NSString *message = dictionary[@"message"];
     
     UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@""
@@ -102,11 +112,12 @@
 
     
     
+    
 }
 
 -(void)recievedServiceCallWithError:(NSError *)ErrorMessage{
     
-    
+    [_actiivityView hide:YES];
     
     UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@""
                                                     message:ErrorMessage.localizedDescription
@@ -114,6 +125,7 @@
                                           cancelButtonTitle:@"ok"
                                           otherButtonTitles:nil, nil];
     [alert   show];
+    
     
 }
 
@@ -127,11 +139,21 @@
 
 - (IBAction)onTapAddBtn:(id)sender {
     
+    [self resignKeyboard];
+    
+    _actiivityView= [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+    _actiivityView.labelText = @"Updating...";
+    _actiivityView.dimBackground = YES;
+
+    
+    
     NSString *beaconTag = self.beaconTagTxtField.text;
     NSString *beaconDesc =  self.beaconDescTxtField.text;
     
     if(!([beaconTag length] > 0)
        || !([beaconDesc length] > 0)){
+        
+        [_actiivityView hide:YES];
         
         UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@""
                                                         message:@"Pls fill all the details."
@@ -141,10 +163,18 @@
         
         [alert show];
         
+
+        
         
     }
     else{
         [self makeWSCallForAddingBeacon];
     }
+}
+
+
+-(void)resignKeyboard{
+    [_beaconDescTxtField resignFirstResponder];
+    [_beaconTagTxtField resignFirstResponder];
 }
 @end

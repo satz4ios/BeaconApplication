@@ -10,7 +10,14 @@
 #import "ServiceCallAPI.h"
 #import "BeaconObj.h"
 
+typedef enum {
+    AddBeaconFlow,
+    EditBeaconFlow
+} LaunchedFrom;
+
 @interface ConfigureBeaconViewController : UIViewController<APIserviceProto,UITextFieldDelegate>
 
 @property (nonatomic,strong) BeaconObj *selectedBeacon;
+@property (nonatomic,assign) LaunchedFrom *launcedFrom;
+
 @end
