@@ -39,6 +39,7 @@
         } else if (operation.response.statusCode == -1005) {
             [self.apiDelegate recievedServiceCallWithError:error];
         }
+        // kCFURLErrorNotConnectedToInternet
     }];
 }
 @end

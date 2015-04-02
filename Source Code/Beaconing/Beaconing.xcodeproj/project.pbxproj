@@ -37,6 +37,14 @@
 		00306C821AC17BC800A7217F /* Signup.png in Resources */ = {isa = PBXBuildFile; fileRef = 00306C7F1AC17BC800A7217F /* Signup.png */; };
 		00306C831AC17BC800A7217F /* splash-bg.png in Resources */ = {isa = PBXBuildFile; fileRef = 00306C801AC17BC800A7217F /* splash-bg.png */; };
 		00306C841AC17BC800A7217F /* Splash-screen.png in Resources */ = {isa = PBXBuildFile; fileRef = 00306C811AC17BC800A7217F /* Splash-screen.png */; };
+		007D52ED1ACD15170026E607 /* icon_120*120.png in Resources */ = {isa = PBXBuildFile; fileRef = 007D52EA1ACD15170026E607 /* icon_120*120.png */; };
+		007D52EE1ACD15170026E607 /* icon_152*152.png in Resources */ = {isa = PBXBuildFile; fileRef = 007D52EB1ACD15170026E607 /* icon_152*152.png */; };
+		007D52EF1ACD15170026E607 /* icon_180*180.png in Resources */ = {isa = PBXBuildFile; fileRef = 007D52EC1ACD15170026E607 /* icon_180*180.png */; };
+		007D52F51ACD25EE0026E607 /* add.-beacon.png in Resources */ = {isa = PBXBuildFile; fileRef = 007D52F01ACD25EE0026E607 /* add.-beacon.png */; };
+		007D52F61ACD25EE0026E607 /* beacon-config.png in Resources */ = {isa = PBXBuildFile; fileRef = 007D52F11ACD25EE0026E607 /* beacon-config.png */; };
+		007D52F71ACD25EE0026E607 /* contact.png in Resources */ = {isa = PBXBuildFile; fileRef = 007D52F21ACD25EE0026E607 /* contact.png */; };
+		007D52F81ACD25EE0026E607 /* create-coupon.png in Resources */ = {isa = PBXBuildFile; fileRef = 007D52F31ACD25EE0026E607 /* create-coupon.png */; };
+		007D52F91ACD25EE0026E607 /* help-us.png in Resources */ = {isa = PBXBuildFile; fileRef = 007D52F41ACD25EE0026E607 /* help-us.png */; };
 		008EE12D1ACA7F04009DCAA8 /* UICustomActionSheet.m in Sources */ = {isa = PBXBuildFile; fileRef = 008EE12A1ACA7F04009DCAA8 /* UICustomActionSheet.m */; };
 		008EE12E1ACA7F04009DCAA8 /* UIImageEffects.m in Sources */ = {isa = PBXBuildFile; fileRef = 008EE12C1ACA7F04009DCAA8 /* UIImageEffects.m */; };
 		008EE1311ACAA935009DCAA8 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 008EE1301ACAA935009DCAA8 /* MBProgressHUD.m */; };
@@ -126,6 +134,14 @@
 		00306C7F1AC17BC800A7217F /* Signup.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Signup.png; sourceTree = "<group>"; };
 		00306C801AC17BC800A7217F /* splash-bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "splash-bg.png"; sourceTree = "<group>"; };
 		00306C811AC17BC800A7217F /* Splash-screen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Splash-screen.png"; sourceTree = "<group>"; };
+		007D52EA1ACD15170026E607 /* icon_120*120.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_120*120.png"; sourceTree = "<group>"; };
+		007D52EB1ACD15170026E607 /* icon_152*152.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_152*152.png"; sourceTree = "<group>"; };
+		007D52EC1ACD15170026E607 /* icon_180*180.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_180*180.png"; sourceTree = "<group>"; };
+		007D52F01ACD25EE0026E607 /* add.-beacon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "add.-beacon.png"; sourceTree = "<group>"; };
+		007D52F11ACD25EE0026E607 /* beacon-config.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "beacon-config.png"; sourceTree = "<group>"; };
+		007D52F21ACD25EE0026E607 /* contact.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = contact.png; sourceTree = "<group>"; };
+		007D52F31ACD25EE0026E607 /* create-coupon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "create-coupon.png"; sourceTree = "<group>"; };
+		007D52F41ACD25EE0026E607 /* help-us.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "help-us.png"; sourceTree = "<group>"; };
 		008EE1291ACA7F04009DCAA8 /* UICustomActionSheet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UICustomActionSheet.h; sourceTree = "<group>"; };
 		008EE12A1ACA7F04009DCAA8 /* UICustomActionSheet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UICustomActionSheet.m; sourceTree = "<group>"; };
 		008EE12B1ACA7F04009DCAA8 /* UIImageEffects.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIImageEffects.h; sourceTree = "<group>"; };
@@ -267,6 +283,14 @@
 		00306C6A1AC17B7E00A7217F /* Image files */ = {
 			isa = PBXGroup;
 			children = (
+				007D52F01ACD25EE0026E607 /* add.-beacon.png */,
+				007D52F11ACD25EE0026E607 /* beacon-config.png */,
+				007D52F21ACD25EE0026E607 /* contact.png */,
+				007D52F31ACD25EE0026E607 /* create-coupon.png */,
+				007D52F41ACD25EE0026E607 /* help-us.png */,
+				007D52EA1ACD15170026E607 /* icon_120*120.png */,
+				007D52EB1ACD15170026E607 /* icon_152*152.png */,
+				007D52EC1ACD15170026E607 /* icon_180*180.png */,
 				00A90C1C1ACBB6DF00209F4F /* Splash-screen-bg.png */,
 				00A90C1A1ACBB11C00209F4F /* Logo.png */,
 				00306C7F1AC17BC800A7217F /* Signup.png */,
@@ -495,6 +519,7 @@
 			files = (
 				00E14DAD1AC5327100153155 /* Raleway-SemiBold.ttf in Resources */,
 				00306C771AC17BBC00A7217F /* login-icon.png in Resources */,
+				007D52ED1ACD15170026E607 /* icon_120*120.png in Resources */,
 				00306C751AC17BBC00A7217F /* back.png in Resources */,
 				00306C781AC17BBC00A7217F /* Login.png in Resources */,
 				4F7F01BF1AB3E9B700019BF3 /* Main.storyboard in Resources */,
@@ -503,15 +528,22 @@
 				00306C7E1AC17BBC00A7217F /* txt-field.png in Resources */,
 				00306C7C1AC17BBC00A7217F /* signup-btn.png in Resources */,
 				00E14DAA1AC51F2C00153155 /* Raleway-Medium.ttf in Resources */,
+				007D52EE1ACD15170026E607 /* icon_152*152.png in Resources */,
+				007D52F91ACD25EE0026E607 /* help-us.png in Resources */,
 				00306C761AC17BBC00A7217F /* login-btn.png in Resources */,
 				00A90C1B1ACBB11C00209F4F /* Logo.png in Resources */,
+				007D52F61ACD25EE0026E607 /* beacon-config.png in Resources */,
 				00306C7B1AC17BBC00A7217F /* remember-me-visible.png in Resources */,
+				007D52F71ACD25EE0026E607 /* contact.png in Resources */,
 				4F7F01C11AB3E9B700019BF3 /* Images.xcassets in Resources */,
+				007D52EF1ACD15170026E607 /* icon_180*180.png in Resources */,
+				007D52F81ACD25EE0026E607 /* create-coupon.png in Resources */,
 				00E14DAB1AC51F2C00153155 /* Raleway-Regular.ttf in Resources */,
 				00306C841AC17BC800A7217F /* Splash-screen.png in Resources */,
 				00306C7D1AC17BBC00A7217F /* signup-icon.png in Resources */,
 				00306C7A1AC17BBC00A7217F /* remember-me-active.png in Resources */,
 				00306C821AC17BC800A7217F /* Signup.png in Resources */,
+				007D52F51ACD25EE0026E607 /* add.-beacon.png in Resources */,
 				00A90C211ACBC32E00209F4F /* Launch Screen.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -634,7 +666,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
-				PROVISIONING_PROFILE = "c3b22a07-b725-45b4-9e71-2a3c38e514c4";
+				PROVISIONING_PROFILE = "b4b9099b-bb9a-4e7a-be1a-88a816bda081";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -671,7 +703,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
-				PROVISIONING_PROFILE = "c3b22a07-b725-45b4-9e71-2a3c38e514c4";
+				PROVISIONING_PROFILE = "b4b9099b-bb9a-4e7a-be1a-88a816bda081";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
@@ -688,7 +720,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "c3b22a07-b725-45b4-9e71-2a3c38e514c4";
+				PROVISIONING_PROFILE = "b4b9099b-bb9a-4e7a-be1a-88a816bda081";
 			};
 			name = Debug;
 		};
@@ -702,7 +734,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "c3b22a07-b725-45b4-9e71-2a3c38e514c4";
+				PROVISIONING_PROFILE = "b4b9099b-bb9a-4e7a-be1a-88a816bda081";
 			};
 			name = Release;
 		};
