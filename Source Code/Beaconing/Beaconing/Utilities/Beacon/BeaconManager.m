@@ -82,7 +82,7 @@
     for (CLBeaconRegion *rgn in beaconRegions) {
         
         [self.locaionMgr startMonitoringForRegion:rgn];
-       // [self.locaionMgr requestStateForRegion:rgn];
+        [self.locaionMgr requestStateForRegion:rgn];
         [rgn setNotifyEntryStateOnDisplay:YES];
     }
 }

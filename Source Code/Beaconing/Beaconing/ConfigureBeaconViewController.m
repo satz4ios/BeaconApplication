@@ -13,7 +13,7 @@
 
 
 
-@interface ConfigureBeaconViewController (){
+@interface ConfigureBeaconViewController ()<UIAlertViewDelegate>{
 
 }
 
@@ -54,9 +54,10 @@
     [self.minorTxtField setText:_selectedBeacon.minorId];
     
     if (_launcedFrom == EditBeaconFlow) {
-//        [[_actionBtn titleLabel] setText:@"Save"];
-        [_actionBtn setTitle:@"Save" forState:UIControlStateNormal];
+        [_actionBtn setTitle:@" Save " forState:UIControlStateNormal];
     }
+    
+    _actionBtn.layer.cornerRadius = 5.0;
     
 }
 
@@ -122,7 +123,7 @@
     
     UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@""
                                                     message:message
-                                                   delegate:nil
+                                                   delegate:self
                                           cancelButtonTitle:@"ok"
                                           otherButtonTitles:nil, nil];
     [alert   show];
@@ -200,5 +201,10 @@
 -(void)resignKeyboard{
     [_beaconDescTxtField resignFirstResponder];
     [_beaconTagTxtField resignFirstResponder];
+}
+
+
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex{
+    [self.navigationController popToRootViewControllerAnimated:YES];
 }
 @end
