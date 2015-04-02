@@ -6,11 +6,11 @@
 //  Copyright (c) 2015 xyz. All rights reserved.
 //
 
-#import "SearchBeaconViewController.h"
+#import "NearbyBeaconListViewController.h"
 #import "BeaconObj.h"
 #import "ConfigureBeaconViewController.h"
 
-@interface SearchBeaconViewController ()<UITableViewDataSource,UITableViewDelegate>
+@interface NearbyBeaconListViewController ()<UITableViewDataSource,UITableViewDelegate>
 
 @property (strong,nonatomic) BeaconManager *beaconMgr;
 
@@ -22,7 +22,7 @@
 
 @end
 
-@implementation SearchBeaconViewController
+@implementation NearbyBeaconListViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -73,13 +73,11 @@
 
 
 - (IBAction)backClick:(id)sender {
-    //[self.navigationController dismissViewControllerAnimated:YES completion:Nil];
     [self.navigationController popViewControllerAnimated:YES];
 }
 
 
 
-/*
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
@@ -87,7 +85,7 @@
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
 }
-*/
+
 
 
 #pragma mark TableView delegates
@@ -109,13 +107,16 @@
     UILabel *majorLbl = (UILabel*) [cell viewWithTag:200];
     UILabel *minorLbl = (UILabel*) [cell viewWithTag:300];
     
-    [uuidLbl setText:tempObj.Uuid];
+    NSString *uuidVal = [NSString stringWithFormat:@"UUID : %@",tempObj.Uuid];
+    NSString *majorVal = [NSString stringWithFormat:@"Major : %@",tempObj.majorId];
+    NSString *minorVal = [NSString stringWithFormat:@"Minor : %@",tempObj.minorId];
     
-    NSString *majorMinorVal = [NSString stringWithFormat:@"%@,%@",tempObj.majorId,tempObj.minorId];
-//    [majorLbl setText:tempObj.majorId];
-    [minorLbl setText:@""];
     
-    [majorLbl setText:majorMinorVal];
+    [uuidLbl setText:uuidVal];
+    
+    [majorLbl setText:majorVal];
+    [minorLbl setText:minorVal];
+    
     
     return cell;
 }
@@ -126,27 +127,12 @@
     UIStoryboard *mainStoryboard = [UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]];
     ConfigureBeaconViewController *_configBeacon = [mainStoryboard instantiateViewControllerWithIdentifier:@"ConfigureBeaconViewController"];
     [_configBeacon setSelectedBeacon:[self.searchedBeacons objectAtIndex:[indexPath row]]];
+    [_configBeacon setLauncedFrom:AddBeaconFlow];
 
     [self.navigationController pushViewController:_configBeacon animated:YES];
-//    UINavigationController *_navigationController = [[UINavigationController alloc]initWithRootViewController:configBeacon];
-//    [self presentViewController:_navigationController animated:YES completion:Nil];
     
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     
-}
-
-
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    return YES;
-}
-
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    if(editingStyle == UITableViewCellEditingStyleDelete)
-    {
-        NSLog(@"I deleted a cell!");
-    }
 }
 
 #pragma mark beacon mgr delegates
@@ -177,8 +163,6 @@
             [tempObj setMajorId:[NSString stringWithFormat:@"%@",[beacon major]]];
             [tempObj setMinorId:[NSString stringWithFormat:@"%@",[beacon minor]]];
             
-
-            __weak SearchBeaconViewController *_weakSelf = self;
             
             __block BOOL isAlreadyPresent = NO;
             

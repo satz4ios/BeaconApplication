@@ -23,7 +23,8 @@
 @property (weak, nonatomic) IBOutlet UITextField *minorTxtField;
 @property (weak, nonatomic) IBOutlet UITextField *beaconTagTxtField;
 @property (weak, nonatomic) IBOutlet UITextField *beaconDescTxtField;
-@property (weak, nonatomic) IBOutlet NSLayoutConstraint *actionBtn;
+
+@property (weak, nonatomic) IBOutlet UIButton *actionBtn;
 
 
 @property (strong,nonatomic) MBProgressHUD *actiivityView;
@@ -52,6 +53,11 @@
     [self.majorTxtField setText:_selectedBeacon.majorId];
     [self.minorTxtField setText:_selectedBeacon.minorId];
     
+    if (_launcedFrom == EditBeaconFlow) {
+//        [[_actionBtn titleLabel] setText:@"Save"];
+        [_actionBtn setTitle:@"Save" forState:UIControlStateNormal];
+    }
+    
 }
 
 -(void)viewWillDisappear:(BOOL)animated{
@@ -60,25 +66,15 @@
 
 
 - (IBAction)backClick:(id)sender {
-    //[self.navigationController dismissViewControllerAnimated:YES completion:Nil];
         [self.navigationController popViewControllerAnimated:YES];
 }
 
 
-/*
- #pragma mark - Navigation
- 
- // In a storyboard-based application, you will often want to do a little preparation before navigation
- - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
- // Get the new view controller using [segue destinationViewController].
- // Pass the selected object to the new view controller.
- }
- */
 
 
--(void)makeWSCallForAddingBeacon{
+-(void)makeWSCallForAddOrEditBeacon{
 
-    NSString *urlStr = AddBeacon;
+    NSString *urlStr = AddOrEditBeacon;
     ServiceCallAPI *_serviceAPI = [[ServiceCallAPI alloc]initWithService:urlStr];
     _serviceAPI.apiDelegate=self;
     NSMutableDictionary *_paramsDict = [[NSMutableDictionary alloc] init];
@@ -93,6 +89,27 @@
     
     [_serviceAPI sendHttpRequestServiceWithParameters:_paramsDict];
 }  
+
+
+-(void)makeWSCallForEditBeacon{
+    
+    //http://gotocontactsonline.com/beaconapp/beaconconfig.php?uuId=1234&majorValue=12&minorValue=0.5&beaconDescription=test&beaconTag=test&createdBy=1
+    
+    NSString *urlStr = AddOrEditBeacon;
+    ServiceCallAPI *_serviceAPI = [[ServiceCallAPI alloc]initWithService:urlStr];
+    _serviceAPI.apiDelegate=self;
+    NSMutableDictionary *_paramsDict = [[NSMutableDictionary alloc] init];
+    [_paramsDict setValue:self.uuidTxtField.text forKey:@"uuId"];
+    [_paramsDict setValue:self.majorTxtField.text forKey:@"majorValue"];
+    [_paramsDict setValue:self.minorTxtField.text forKey:@"minorValue"];
+    [_paramsDict setValue:self.beaconDescTxtField.text forKey:@"beaconDescription"];
+    [_paramsDict setValue:self.beaconTagTxtField.text forKey:@"beaconTag"];
+    
+#warning add user id for created by
+    [_paramsDict setValue:@"1" forKey:@"createdBy"];
+    
+    [_serviceAPI sendHttpRequestServiceWithParameters:_paramsDict];
+}
 
 
 #pragma mark APIserviceProto delegates
@@ -168,7 +185,14 @@
         
     }
     else{
-        [self makeWSCallForAddingBeacon];
+        [self makeWSCallForAddOrEditBeacon];
+/*        if (_launcedFrom == AddBeaconFlow) {
+            [self makeWSCallForAddingBeacon];
+        }
+        else{
+            [self makeWSCallForEditBeacon];
+        }*/
+        
     }
 }
 

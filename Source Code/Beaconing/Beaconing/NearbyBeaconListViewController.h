@@ -10,6 +10,6 @@
 #import "BeaconManager.h"
 #import <CoreBluetooth/CoreBluetooth.h>
 
-@interface SearchBeaconViewController : UIViewController<BeaconManagerDelegate,CBCentralManagerDelegate>
+@interface NearbyBeaconListViewController : UIViewController<BeaconManagerDelegate,CBCentralManagerDelegate>
 
 @end

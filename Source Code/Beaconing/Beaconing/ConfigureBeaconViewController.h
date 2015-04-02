@@ -18,6 +18,6 @@ typedef enum {
 @interface ConfigureBeaconViewController : UIViewController<APIserviceProto,UITextFieldDelegate>
 
 @property (nonatomic,strong) BeaconObj *selectedBeacon;
-@property (nonatomic,assign) LaunchedFrom *launcedFrom;
+@property (nonatomic,assign) LaunchedFrom launcedFrom;
 
 @end

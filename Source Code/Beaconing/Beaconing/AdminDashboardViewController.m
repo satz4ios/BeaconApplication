@@ -7,10 +7,13 @@
 //
 
 #import "AdminDashboardViewController.h"
-#import "SearchBeaconViewController.h"
+#import "NearbyBeaconListViewController.h"
+#import "RegisteredBeaconsListViewController.h"
 
 @interface AdminDashboardViewController ()
 - (IBAction)onTapAddBeacon:(id)sender;
+
+- (IBAction)onTapConfigureBeaconBtn:(id)sender;
 
 @end
 
@@ -45,9 +48,16 @@
 
 - (IBAction)onTapAddBeacon:(id)sender {
     
-    UIStoryboard *mainStoryboard = [UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]];
-    SearchBeaconViewController *_searchBeaconVC = [mainStoryboard instantiateViewControllerWithIdentifier:@"SearchBeaconViewController"];
+    UIStoryboard *_mainStoryboard = [UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]];
+    NearbyBeaconListViewController *_searchBeaconVC = [_mainStoryboard instantiateViewControllerWithIdentifier:@"SearchBeaconViewController"];
     [self.navigationController pushViewController:_searchBeaconVC animated:YES];
+    
+}
+- (IBAction)onTapConfigureBeaconBtn:(id)sender {
+    
+    UIStoryboard *_mainStoryBoard = [UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]];
+    RegisteredBeaconsListViewController *_regBeaconList = [_mainStoryBoard instantiateViewControllerWithIdentifier:@"RegisteredBeaconsListViewController"];
+    [self.navigationController pushViewController:_regBeaconList animated:YES];
     
 }
 @end
