@@ -45,6 +45,7 @@
 		007D52F71ACD25EE0026E607 /* contact.png in Resources */ = {isa = PBXBuildFile; fileRef = 007D52F21ACD25EE0026E607 /* contact.png */; };
 		007D52F81ACD25EE0026E607 /* create-coupon.png in Resources */ = {isa = PBXBuildFile; fileRef = 007D52F31ACD25EE0026E607 /* create-coupon.png */; };
 		007D52F91ACD25EE0026E607 /* help-us.png in Resources */ = {isa = PBXBuildFile; fileRef = 007D52F41ACD25EE0026E607 /* help-us.png */; };
+		008405431ACF824D00269E8F /* Title-background.png in Resources */ = {isa = PBXBuildFile; fileRef = 008405421ACF824D00269E8F /* Title-background.png */; };
 		008EE12D1ACA7F04009DCAA8 /* UICustomActionSheet.m in Sources */ = {isa = PBXBuildFile; fileRef = 008EE12A1ACA7F04009DCAA8 /* UICustomActionSheet.m */; };
 		008EE12E1ACA7F04009DCAA8 /* UIImageEffects.m in Sources */ = {isa = PBXBuildFile; fileRef = 008EE12C1ACA7F04009DCAA8 /* UIImageEffects.m */; };
 		008EE1311ACAA935009DCAA8 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 008EE1301ACAA935009DCAA8 /* MBProgressHUD.m */; };
@@ -142,6 +143,7 @@
 		007D52F21ACD25EE0026E607 /* contact.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = contact.png; sourceTree = "<group>"; };
 		007D52F31ACD25EE0026E607 /* create-coupon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "create-coupon.png"; sourceTree = "<group>"; };
 		007D52F41ACD25EE0026E607 /* help-us.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "help-us.png"; sourceTree = "<group>"; };
+		008405421ACF824D00269E8F /* Title-background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Title-background.png"; sourceTree = "<group>"; };
 		008EE1291ACA7F04009DCAA8 /* UICustomActionSheet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UICustomActionSheet.h; sourceTree = "<group>"; };
 		008EE12A1ACA7F04009DCAA8 /* UICustomActionSheet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UICustomActionSheet.m; sourceTree = "<group>"; };
 		008EE12B1ACA7F04009DCAA8 /* UIImageEffects.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIImageEffects.h; sourceTree = "<group>"; };
@@ -283,6 +285,7 @@
 		00306C6A1AC17B7E00A7217F /* Image files */ = {
 			isa = PBXGroup;
 			children = (
+				008405421ACF824D00269E8F /* Title-background.png */,
 				007D52F01ACD25EE0026E607 /* add.-beacon.png */,
 				007D52F11ACD25EE0026E607 /* beacon-config.png */,
 				007D52F21ACD25EE0026E607 /* contact.png */,
@@ -534,6 +537,7 @@
 				00A90C1B1ACBB11C00209F4F /* Logo.png in Resources */,
 				007D52F61ACD25EE0026E607 /* beacon-config.png in Resources */,
 				00306C7B1AC17BBC00A7217F /* remember-me-visible.png in Resources */,
+				008405431ACF824D00269E8F /* Title-background.png in Resources */,
 				007D52F71ACD25EE0026E607 /* contact.png in Resources */,
 				4F7F01C11AB3E9B700019BF3 /* Images.xcassets in Resources */,
 				007D52EF1ACD15170026E607 /* icon_180*180.png in Resources */,

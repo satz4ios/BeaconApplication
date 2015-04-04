@@ -1,13 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <customFonts key="customFonts">
         <mutableArray key="Raleway-Medium.ttf">
-            <string>Raleway-Medium</string>
             <string>Raleway-Medium</string>
             <string>Raleway-Medium</string>
             <string>Raleway-Medium</string>
@@ -542,74 +541,106 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8gd-ZO-eCa">
-                                <rect key="frame" x="204" y="156" width="193" height="30"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="56" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="ZkZ-4J-fxe">
+                                <rect key="frame" x="0.0" y="75" width="600" height="525"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="193" id="3WQ-6S-m69"/>
+                                    <constraint firstAttribute="height" constant="525" id="9iJ-O5-o7i"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="535" id="DcE-CT-Yxz"/>
+                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="600" id="SDa-vo-93H"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="Raleway-Medium" family="Raleway" pointSize="15"/>
-                                <state key="normal" title="Add Beacons">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
+                                <prototypes>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="HomeScreenList" rowHeight="80" id="qR6-0Z-mkf">
+                                        <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="qR6-0Z-mkf" id="793-k1-kKe">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" tag="99" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add Beacon" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Car-LP-6wm">
+                                                    <rect key="frame" x="129" y="17" width="452" height="44"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="44" id="7Y8-8J-C7F"/>
+                                                        <constraint firstAttribute="width" constant="452" id="SdT-7Q-46T"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="Raleway" family="Raleway" pointSize="19"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView userInteractionEnabled="NO" tag="88" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="add.-beacon.png" translatesAutoresizingMaskIntoConstraints="NO" id="obC-Fa-gX4">
+                                                    <rect key="frame" x="22" y="14" width="50" height="50"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="50" id="cFk-Co-p4a"/>
+                                                        <constraint firstAttribute="width" constant="50" id="wie-o8-LHy"/>
+                                                    </constraints>
+                                                </imageView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="obC-Fa-gX4" firstAttribute="top" secondItem="793-k1-kKe" secondAttribute="topMargin" constant="6" id="94d-ev-Lmu"/>
+                                                <constraint firstItem="obC-Fa-gX4" firstAttribute="centerY" secondItem="Car-LP-6wm" secondAttribute="centerY" id="TTk-0Y-vBW"/>
+                                                <constraint firstItem="obC-Fa-gX4" firstAttribute="leading" secondItem="793-k1-kKe" secondAttribute="leadingMargin" constant="14" id="Tjf-aX-ZQK"/>
+                                                <constraint firstItem="Car-LP-6wm" firstAttribute="leading" secondItem="793-k1-kKe" secondAttribute="leadingMargin" constant="121" id="rvS-jc-Abv"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="obC-Fa-gX4" secondAttribute="bottom" constant="7" id="vF2-5I-CoR"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" red="0.91903409090909094" green="0.91903409090909094" blue="0.91903409090909094" alpha="1" colorSpace="calibratedRGB"/>
+                                    </tableViewCell>
+                                </prototypes>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="DcE-CT-Yxz"/>
+                                    </mask>
+                                </variation>
                                 <connections>
-                                    <action selector="onTapAddBeacon:" destination="m4m-Nm-320" eventType="touchUpInside" id="WTa-W9-sqP"/>
+                                    <outlet property="dataSource" destination="m4m-Nm-320" id="QjC-YE-JJ9"/>
+                                    <outlet property="delegate" destination="m4m-Nm-320" id="ehQ-qC-Og4"/>
                                 </connections>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mge-ld-Ujx">
-                                <rect key="frame" x="357" y="31" width="227" height="32"/>
+                            </tableView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Title-background.png" translatesAutoresizingMaskIntoConstraints="NO" id="RsT-Zy-xfw">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="75"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="32" id="IBO-f0-AYv"/>
-                                    <constraint firstAttribute="width" constant="227" id="rmR-ux-kiA"/>
+                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="600" id="2S6-Cv-o7X"/>
+                                    <constraint firstAttribute="height" constant="75" id="6dp-0A-4M8"/>
+                                    <constraint firstAttribute="width" constant="600" id="fdi-zU-7Tj"/>
+                                    <constraint firstAttribute="height" constant="75" id="x1l-uh-8Me"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sD5-bI-5lh">
-                                <rect key="frame" x="204" y="216" width="193" height="30"/>
-                                <fontDescription key="fontDescription" name="Raleway" family="Raleway" pointSize="15"/>
-                                <state key="normal" title="Configure Beacons">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="onTapConfigureBeaconBtn:" destination="m4m-Nm-320" eventType="touchUpInside" id="3pD-KN-qhy"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r2g-jR-lLs">
-                                <rect key="frame" x="204" y="276" width="193" height="30"/>
-                                <state key="normal" title="Create Coupons">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E3r-e9-4yf">
-                                <rect key="frame" x="204" y="336" width="193" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="193" id="bPF-df-HDQ"/>
-                                </constraints>
-                                <state key="normal" title="Configure Coupons">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                            </button>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="fdi-zU-7Tj"/>
+                                        <exclude reference="x1l-uh-8Me"/>
+                                    </mask>
+                                </variation>
+                            </imageView>
                         </subviews>
-                        <color key="backgroundColor" red="0.2198541745" green="0.20941119759999999" blue="0.33333333329999998" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="sD5-bI-5lh" firstAttribute="leading" secondItem="r2g-jR-lLs" secondAttribute="leading" id="Hx5-tb-LA6"/>
-                            <constraint firstItem="8gd-ZO-eCa" firstAttribute="top" secondItem="mge-ld-Ujx" secondAttribute="bottom" constant="93" id="JEy-4M-xc9"/>
-                            <constraint firstItem="sD5-bI-5lh" firstAttribute="centerX" secondItem="rqQ-tO-dqg" secondAttribute="centerX" id="LU2-C1-T3X"/>
-                            <constraint firstItem="E3r-e9-4yf" firstAttribute="leading" secondItem="r2g-jR-lLs" secondAttribute="leading" id="Wzu-bX-ikT"/>
-                            <constraint firstItem="sD5-bI-5lh" firstAttribute="top" secondItem="8gd-ZO-eCa" secondAttribute="bottom" constant="30" id="cmo-ub-EYj"/>
-                            <constraint firstItem="8gd-ZO-eCa" firstAttribute="trailing" secondItem="sD5-bI-5lh" secondAttribute="trailing" id="kPM-z9-urW"/>
-                            <constraint firstItem="8gd-ZO-eCa" firstAttribute="leading" secondItem="sD5-bI-5lh" secondAttribute="leading" id="kdF-2o-cTR"/>
-                            <constraint firstItem="mge-ld-Ujx" firstAttribute="trailing" secondItem="rqQ-tO-dqg" secondAttribute="trailingMargin" id="m6i-aC-J8x"/>
-                            <constraint firstItem="E3r-e9-4yf" firstAttribute="top" secondItem="r2g-jR-lLs" secondAttribute="bottom" constant="30" id="uCZ-lR-vsZ"/>
-                            <constraint firstItem="r2g-jR-lLs" firstAttribute="top" secondItem="sD5-bI-5lh" secondAttribute="bottom" constant="30" id="uIm-kI-OhN"/>
-                            <constraint firstItem="sD5-bI-5lh" firstAttribute="trailing" secondItem="r2g-jR-lLs" secondAttribute="trailing" id="wKF-Oy-WMH"/>
+                            <constraint firstItem="RsT-Zy-xfw" firstAttribute="leading" secondItem="rqQ-tO-dqg" secondAttribute="leadingMargin" constant="-16" id="0OX-yB-ifb"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="RsT-Zy-xfw" secondAttribute="trailing" constant="-16" id="4Es-cu-xyK"/>
+                            <constraint firstItem="RsT-Zy-xfw" firstAttribute="top" secondItem="AJl-M0-cgF" secondAttribute="bottom" constant="-20" id="EYW-nQ-Z1W"/>
+                            <constraint firstItem="ZkZ-4J-fxe" firstAttribute="top" secondItem="RsT-Zy-xfw" secondAttribute="bottom" id="HKe-bT-Kn7"/>
+                            <constraint firstAttribute="centerX" secondItem="RsT-Zy-xfw" secondAttribute="centerX" id="Hs7-ag-hIO"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="ZkZ-4J-fxe" secondAttribute="trailing" constant="-16" id="Kt2-ic-6AH"/>
+                            <constraint firstItem="ZkZ-4J-fxe" firstAttribute="top" secondItem="RsT-Zy-xfw" secondAttribute="bottom" id="aVM-KG-Kvw"/>
+                            <constraint firstAttribute="centerX" secondItem="ZkZ-4J-fxe" secondAttribute="centerX" id="btb-rv-dLT"/>
+                            <constraint firstItem="RsT-Zy-xfw" firstAttribute="top" secondItem="AJl-M0-cgF" secondAttribute="bottom" constant="-20" id="f3h-eJ-6Mk"/>
+                            <constraint firstItem="j5R-mQ-hpr" firstAttribute="top" secondItem="ZkZ-4J-fxe" secondAttribute="bottom" id="ljr-hd-8Gz"/>
+                            <constraint firstItem="ZkZ-4J-fxe" firstAttribute="bottom" secondItem="j5R-mQ-hpr" secondAttribute="top" id="qHf-tf-QKj"/>
+                            <constraint firstItem="ZkZ-4J-fxe" firstAttribute="leading" secondItem="rqQ-tO-dqg" secondAttribute="leadingMargin" constant="-16" id="y0z-JH-hRW"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="f3h-eJ-6Mk"/>
+                                <exclude reference="aVM-KG-Kvw"/>
+                                <exclude reference="ljr-hd-8Gz"/>
+                            </mask>
+                        </variation>
                     </view>
+                    <connections>
+                        <outlet property="_TableViewObj" destination="ZkZ-4J-fxe" id="Sja-90-KKH"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="74o-lh-Q0J" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="910" y="1066"/>
+            <point key="canvasLocation" x="906" y="992"/>
         </scene>
         <!--Nearby Beacon List View Controller-->
         <scene sceneID="VjN-DX-gYm">
@@ -730,7 +761,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gpI-QS-1Ky" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1023" y="1758"/>
+            <point key="canvasLocation" x="1010" y="1696"/>
         </scene>
         <!--Registered Beacons List View Controller-->
         <scene sceneID="a2T-IA-AoB">
@@ -857,7 +888,7 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6lO-TQ-ecm">
                                 <rect key="frame" x="0.0" y="20" width="600" height="44"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add Beacon" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bBZ-SK-Zj9">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Add Beacon" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bBZ-SK-Zj9">
                                         <rect key="frame" x="254" y="12" width="92" height="19"/>
                                         <fontDescription key="fontDescription" name="Raleway-SemiBold" family="Raleway" pointSize="16"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -1039,6 +1070,8 @@
         <image name="Logo" width="815" height="632"/>
         <image name="RememberMeVsbImage" width="70" height="70"/>
         <image name="SignUpButtonImages" width="528" height="140"/>
+        <image name="Title-background.png" width="1242" height="193"/>
+        <image name="add.-beacon.png" width="170" height="170"/>
         <image name="login-icon.png" width="70" height="80"/>
         <image name="signup-icon.png" width="80" height="70"/>
     </resources>

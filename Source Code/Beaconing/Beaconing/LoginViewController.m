@@ -107,30 +107,43 @@
 }
 -(void)recievedServiceCallData:(NSDictionary *)dictionary {
     NSDictionary *_dictArray;
-    for (NSDictionary *_array in [dictionary objectForKey:@"userDetails"]) {
-        _dictArray=_array;
-    }
-    NSString *_loginStatus = [NSString stringWithFormat:@"%@",[dictionary objectForKey:@"message"]];
-    NSString *_userType = [NSString stringWithFormat:@"%@",[_dictArray objectForKey:@"userType"]];
-    [busyView hide:YES];
-
-    if ([_loginStatus isEqualToString:@"Successfully Logged in"]) {
-        if ([_userType isEqualToString:@"1"]) {
-            _MainStoryboard = [UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]];
-            AdminDashboardViewController *_adminUser = [_MainStoryboard instantiateViewControllerWithIdentifier:@"AdminController"];
-            UINavigationController *_navigationController = [[UINavigationController alloc]initWithRootViewController:_adminUser];
-            [self presentViewController:_navigationController animated:YES completion:Nil];
-        }else {
-            _MainStoryboard = [UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]];
-            NormalUserViewController *_normalUser = [_MainStoryboard instantiateViewControllerWithIdentifier:@"NormalUserController"];
-            UINavigationController *_navigationController = [[UINavigationController alloc]initWithRootViewController:_normalUser];
-            [self presentViewController:_navigationController animated:YES completion:Nil];
+    if ([[dictionary objectForKey:@"errorCode"]isEqualToString:@"400"]) {
+        [busyView hide:YES];
+        if ([[dictionary objectForKey:@"message"]isEqualToString:@"Emailid and Password Mismatch"]) {
+            [[[UIAlertView alloc]initWithTitle:@"Login Error" message:@"Email ID and Password Mismatch" delegate:nil
+                             cancelButtonTitle:@"Ok" otherButtonTitles:nil, nil]show];
+            
+        } else if ([[dictionary objectForKey:@"message"]isEqualToString:@"Please activate your account from your email id"]) {
+            [[[UIAlertView alloc]initWithTitle:@"Validation Error" message:@"Please activate your account from your Email ID and try again " delegate:nil
+                             cancelButtonTitle:@"Ok" otherButtonTitles:nil, nil]show];
+        }
+    }else {
+        for (NSDictionary *_array in [dictionary objectForKey:@"userDetails"]) {
+            _dictArray=_array;
+        }
+        NSString *_loginStatus = [NSString stringWithFormat:@"%@",[dictionary objectForKey:@"message"]];
+        NSString *_userType = [NSString stringWithFormat:@"%@",[_dictArray objectForKey:@"userType"]];
+        [busyView hide:YES];
+        
+        if ([_loginStatus isEqualToString:@"Successfully Logged in"]) {
+            if ([_userType isEqualToString:@"1"]) {
+                _MainStoryboard = [UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]];
+                AdminDashboardViewController *_adminUser = [_MainStoryboard instantiateViewControllerWithIdentifier:@"AdminController"];
+                UINavigationController *_navigationController = [[UINavigationController alloc]initWithRootViewController:_adminUser];
+                [self presentViewController:_navigationController animated:YES completion:Nil];
+            }else {
+                _MainStoryboard = [UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]];
+                NormalUserViewController *_normalUser = [_MainStoryboard instantiateViewControllerWithIdentifier:@"NormalUserController"];
+                UINavigationController *_navigationController = [[UINavigationController alloc]initWithRootViewController:_normalUser];
+                [self presentViewController:_navigationController animated:YES completion:Nil];
+                
+            }
+            
+        } else {
             
         }
-        
-    } else {
-        
     }
+    
     
 }
 

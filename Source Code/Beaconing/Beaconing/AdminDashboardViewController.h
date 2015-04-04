@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface AdminDashboardViewController : UIViewController
+@interface AdminDashboardViewController : UIViewController<UITableViewDataSource,UITableViewDelegate>
+@property (weak, nonatomic) IBOutlet UITableView *_TableViewObj;
 
 @end
