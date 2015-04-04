@@ -217,6 +217,14 @@
     // Pass the selected object to the new view controller.
 }
 */
+-(void)textFieldDidBeginEditing:(UITextField *)textField
+{
+    if (textField==_emailIdTxtFld||textField==_passWrdTxtFld)
+    {
+        rememberCliked=NO;
+         [_checkBoxBtn setBackgroundImage:[UIImage imageNamed:@"RememberMeVsbImage"] forState:UIControlStateNormal];
+    }
+}
 
 - (IBAction)forgotPwdClick:(id)sender {
 }

@@ -68,6 +68,22 @@
         RegisteredBeaconsListViewController *_regBeaconList = [_mainStoryBoard instantiateViewControllerWithIdentifier:@"RegisteredBeaconsListViewController"];
         [self.navigationController pushViewController:_regBeaconList animated:YES];
 
+    } else if (indexPath.row==6) {
+        UICustomActionSheet* actionSheet = [[UICustomActionSheet alloc] initWithTitle:@"Settings" delegate:nil buttonTitles:@[@"Cancel",@"Log Out",@"View Profile",]];
+        actionSheet.delegate=self;
+        [actionSheet setButtonColors:@[[UIColor redColor]]];
+        [actionSheet setBackgroundColor:[UIColor clearColor]];
+        [actionSheet setTintColor:[UIColor lightGrayColor]];
+        [actionSheet setSubtitle:@""];
+        [actionSheet setSubtitleColor:[UIColor whiteColor]];
+        [actionSheet showInView:self.view];
+
+    }
+}
+
+-(void)customActionSheet:(UICustomActionSheet *)customActionSheet clickedButtonAtIndex:(NSInteger)buttonIndex {
+    if (buttonIndex==1) {
+        [self dismissViewControllerAnimated:YES completion:nil];
     }
 }
 /*

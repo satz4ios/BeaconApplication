@@ -37,6 +37,7 @@
 		00306C821AC17BC800A7217F /* Signup.png in Resources */ = {isa = PBXBuildFile; fileRef = 00306C7F1AC17BC800A7217F /* Signup.png */; };
 		00306C831AC17BC800A7217F /* splash-bg.png in Resources */ = {isa = PBXBuildFile; fileRef = 00306C801AC17BC800A7217F /* splash-bg.png */; };
 		00306C841AC17BC800A7217F /* Splash-screen.png in Resources */ = {isa = PBXBuildFile; fileRef = 00306C811AC17BC800A7217F /* Splash-screen.png */; };
+		004903D91ACFDED7003A3293 /* UserInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 004903D81ACFDED7003A3293 /* UserInfo.m */; };
 		007D52ED1ACD15170026E607 /* icon_120*120.png in Resources */ = {isa = PBXBuildFile; fileRef = 007D52EA1ACD15170026E607 /* icon_120*120.png */; };
 		007D52EE1ACD15170026E607 /* icon_152*152.png in Resources */ = {isa = PBXBuildFile; fileRef = 007D52EB1ACD15170026E607 /* icon_152*152.png */; };
 		007D52EF1ACD15170026E607 /* icon_180*180.png in Resources */ = {isa = PBXBuildFile; fileRef = 007D52EC1ACD15170026E607 /* icon_180*180.png */; };
@@ -135,6 +136,8 @@
 		00306C7F1AC17BC800A7217F /* Signup.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Signup.png; sourceTree = "<group>"; };
 		00306C801AC17BC800A7217F /* splash-bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "splash-bg.png"; sourceTree = "<group>"; };
 		00306C811AC17BC800A7217F /* Splash-screen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Splash-screen.png"; sourceTree = "<group>"; };
+		004903D71ACFDED7003A3293 /* UserInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserInfo.h; sourceTree = "<group>"; };
+		004903D81ACFDED7003A3293 /* UserInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserInfo.m; sourceTree = "<group>"; };
 		007D52EA1ACD15170026E607 /* icon_120*120.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_120*120.png"; sourceTree = "<group>"; };
 		007D52EB1ACD15170026E607 /* icon_152*152.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_152*152.png"; sourceTree = "<group>"; };
 		007D52EC1ACD15170026E607 /* icon_180*180.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_180*180.png"; sourceTree = "<group>"; };
@@ -355,6 +358,8 @@
 				008EE12B1ACA7F04009DCAA8 /* UIImageEffects.h */,
 				008EE12C1ACA7F04009DCAA8 /* UIImageEffects.m */,
 				00A9A8B01AC40FFF00D4A439 /* Beacon */,
+				004903D71ACFDED7003A3293 /* UserInfo.h */,
+				004903D81ACFDED7003A3293 /* UserInfo.m */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -584,6 +589,7 @@
 				000855461AB6BBA600E0C566 /* UIButton+AFNetworking.m in Sources */,
 				008EE1311ACAA935009DCAA8 /* MBProgressHUD.m in Sources */,
 				000855471AB6BBA600E0C566 /* UIImageView+AFNetworking.m in Sources */,
+				004903D91ACFDED7003A3293 /* UserInfo.m in Sources */,
 				4F7F01DB1AB3F46500019BF3 /* RegisterUserViewController.m in Sources */,
 				008EE12E1ACA7F04009DCAA8 /* UIImageEffects.m in Sources */,
 				4F7F01B61AB3E9B700019BF3 /* main.m in Sources */,

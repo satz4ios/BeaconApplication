@@ -7,8 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "UICustomActionSheet.h"
 
-@interface AdminDashboardViewController : UIViewController<UITableViewDataSource,UITableViewDelegate>
+@interface AdminDashboardViewController : UIViewController<UITableViewDataSource,UITableViewDelegate,UICustomActionSheetDelegate>
 @property (weak, nonatomic) IBOutlet UITableView *_TableViewObj;
 
 @end

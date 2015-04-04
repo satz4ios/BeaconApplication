@@ -117,7 +117,7 @@
     
     
 
-    UIFont *mediumFont = [UIFont fontWithName:@"Raleway-Medium" size:15];
+    UIFont *mediumFont = [UIFont fontWithName:@"Raleway-SemiBold" size:15];
     //UIFont *regularFont = [UIFont fontWithName:@"Raleway-Regular" size:15];
     UIFont *regularFont = [UIFont fontWithName:@"Raleway" size:15];
     
@@ -192,7 +192,7 @@
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
-    return 60.0;
+    return 80;
 }
 
 #pragma mark beacon mgr delegates
