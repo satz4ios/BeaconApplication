@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
@@ -654,6 +654,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Title-background.png" translatesAutoresizingMaskIntoConstraints="NO" id="AXE-DN-0RD">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="66"/>
+                                <color key="backgroundColor" red="0.1960784314" green="0.7725490196" blue="0.60392156860000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="66" id="jCN-dk-c4z"/>
+                                </constraints>
+                            </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ule-Zw-5pR">
                                 <rect key="frame" x="0.0" y="20" width="600" height="44"/>
                                 <subviews>
@@ -677,14 +684,14 @@
                                             <action selector="backClick:" destination="dvW-Fw-tIg" eventType="touchUpInside" id="FVb-Yf-vkk"/>
                                         </connections>
                                     </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Add Beacon" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yff-4a-1ij">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add Beacon" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yff-4a-1ij">
                                         <rect key="frame" x="254" y="12" width="92" height="19"/>
                                         <fontDescription key="fontDescription" name="Raleway-SemiBold" family="Raleway" pointSize="16"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
-                                <color key="backgroundColor" red="0.1960784314" green="0.7725490196" blue="0.60392156860000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="s1k-wR-87o" secondAttribute="trailing" constant="19" id="JcH-c3-WWO"/>
                                     <constraint firstAttribute="centerY" secondItem="Yff-4a-1ij" secondAttribute="centerY" id="JfT-NM-J2H"/>
@@ -712,14 +719,14 @@
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" tag="200" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bLR-Y1-tN9">
-                                                    <rect key="frame" x="10" y="26" width="40" height="18"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" tag="200" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bLR-Y1-tN9">
+                                                    <rect key="frame" x="10" y="36" width="40" height="18"/>
                                                     <fontDescription key="fontDescription" name="Raleway-Medium" family="Raleway" pointSize="15"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" tag="300" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fIo-E5-U0t">
-                                                    <rect key="frame" x="550" y="26" width="40" height="18"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" tag="300" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fIo-E5-U0t">
+                                                    <rect key="frame" x="550" y="36" width="40" height="18"/>
                                                     <fontDescription key="fontDescription" name="Raleway-Medium" family="Raleway" pointSize="15"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
@@ -747,7 +754,10 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="centerX" secondItem="ule-Zw-5pR" secondAttribute="centerX" id="2EO-nB-QBb"/>
+                            <constraint firstAttribute="centerX" secondItem="AXE-DN-0RD" secondAttribute="centerX" id="4k9-yA-sUF"/>
+                            <constraint firstItem="AXE-DN-0RD" firstAttribute="width" secondItem="Thb-8M-Rsn" secondAttribute="width" id="7BM-Mv-HFD"/>
                             <constraint firstItem="tiN-2b-cDa" firstAttribute="width" secondItem="Thb-8M-Rsn" secondAttribute="width" id="Cl4-01-6EK"/>
+                            <constraint firstItem="AXE-DN-0RD" firstAttribute="top" secondItem="Thb-8M-Rsn" secondAttribute="topMargin" id="bBT-hK-l3D"/>
                             <constraint firstItem="E3N-PU-8eD" firstAttribute="top" secondItem="tiN-2b-cDa" secondAttribute="bottom" id="eij-ki-0v1"/>
                             <constraint firstAttribute="width" secondItem="ule-Zw-5pR" secondAttribute="width" id="sT9-P0-NCb"/>
                             <constraint firstItem="tiN-2b-cDa" firstAttribute="top" secondItem="ule-Zw-5pR" secondAttribute="bottom" id="xR6-yY-sQ5"/>
@@ -823,13 +833,13 @@
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" tag="200" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vwg-D8-Hvv">
+                                                <label opaque="NO" userInteractionEnabled="NO" tag="200" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vwg-D8-Hvv">
                                                     <rect key="frame" x="10" y="26" width="40" height="18"/>
                                                     <fontDescription key="fontDescription" name="Raleway-Medium" family="Raleway" pointSize="15"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" tag="300" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T7p-eR-Yx9">
+                                                <label opaque="NO" userInteractionEnabled="NO" tag="300" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T7p-eR-Yx9">
                                                     <rect key="frame" x="550" y="26" width="40" height="18"/>
                                                     <fontDescription key="fontDescription" name="Raleway-Medium" family="Raleway" pointSize="15"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -885,10 +895,16 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Title-background.png" translatesAutoresizingMaskIntoConstraints="NO" id="UuY-Gv-NE1">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="66"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="66" id="9Qa-VV-t2D"/>
+                                </constraints>
+                            </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6lO-TQ-ecm">
                                 <rect key="frame" x="0.0" y="20" width="600" height="44"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Add Beacon" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bBZ-SK-Zj9">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add Beacon" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bBZ-SK-Zj9">
                                         <rect key="frame" x="254" y="12" width="92" height="19"/>
                                         <fontDescription key="fontDescription" name="Raleway-SemiBold" family="Raleway" pointSize="16"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -920,7 +936,7 @@
                                         </connections>
                                     </button>
                                 </subviews>
-                                <color key="backgroundColor" red="0.1960784314" green="0.7725490196" blue="0.60392156860000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="YLQ-d9-9NF" secondAttribute="trailing" constant="20" id="0zs-ia-0fw"/>
                                     <constraint firstAttribute="centerY" secondItem="bBZ-SK-Zj9" secondAttribute="centerY" id="5up-87-qpz"/>
@@ -981,6 +997,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="6lO-TQ-ecm" firstAttribute="width" secondItem="XPP-aB-C0O" secondAttribute="width" id="5SP-tU-G9b"/>
+                            <constraint firstAttribute="centerX" secondItem="UuY-Gv-NE1" secondAttribute="centerX" id="8PA-5b-RH2"/>
                             <constraint firstItem="7YO-kV-Naf" firstAttribute="top" secondItem="a4n-Q9-cKC" secondAttribute="bottom" constant="20" id="JWW-07-Uwj"/>
                             <constraint firstItem="Is4-hZ-fYq" firstAttribute="leading" secondItem="XPP-aB-C0O" secondAttribute="leadingMargin" constant="50" id="Msl-ZA-rdm"/>
                             <constraint firstItem="Qav-E3-J0y" firstAttribute="leading" secondItem="XPP-aB-C0O" secondAttribute="leadingMargin" constant="50" id="Twu-F6-nwc"/>
@@ -988,6 +1005,7 @@
                             <constraint firstAttribute="trailingMargin" secondItem="a4n-Q9-cKC" secondAttribute="trailing" constant="50" id="ZSh-Ft-5PL"/>
                             <constraint firstItem="6lO-TQ-ecm" firstAttribute="top" secondItem="5c4-PX-etH" secondAttribute="bottom" id="aBV-V1-aeb"/>
                             <constraint firstAttribute="trailingMargin" secondItem="7YO-kV-Naf" secondAttribute="trailing" constant="50" id="c27-b4-GMZ"/>
+                            <constraint firstAttribute="width" secondItem="UuY-Gv-NE1" secondAttribute="width" id="c6l-ye-7K5"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Is4-hZ-fYq" secondAttribute="trailing" constant="50" id="gLH-AG-c55"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Qav-E3-J0y" secondAttribute="trailing" constant="50" id="jHd-vR-fXm"/>
                             <constraint firstItem="7YO-kV-Naf" firstAttribute="leading" secondItem="XPP-aB-C0O" secondAttribute="leadingMargin" constant="50" id="jTv-i6-Mko"/>
@@ -998,6 +1016,7 @@
                             <constraint firstAttribute="trailingMargin" secondItem="oRG-vB-PoU" secondAttribute="trailing" constant="50" id="ta0-ot-2fd"/>
                             <constraint firstItem="oRG-vB-PoU" firstAttribute="top" secondItem="Is4-hZ-fYq" secondAttribute="bottom" constant="20" id="u97-ud-dcb"/>
                             <constraint firstItem="Qav-E3-J0y" firstAttribute="top" secondItem="6lO-TQ-ecm" secondAttribute="bottom" constant="36" id="vpm-tw-ptJ"/>
+                            <constraint firstItem="UuY-Gv-NE1" firstAttribute="top" secondItem="XPP-aB-C0O" secondAttribute="topMargin" id="ykf-3J-udn"/>
                         </constraints>
                     </view>
                     <connections>
