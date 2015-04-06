@@ -12,6 +12,8 @@
 #import "AdminDashboardViewController.h"
 #import "NormalUserViewController.h"
 #import "MBProgressHUD.h"
+#import "ForgotPasswordViewController.h"
+#import "UIImageEffects.h"
 @interface LoginViewController () {
     UIStoryboard *_MainStoryboard;
     NSAttributedString *_underlineString;
@@ -227,7 +229,93 @@
 }
 
 - (IBAction)forgotPwdClick:(id)sender {
+    [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(dismissBlurredView:) name:@"BlurredView" object:nil];
+    backgroundImage = [UIImageView new];
+    backgroundImage.translatesAutoresizingMaskIntoConstraints = NO;
+    [self.view addSubview:backgroundImage];
+    [self showInView:self.view];
+    UIStoryboard *_sb= [UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]];
+    
+    ForgotPasswordViewController *_forgotPasswordVC = [_sb instantiateViewControllerWithIdentifier:@"ForgotPasswordViewController"];
+    
+    
+    [self addChildViewController:_forgotPasswordVC];
+    
+    UIView *toView = _forgotPasswordVC.view;
+    
+    [self.view addSubview:toView];
+    
+    [_forgotPasswordVC.forgotPasswordBtn setHidden:YES];
+    [_forgotPasswordVC.forgotPasswordTxtField setHidden:YES];
+    [_forgotPasswordVC.infoLabl setHidden:YES];
+    [_forgotPasswordVC.closeBtn setHidden:YES];
+    
+    _forgotPasswordVC.heightConstrain.constant = 0.0;
+    
+    // TODO: set initial layout constraints here
+    
+    [self.view layoutIfNeeded];
+    
+    [UIView animateWithDuration:0.5
+                          delay:0.0
+                        options:UIViewAnimationOptionAllowAnimatedContent
+                     animations:^{
+                         
+                         // TODO: set final layout constraints here
+                         
+                         _forgotPasswordVC.heightConstrain.constant = 150.0;
+                         
+                         
+                         [self.view layoutIfNeeded];
+                         
+                     } completion:^(BOOL finished) {
+                         [_forgotPasswordVC didMoveToParentViewController:self];
+                         
+                         [_forgotPasswordVC.forgotPasswordBtn setHidden:NO];
+                         [_forgotPasswordVC.forgotPasswordTxtField setHidden:NO];
+                         [_forgotPasswordVC.infoLabl setHidden:NO];
+                         [_forgotPasswordVC.closeBtn setHidden:NO];
+                     }];
+
 }
+-(void)dismissBlurredView:(NSNotification *)notif {
+    
+    [backgroundImage removeFromSuperview];
+}
+-(void)showInView:(UIView *)view {
+    UIGraphicsBeginImageContext([view.layer frame].size);
+    
+    [view.layer renderInContext:UIGraphicsGetCurrentContext()];
+    
+    UIImage *inImage = UIGraphicsGetImageFromCurrentImageContext();
+    
+    UIGraphicsEndImageContext();
+    
+    UIImage *outImage = [UIImageEffects imageByApplyingBlurToImage:inImage withRadius:5.0 tintColor:_blurTintColor saturationDeltaFactor:1.2 maskImage:nil];
+    
+    UIGraphicsBeginImageContext(outImage.size);
+    
+    CGContextTranslateCTM(UIGraphicsGetCurrentContext(), 0, outImage.size.height);
+    CGContextScaleCTM(UIGraphicsGetCurrentContext(), 1.0, -1.0);
+    
+    CGContextDrawImage(UIGraphicsGetCurrentContext(), CGRectMake(0, 0, outImage.size.width, outImage.size.height), outImage.CGImage);
+    
+    CGContextTranslateCTM(UIGraphicsGetCurrentContext(), 0, outImage.size.height);
+    CGContextScaleCTM(UIGraphicsGetCurrentContext(), 1.0, -1.0);
+    
+    CGRect circlePoint = (_clearArea);
+    CGContextSetFillColorWithColor( UIGraphicsGetCurrentContext(), [UIColor clearColor].CGColor );
+    CGContextSetBlendMode(UIGraphicsGetCurrentContext(), kCGBlendModeClear);
+    CGContextFillRect(UIGraphicsGetCurrentContext(), circlePoint);
+    
+    UIImage *finalImage = UIGraphicsGetImageFromCurrentImageContext();
+    
+    UIGraphicsEndImageContext();
+    
+    backgroundImage.image = finalImage;
+    
+}
+
 - (IBAction)rememberMeClick:(id)sender {
     
     if (rememberCliked) {

@@ -121,7 +121,7 @@
     //UIFont *regularFont = [UIFont fontWithName:@"Raleway-Regular" size:15];
     UIFont *regularFont = [UIFont fontWithName:@"Raleway" size:15];
     
-    NSString *uuidText = @"UUID : ";
+    NSString *uuidText = @"UUID :  ";
     NSMutableAttributedString *uuidAttString=[[NSMutableAttributedString alloc] initWithString:uuidText];
     NSInteger _stringLength=[uuidText length];
     [uuidAttString addAttribute:NSFontAttributeName value:mediumFont range:NSMakeRange(0, _stringLength)];

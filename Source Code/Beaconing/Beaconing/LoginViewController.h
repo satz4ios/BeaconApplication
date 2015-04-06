@@ -10,7 +10,10 @@
 #import "ServiceCallAPI.h"
 #import <QuartzCore/QuartzCore.h>
 #import "MBProgressHUD.h"
-@interface LoginViewController : UIViewController<APIserviceProto,UITextFieldDelegate,MBProgressHUDDelegate>
+@interface LoginViewController : UIViewController<APIserviceProto,UITextFieldDelegate,MBProgressHUDDelegate> {
+    UIImageView *backgroundImage;
+
+}
 @property (weak, nonatomic) IBOutlet UITextField *emailIdTxtFld;
 @property (weak, nonatomic) IBOutlet UITextField *passWrdTxtFld;
 @property (weak, nonatomic) IBOutlet UIButton *loginBtn;
@@ -19,6 +22,8 @@
 @property (weak, nonatomic) IBOutlet UIButton *forgotPwdBtn;
 @property (weak, nonatomic) IBOutlet UIButton *checkBoxBtn;
 @property (weak, nonatomic) IBOutlet UIView *_embededView;
+@property (nonatomic, readwrite) CGRect clearArea;
+@property (nonatomic, strong) UIColor* blurTintColor;
 
 - (IBAction)rememberMeClick:(id)sender;
 

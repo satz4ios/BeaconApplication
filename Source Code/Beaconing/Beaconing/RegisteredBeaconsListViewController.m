@@ -139,7 +139,9 @@
         NSLog(@"I deleted a cell!");
     }
 }
-
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+    return 80;
+}
 - (IBAction)onTapBackBtn:(id)sender {
     
     [self.navigationController popViewControllerAnimated:YES];

@@ -17,10 +17,10 @@
 
 }
 
-@property (weak, nonatomic) IBOutlet UITextField *uuidTxtField;
-@property (weak, nonatomic) IBOutlet UITextField *majorTxtField;
+@property (weak, nonatomic) IBOutlet UILabel *uuidTxtField;
+@property (weak, nonatomic) IBOutlet UILabel *majorTxtField;
 
-@property (weak, nonatomic) IBOutlet UITextField *minorTxtField;
+@property (weak, nonatomic) IBOutlet UILabel *minorTxtField;
 @property (weak, nonatomic) IBOutlet UITextField *beaconTagTxtField;
 @property (weak, nonatomic) IBOutlet UITextField *beaconDescTxtField;
 

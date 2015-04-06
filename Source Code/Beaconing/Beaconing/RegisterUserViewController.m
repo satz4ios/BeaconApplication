@@ -67,7 +67,7 @@
     [_businesNameFld setValue:[UIFont fontWithName:@"Raleway-Medium" size: 18] forKeyPath:@"_placeholderLabel.font"];
     [_contactFld setFont:[UIFont fontWithName:@"Raleway-Medium" size:18] ];
     [_contactFld setValue:[UIFont fontWithName:@"Raleway-Medium" size: 18] forKeyPath:@"_placeholderLabel.font"];
-
+    [_registerButton.titleLabel setFont:[UIFont fontWithName:@"Raleway-Medium" size:22]];
 
     
 }
@@ -224,13 +224,15 @@
     
     if ([dictionary objectForKey:@"errorCode"]&&[[dictionary objectForKey:@"message"] isEqualToString:@"Successfully Registered"]) {
         [busyView hide:YES];
-        [[[UIAlertView alloc]initWithTitle:@"Alert" message:@"Successfully Registered" delegate:self cancelButtonTitle:@"Ok" otherButtonTitles:nil, nil]show];
+        UIAlertView *_alertView = [[UIAlertView alloc]initWithTitle:@"Alert" message:@"Successfully Registered" delegate:self cancelButtonTitle:@"Ok" otherButtonTitles:nil,nil];
+        _alertView.tag=125;
+        [_alertView show];
     }
     
 }
 -(IBAction)ShowUserTypeActionSheet:(id)sender {
     
-    UICustomActionSheet* actionSheet = [[UICustomActionSheet alloc] initWithTitle:@"Choose your Type" delegate:nil buttonTitles:@[@"Cancel",@"Normal User",@"Bussiness Owner",]];
+    UICustomActionSheet* actionSheet = [[UICustomActionSheet alloc] initWithTitle:@"Choose your Type" delegate:nil buttonTitles:@[@"Cancel",@"Customer",@"Bussiness Owner",]];
     actionSheet.delegate=self;
     [actionSheet setButtonColors:@[[UIColor redColor]]];
     [actionSheet setBackgroundColor:[UIColor clearColor]];
@@ -249,8 +251,10 @@
         [_businesNameFld setText:nil];
         [_contactFld setText:nil];
         [UIView animateWithDuration:0.5 animations:^{
-            _businesNameFld.alpha=0.5;
-            _contactFld.alpha=0.5;
+//            _businesNameFld.alpha=0.5;
+//            _contactFld.alpha=0.5;
+            __verticalConstraintBtn.constant=17;
+
         } completion:^(BOOL finished) {
             _businesNameFld.alpha=0;
             _contactFld.alpha=0;
@@ -267,7 +271,7 @@
             _contactFld.hidden=NO;
             _businesNameFld.alpha=0.5;
             _contactFld.alpha=0.5;
-            
+            __verticalConstraintBtn.constant=145;
         } completion:^(BOOL finished) {
             _businesNameFld.alpha=1;
             _contactFld.alpha=1;
@@ -283,7 +287,9 @@
     
 }
 -(void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex {
-    [self dismissViewControllerAnimated:YES completion:Nil];
+    if (alertView.tag==125) {
+        [self dismissViewControllerAnimated:YES completion:Nil];
+    }
 }
 
 #pragma mark - TextField Delegates

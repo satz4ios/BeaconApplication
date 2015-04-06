@@ -25,7 +25,7 @@
 @property (weak, nonatomic) IBOutlet UITextField *businesNameFld;
 @property (weak, nonatomic) IBOutlet UITextField *contactFld;
 @property (weak, nonatomic) IBOutlet UIScrollView *_scrollView;
-
+@property (weak,nonatomic)IBOutlet NSLayoutConstraint *_verticalConstraintBtn;
 - (IBAction)registerUser:(id)sender;
 
 @end

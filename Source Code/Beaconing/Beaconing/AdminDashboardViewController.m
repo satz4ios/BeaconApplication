@@ -73,7 +73,7 @@
         actionSheet.delegate=self;
         [actionSheet setButtonColors:@[[UIColor redColor]]];
         [actionSheet setBackgroundColor:[UIColor clearColor]];
-        [actionSheet setTintColor:[UIColor lightGrayColor]];
+        [actionSheet setTintColor:[UIColor darkGrayColor]];
         [actionSheet setSubtitle:@""];
         [actionSheet setSubtitleColor:[UIColor whiteColor]];
         [actionSheet showInView:self.view];
