@@ -10,19 +10,16 @@
 
 @implementation UserInfo
 @synthesize BeaconsArray;
+
 static UserInfo* _sharedInformation= nil;
 
 +(UserInfo*)SharedInfo {
     
-    @synchronized([UserInfo class])
-    {
-        if (!_sharedInformation)
-            [[self alloc] init];
-        
-        return _sharedInformation;
-    }
+    static dispatch_once_t pred;
+    static UserInfo *sharedInstance;
+    dispatch_once(&pred, ^{ sharedInstance = [[self alloc] init]; });
+    return sharedInstance;
     
-    return nil;
 }
 +(id)alloc {
     @synchronized([UserInfo class]) {

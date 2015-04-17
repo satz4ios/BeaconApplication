@@ -29,7 +29,8 @@
 
 #define RegisterUser                     (Beaconing_API_Endpoint_Host @"registration.php");
 #define LoginUser                        (Beaconing_API_Endpoint_Host @"login.php");
-#define AddOrEditBeacon                        (Beaconing_API_Endpoint_Host @"beaconconfig.php");
-
+#define forgotPassword                   (Beaconing_API_Endpoint_Host @"forgetpassword.php");
+#define AddOrEditBeacon                  (Beaconing_API_Endpoint_Host @"beaconconfig.php");
+#define GetListOfBeacons                 (Beaconing_API_Endpoint_Host @"beacondetails.php");
 
 #endif

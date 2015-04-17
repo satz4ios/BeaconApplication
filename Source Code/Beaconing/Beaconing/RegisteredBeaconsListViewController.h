@@ -7,7 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "ServiceCallAPI.h"
+#import "MBProgressHUD.h"
 
-@interface RegisteredBeaconsListViewController : UIViewController
+@interface RegisteredBeaconsListViewController : UIViewController<APIserviceProto,MBProgressHUDDelegate>
 
 @end

@@ -14,6 +14,7 @@
 #import "MBProgressHUD.h"
 #import "ForgotPasswordViewController.h"
 #import "UIImageEffects.h"
+#import "UserInfo.h"
 @interface LoginViewController () {
     UIStoryboard *_MainStoryboard;
     NSAttributedString *_underlineString;
@@ -129,6 +130,12 @@
         
         if ([_loginStatus isEqualToString:@"Successfully Logged in"]) {
             if ([_userType isEqualToString:@"1"]) {
+                
+                NSString *userId=[_dictArray objectForKey:@"userId"];
+                NSString *userType=[_dictArray objectForKey:@"userType"];
+                [[UserInfo SharedInfo]setObject:userId forKey:@"userId"];
+                [[UserInfo SharedInfo]setObject:userType forKey:@"userType"];
+
                 _MainStoryboard = [UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]];
                 AdminDashboardViewController *_adminUser = [_MainStoryboard instantiateViewControllerWithIdentifier:@"AdminController"];
                 UINavigationController *_navigationController = [[UINavigationController alloc]initWithRootViewController:_adminUser];

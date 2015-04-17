@@ -7,8 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
-
-@interface ForgotPasswordViewController : UIViewController<UITextFieldDelegate> {
+#import "ServiceCallAPI.h"
+#import "MBProgressHUD.h"
+@interface ForgotPasswordViewController : UIViewController<UITextFieldDelegate,APIserviceProto,MBProgressHUDDelegate,UIAlertViewDelegate> {
     UIImageView *backgroundImage;
     IBOutlet UIView *_passwordBGview;
 

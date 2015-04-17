@@ -9,13 +9,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Beaconing/LoginViewController.m"
-            timestampString = "449992772.39462"
+            filePath = "Beaconing/Utilities/MBProgressHUD.m"
+            timestampString = "450961904.508127"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "281"
-            endingLineNumber = "281"
-            landmarkName = "-dismissBlurredView:"
+            startingLineNumber = "332"
+            endingLineNumber = "332"
+            landmarkName = "-hideUsingAnimation:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -25,29 +25,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Beaconing/NearbyBeaconListViewController.m"
-            timestampString = "449999360.831008"
+            filePath = "Beaconing/Utilities/MBProgressHUD.m"
+            timestampString = "450961906.499908"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "289"
-            endingLineNumber = "289"
-            landmarkName = "-centralManagerDidUpdateState:"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Beaconing/RegisteredBeaconsListViewController.m"
-            timestampString = "450012400.916779"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "136"
-            endingLineNumber = "136"
-            landmarkName = "-tableView:commitEditingStyle:forRowAtIndexPath:"
+            startingLineNumber = "305"
+            endingLineNumber = "305"
+            landmarkName = "-showUsingAnimation:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

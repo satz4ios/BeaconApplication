@@ -306,6 +306,7 @@ static const CGFloat kDetailsLabelFontSize = 12.f;
     // Cancel any scheduled hideDelayed: calls
     [NSObject cancelPreviousPerformRequestsWithTarget:self];
     [self setNeedsDisplay];
+    [[UIApplication sharedApplication]setNetworkActivityIndicatorVisible:YES];
 
 	if (animated && animationType == MBProgressHUDAnimationZoomIn) {
 		self.transform = CGAffineTransformConcat(rotationTransform, CGAffineTransformMakeScale(0.5f, 0.5f));
@@ -331,6 +332,7 @@ static const CGFloat kDetailsLabelFontSize = 12.f;
 - (void)hideUsingAnimation:(BOOL)animated {
 	// Fade out
 	if (animated && showStarted) {
+        [[UIApplication sharedApplication]setNetworkActivityIndicatorVisible:NO];
 		[UIView beginAnimations:nil context:NULL];
 		[UIView setAnimationDuration:0.30];
 		[UIView setAnimationDelegate:self];

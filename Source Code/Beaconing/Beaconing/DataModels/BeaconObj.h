@@ -13,6 +13,8 @@
 @property (nonatomic,strong) NSString *Uuid;
 @property (nonatomic,strong) NSString *majorId;
 @property (nonatomic,strong) NSString *minorId;
+@property (nonatomic,strong) NSString *_beaconDescription;
+@property (nonatomic,strong) NSString *_beaconTagLine;
 
 
 @end

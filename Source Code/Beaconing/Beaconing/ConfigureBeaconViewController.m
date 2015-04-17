@@ -7,7 +7,7 @@
 //
 
 #import "ConfigureBeaconViewController.h"
-
+#import "UserInfo.h"
 #import "Services.h"
 #import "MBProgressHUD.h"
 
@@ -69,7 +69,6 @@
 - (IBAction)backClick:(id)sender {
         [self.navigationController popViewControllerAnimated:YES];
 }
-
 
 
 

@@ -9,8 +9,12 @@
 #import "RegisteredBeaconsListViewController.h"
 #import "BeaconObj.h"
 #import "ConfigureBeaconViewController.h"
-
-@interface RegisteredBeaconsListViewController()
+#import "UserInfo.h"
+#import "ServiceCallAPI.h"
+#import "Services.h"
+@interface RegisteredBeaconsListViewController() {
+    MBProgressHUD *busyView;
+}
 @property(nonatomic,strong) NSMutableArray *registeredBeacons;
 @property (weak, nonatomic) IBOutlet UITableView *beaconListTv;
 - (IBAction)onTapBackBtn:(id)sender;
@@ -22,13 +26,53 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    
-    
     self.registeredBeacons  = [[NSMutableArray alloc] init];
-    
+    [self makeWSCallToGetListOfBeacons];
+
+
     
 }
 
+
+-(void)makeWSCallToGetListOfBeacons {
+    
+    busyView = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+    busyView.labelText = @"Please Wait..";
+    busyView.dimBackground = YES;
+    busyView.delegate = self;
+
+    NSString *urlStr = GetListOfBeacons;
+    ServiceCallAPI *_serviceAPI = [[ServiceCallAPI alloc]initWithService:urlStr];
+    _serviceAPI.apiDelegate=self;
+    NSMutableDictionary *_paramsDict = [[NSMutableDictionary alloc] init];
+    NSString *userId=[[UserInfo SharedInfo]objectForKey:@"userId"];
+    NSString *userType=[[UserInfo SharedInfo] objectForKey:@"userType"];
+    [_paramsDict setValue:@"1" forKey:@"userId"];
+    [_paramsDict setValue:@"1" forKey:@"userType"];
+    [_serviceAPI sendHttpRequestServiceWithParameters:_paramsDict];
+    
+    
+}
+-(void)recievedServiceCallData:(NSDictionary *)dictionary {
+    
+    [busyView hide:YES];
+    NSArray *_listOfBeacons = [dictionary objectForKey:@"beaconDetails"];
+    
+    for (NSDictionary *_beaconDict in _listOfBeacons) {
+        BeaconObj *tempObj = [[BeaconObj alloc] init];
+        tempObj.Uuid = [_beaconDict objectForKey:@"uuId"];
+        tempObj.majorId = [_beaconDict objectForKey:@"majorValue"];
+        tempObj.minorId = [_beaconDict objectForKey:@"minorValue"];
+        tempObj._beaconDescription = [_beaconDict objectForKey:@"beaconDescription"];
+        tempObj._beaconTagLine =[_beaconDict objectForKey:@"beaconTag"];
+        [self.registeredBeacons addObject:tempObj];
+    }
+    [self.beaconListTv reloadData];
+}
+-(void)recievedServiceCallWithError:(NSError *)ErrorMessage {
+    [busyView hide:YES];
+
+}
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
@@ -37,22 +81,8 @@
 -(void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
     
-    
-    self.navigationController.navigationBar.hidden = YES;
-    
-    
-    
-    for (int idx =0; idx<5; idx++) {
-        BeaconObj *tempObj = [[BeaconObj alloc] init];
-        tempObj.Uuid = @"123";
-        tempObj.majorId = @"123";
-        tempObj.minorId = @"123";
-        
-        [self.registeredBeacons addObject:tempObj];
-    }
-    
-    [self.beaconListTv reloadData];
-    
+    self.beaconListTv.tableFooterView = [[UIView alloc] initWithFrame:CGRectZero];
+    self.beaconListTv.tableHeaderView = [[UIView alloc] initWithFrame:CGRectZero];
     
 }
 
@@ -85,26 +115,31 @@
     //return 5;
     return [self.registeredBeacons count];
 }
-
-
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+    
+    return 1;
+}
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"beaconListCell"];
     
     BeaconObj *tempObj = [self.registeredBeacons objectAtIndex:[indexPath row]];
     
-    
+    UILabel *beaconDescriptionLbl = (UILabel*) [cell viewWithTag:80];
+    UILabel *beaconTagLbl = (UILabel*) [cell viewWithTag:90];
     UILabel *uuidLbl = (UILabel*) [cell viewWithTag:100];
     UILabel *majorLbl = (UILabel*) [cell viewWithTag:200];
     UILabel *minorLbl = (UILabel*) [cell viewWithTag:300];
     
+    NSString *beaconDescrip = [NSString stringWithFormat:@"Beacon Description : %@",tempObj._beaconDescription];
+    NSString *beaconTag = [NSString stringWithFormat:@"Beacon TagLine : %@",tempObj._beaconTagLine];
     NSString *uuidVal = [NSString stringWithFormat:@"UUID : %@",tempObj.Uuid];
     NSString *majorVal = [NSString stringWithFormat:@"Major : %@",tempObj.majorId];
     NSString *minorVal = [NSString stringWithFormat:@"Minor : %@",tempObj.minorId];
     
-    
+    [beaconDescriptionLbl setText:beaconDescrip];
+    [beaconTagLbl setText:beaconTag];
     [uuidLbl setText:uuidVal];
-    
     [majorLbl setText:majorVal];
     [minorLbl setText:minorVal];
     
@@ -139,9 +174,9 @@
         NSLog(@"I deleted a cell!");
     }
 }
-- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
-    return 80;
-}
+//- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+//    return 130;
+//}
 - (IBAction)onTapBackBtn:(id)sender {
     
     [self.navigationController popViewControllerAnimated:YES];
