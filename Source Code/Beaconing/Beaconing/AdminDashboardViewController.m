@@ -9,7 +9,7 @@
 #import "AdminDashboardViewController.h"
 #import "NearbyBeaconListViewController.h"
 #import "RegisteredBeaconsListViewController.h"
-
+#import "CreateCouponViewController.h"
 @interface AdminDashboardViewController () {
     NSMutableArray *_listOfMenu;
     NSMutableArray *_listOfMenuImages;
@@ -58,16 +58,20 @@
     return 90;
 }
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    UIStoryboard *_mainStoryboard = [UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]];
+
     if (indexPath.row==0) {
-        UIStoryboard *_mainStoryboard = [UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]];
         NearbyBeaconListViewController *_searchBeaconVC = [_mainStoryboard instantiateViewControllerWithIdentifier:@"SearchBeaconViewController"];
         [self.navigationController pushViewController:_searchBeaconVC animated:YES];
 
     } else if (indexPath.row==1) {
-        UIStoryboard *_mainStoryBoard = [UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]];
-        RegisteredBeaconsListViewController *_regBeaconList = [_mainStoryBoard instantiateViewControllerWithIdentifier:@"RegisteredBeaconsListViewController"];
+        RegisteredBeaconsListViewController *_regBeaconList = [_mainStoryboard instantiateViewControllerWithIdentifier:@"RegisteredBeaconsListViewController"];
         [self.navigationController pushViewController:_regBeaconList animated:YES];
 
+    } else if (indexPath.row==2) {
+        CreateCouponViewController *_createCoupon = [_mainStoryboard instantiateViewControllerWithIdentifier:@"CouponController"];
+        [self.navigationController pushViewController:_createCoupon animated:YES];
+        
     } else if (indexPath.row==6) {
         UICustomActionSheet* actionSheet = [[UICustomActionSheet alloc] initWithTitle:@"Settings" delegate:nil buttonTitles:@[@"Cancel",@"Log Out",@"View Profile",]];
         actionSheet.delegate=self;

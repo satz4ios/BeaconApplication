@@ -44,6 +44,8 @@
 		0069A2841AD2896000D7DD1A /* Raleway-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0069A27F1AD2896000D7DD1A /* Raleway-ExtraLight.ttf */; };
 		0069A2851AD2896000D7DD1A /* Raleway-Heavy.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0069A2801AD2896000D7DD1A /* Raleway-Heavy.ttf */; };
 		0069A2861AD2896000D7DD1A /* Raleway-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0069A2811AD2896000D7DD1A /* Raleway-Thin.ttf */; };
+		0076B6FC1AE4C5B700E8EE08 /* CreateCouponViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0076B6FB1AE4C5B700E8EE08 /* CreateCouponViewController.m */; };
+		0076B7001AE4C9F400E8EE08 /* couponBg.png in Resources */ = {isa = PBXBuildFile; fileRef = 0076B6FF1AE4C9F400E8EE08 /* couponBg.png */; };
 		007D52ED1ACD15170026E607 /* icon_120*120.png in Resources */ = {isa = PBXBuildFile; fileRef = 007D52EA1ACD15170026E607 /* icon_120*120.png */; };
 		007D52EE1ACD15170026E607 /* icon_152*152.png in Resources */ = {isa = PBXBuildFile; fileRef = 007D52EB1ACD15170026E607 /* icon_152*152.png */; };
 		007D52EF1ACD15170026E607 /* icon_180*180.png in Resources */ = {isa = PBXBuildFile; fileRef = 007D52EC1ACD15170026E607 /* icon_180*180.png */; };
@@ -150,6 +152,9 @@
 		0069A27F1AD2896000D7DD1A /* Raleway-ExtraLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Raleway-ExtraLight.ttf"; sourceTree = "<group>"; };
 		0069A2801AD2896000D7DD1A /* Raleway-Heavy.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Raleway-Heavy.ttf"; sourceTree = "<group>"; };
 		0069A2811AD2896000D7DD1A /* Raleway-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Raleway-Thin.ttf"; sourceTree = "<group>"; };
+		0076B6FA1AE4C5B700E8EE08 /* CreateCouponViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CreateCouponViewController.h; sourceTree = "<group>"; };
+		0076B6FB1AE4C5B700E8EE08 /* CreateCouponViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CreateCouponViewController.m; sourceTree = "<group>"; };
+		0076B6FF1AE4C9F400E8EE08 /* couponBg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = couponBg.png; sourceTree = "<group>"; };
 		007D52EA1ACD15170026E607 /* icon_120*120.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_120*120.png"; sourceTree = "<group>"; };
 		007D52EB1ACD15170026E607 /* icon_152*152.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_152*152.png"; sourceTree = "<group>"; };
 		007D52EC1ACD15170026E607 /* icon_180*180.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_180*180.png"; sourceTree = "<group>"; };
@@ -306,6 +311,7 @@
 		00306C6A1AC17B7E00A7217F /* Image files */ = {
 			isa = PBXGroup;
 			children = (
+				0076B6FF1AE4C9F400E8EE08 /* couponBg.png */,
 				0069A27B1AD2853500D7DD1A /* Logo.png */,
 				008405421ACF824D00269E8F /* Title-background.png */,
 				007D52F01ACD25EE0026E607 /* add.-beacon.png */,
@@ -354,6 +360,8 @@
 				00A9A8BD1AC42F9D00D4A439 /* ConfigureBeaconViewController.m */,
 				009771CD1ACD15F0007DF037 /* RegisteredBeaconsListViewController.h */,
 				009771CE1ACD15F0007DF037 /* RegisteredBeaconsListViewController.m */,
+				0076B6FA1AE4C5B700E8EE08 /* CreateCouponViewController.h */,
+				0076B6FB1AE4C5B700E8EE08 /* CreateCouponViewController.m */,
 			);
 			name = ViewControllers;
 			path = ..;
@@ -572,6 +580,7 @@
 				007D52EF1ACD15170026E607 /* icon_180*180.png in Resources */,
 				007D52F81ACD25EE0026E607 /* create-coupon.png in Resources */,
 				00E14DAB1AC51F2C00153155 /* Raleway-Regular.ttf in Resources */,
+				0076B7001AE4C9F400E8EE08 /* couponBg.png in Resources */,
 				00306C841AC17BC800A7217F /* Splash-screen.png in Resources */,
 				00306C7D1AC17BBC00A7217F /* signup-icon.png in Resources */,
 				00306C7A1AC17BBC00A7217F /* remember-me-active.png in Resources */,
@@ -606,6 +615,7 @@
 				000855101AB6961600E0C566 /* ServiceCallAPI.m in Sources */,
 				0008553F1AB6BBA600E0C566 /* AFURLConnectionOperation.m in Sources */,
 				009771CF1ACD15F0007DF037 /* RegisteredBeaconsListViewController.m in Sources */,
+				0076B6FC1AE4C5B700E8EE08 /* CreateCouponViewController.m in Sources */,
 				000855481AB6BBA600E0C566 /* UIProgressView+AFNetworking.m in Sources */,
 				00A9A8B81AC4103100D4A439 /* BeaconObj.m in Sources */,
 				0008553C1AB6BBA600E0C566 /* AFHTTPSessionManager.m in Sources */,
@@ -702,7 +712,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
-				PROVISIONING_PROFILE = "b4b9099b-bb9a-4e7a-be1a-88a816bda081";
+				PROVISIONING_PROFILE = "34c3611f-16bd-422d-8d84-368934042f96";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -739,7 +749,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
-				PROVISIONING_PROFILE = "b4b9099b-bb9a-4e7a-be1a-88a816bda081";
+				PROVISIONING_PROFILE = "34c3611f-16bd-422d-8d84-368934042f96";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
@@ -756,7 +766,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "b4b9099b-bb9a-4e7a-be1a-88a816bda081";
+				PROVISIONING_PROFILE = "34c3611f-16bd-422d-8d84-368934042f96";
 			};
 			name = Debug;
 		};
@@ -770,7 +780,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "b4b9099b-bb9a-4e7a-be1a-88a816bda081";
+				PROVISIONING_PROFILE = "34c3611f-16bd-422d-8d84-368934042f96";
 			};
 			name = Release;
 		};

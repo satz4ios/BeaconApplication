@@ -32,5 +32,6 @@
 #define forgotPassword                   (Beaconing_API_Endpoint_Host @"forgetpassword.php");
 #define AddOrEditBeacon                  (Beaconing_API_Endpoint_Host @"beaconconfig.php");
 #define GetListOfBeacons                 (Beaconing_API_Endpoint_Host @"beacondetails.php");
+#define CreateCoupon                     (Beaconing_API_Endpoint_Host @"couponconfig.php");
 
 #endif
