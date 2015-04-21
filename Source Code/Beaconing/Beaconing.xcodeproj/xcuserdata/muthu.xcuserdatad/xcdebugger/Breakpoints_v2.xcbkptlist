@@ -9,13 +9,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Beaconing/Utilities/MBProgressHUD.m"
-            timestampString = "450961904.508127"
+            filePath = "Beaconing/ConfigureBeaconViewController.m"
+            timestampString = "451303663.546847"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "332"
-            endingLineNumber = "332"
-            landmarkName = "-hideUsingAnimation:"
+            startingLineNumber = "114"
+            endingLineNumber = "114"
+            landmarkName = "-recievedServiceCallData:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -25,13 +25,45 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Beaconing/Utilities/MBProgressHUD.m"
-            timestampString = "450961906.499908"
+            filePath = "Beaconing/ConfigureBeaconViewController.m"
+            timestampString = "451303663.546847"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "305"
-            endingLineNumber = "305"
-            landmarkName = "-showUsingAnimation:"
+            startingLineNumber = "132"
+            endingLineNumber = "132"
+            landmarkName = "-recievedServiceCallWithError:"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Beaconing/ConfigureBeaconViewController.m"
+            timestampString = "451303663.546847"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "92"
+            endingLineNumber = "92"
+            landmarkName = "-makeWSCallForEditBeacon"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Beaconing/ConfigureBeaconViewController.m"
+            timestampString = "451303643.038011"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "75"
+            endingLineNumber = "75"
+            landmarkName = "-makeWSCallForAddOrEditBeacon"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

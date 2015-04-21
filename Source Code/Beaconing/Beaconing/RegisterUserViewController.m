@@ -247,7 +247,7 @@
     if (buttonIndex == 1) {
         // Selected User consumer //
         _userTypeValue=2;
-        _userTypeFld.text=@"Normal User";
+        _userTypeFld.text=@"   Normal User";
         [_businesNameFld setText:nil];
         [_contactFld setText:nil];
         [UIView animateWithDuration:0.5 animations:^{
@@ -265,7 +265,7 @@
     } else if (buttonIndex == 2) {
         // Selected User Bussiness //
         _userTypeValue=1;
-        _userTypeFld.text=@"Bussiness Owner";
+        _userTypeFld.text=@"   Bussiness Owner";
         [UIView animateWithDuration:0.3 animations:^{
             _businesNameFld.hidden=NO;
             _contactFld.hidden=NO;
@@ -342,7 +342,7 @@
         {
             UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Error" message:@"Username should be at least 3 characters long" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
             [alert show];
-            return NO;
+            return YES;
         }
         return YES;
         
@@ -354,7 +354,7 @@
             UIAlertView *loginalert = [[UIAlertView alloc] initWithTitle:@"Error"   message:@"Enter valid E-mail" delegate:self
                                                        cancelButtonTitle:@"OK" otherButtonTitles:nil];
             [loginalert show];
-            return NO;
+            return YES;
         }
         
     }
@@ -366,7 +366,7 @@
             UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Error"   message:@"Password is mandatory"  delegate:self cancelButtonTitle:@"OK"  otherButtonTitles:nil, nil];
             [alert show];
             
-            return NO;
+            return YES;
             
         }
         else if ([textField.text length]<8)
@@ -375,7 +375,7 @@
             UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Error"   message:@"Password should be at least 8 characters long"   delegate:self cancelButtonTitle: @"OK"  otherButtonTitles:nil, nil];
             [alert show];
             
-            return NO;
+            return YES;
             
         }
         else
@@ -394,7 +394,7 @@
             UIAlertView *loginalert = [[UIAlertView alloc] initWithTitle:@"Error"   message: @"Please confirm your password"   delegate:self
                                                        cancelButtonTitle: @"OK"  otherButtonTitles:nil];
             [loginalert show];
-            return NO;
+            return YES;
         }
         else if (![_cPasswrdFld.text isEqualToString:_passwordString])
         {
@@ -403,7 +403,7 @@
             UIAlertView *loginalert = [[UIAlertView alloc] initWithTitle:@"Error"   message: @"Password does not match the confirm password"   delegate:self
                                                        cancelButtonTitle: @"OK"  otherButtonTitles:nil];
             [loginalert show];
-            return NO;
+            return YES;
             
             
         }

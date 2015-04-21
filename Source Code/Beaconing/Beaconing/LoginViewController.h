@@ -21,7 +21,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *rememberMELbl;
 @property (weak, nonatomic) IBOutlet UIButton *forgotPwdBtn;
 @property (weak, nonatomic) IBOutlet UIButton *checkBoxBtn;
-@property (weak, nonatomic) IBOutlet UIView *_embededView;
+@property (weak, nonatomic) IBOutlet UIScrollView *_embededView;
 @property (nonatomic, readwrite) CGRect clearArea;
 @property (nonatomic, strong) UIColor* blurTintColor;
 

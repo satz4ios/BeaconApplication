@@ -33,5 +33,5 @@
 #define AddOrEditBeacon                  (Beaconing_API_Endpoint_Host @"beaconconfig.php");
 #define GetListOfBeacons                 (Beaconing_API_Endpoint_Host @"beacondetails.php");
 #define CreateCoupon                     (Beaconing_API_Endpoint_Host @"couponconfig.php");
-
+#define DeleteBeacon                     (Beaconing_API_Endpoint_Host @"deletebeacon.php");
 #endif

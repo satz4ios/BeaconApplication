@@ -53,21 +53,28 @@
     
     
 }
+-(void)makeWSCallToDeleteBeaconList {
+    
+}
 -(void)recievedServiceCallData:(NSDictionary *)dictionary {
     
-    [busyView hide:YES];
-    NSArray *_listOfBeacons = [dictionary objectForKey:@"beaconDetails"];
-    
-    for (NSDictionary *_beaconDict in _listOfBeacons) {
-        BeaconObj *tempObj = [[BeaconObj alloc] init];
-        tempObj.Uuid = [_beaconDict objectForKey:@"uuId"];
-        tempObj.majorId = [_beaconDict objectForKey:@"majorValue"];
-        tempObj.minorId = [_beaconDict objectForKey:@"minorValue"];
-        tempObj._beaconDescription = [_beaconDict objectForKey:@"beaconDescription"];
-        tempObj._beaconTagLine =[_beaconDict objectForKey:@"beaconTag"];
-        [self.registeredBeacons addObject:tempObj];
+    if ([[dictionary objectForKey:@"errorCode"]isEqualToString:@"400"]) {
+        [busyView hide:YES];
+
+    } else {
+        [busyView hide:YES];
+        NSArray *_listOfBeacons = [dictionary objectForKey:@"beaconDetails"];
+        for (NSDictionary *_beaconDict in _listOfBeacons) {
+            BeaconObj *tempObj = [[BeaconObj alloc] init];
+            tempObj.Uuid = [_beaconDict objectForKey:@"uuId"];
+            tempObj.majorId = [_beaconDict objectForKey:@"majorValue"];
+            tempObj.minorId = [_beaconDict objectForKey:@"minorValue"];
+            tempObj._beaconDescription = [_beaconDict objectForKey:@"beaconDescription"];
+            tempObj._beaconTagLine =[_beaconDict objectForKey:@"beaconTag"];
+            [self.registeredBeacons addObject:tempObj];
+        }
+        [self.beaconListTv reloadData];
     }
-    [self.beaconListTv reloadData];
 }
 -(void)recievedServiceCallWithError:(NSError *)ErrorMessage {
     [busyView hide:YES];
@@ -162,16 +169,28 @@
 }
 
 
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
-{
+- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath{
     return YES;
 }
 
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    if(editingStyle == UITableViewCellEditingStyleDelete)
-    {
+- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
+    if(editingStyle == UITableViewCellEditingStyleDelete) {
         NSLog(@"I deleted a cell!");
+        busyView = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+        busyView.labelText = @"Please Wait..";
+        busyView.dimBackground = YES;
+        busyView.delegate = self;
+        
+        NSString *urlStr = GetListOfBeacons;
+        ServiceCallAPI *_serviceAPI = [[ServiceCallAPI alloc]initWithService:urlStr];
+        _serviceAPI.apiDelegate=self;
+        NSMutableDictionary *_paramsDict = [[NSMutableDictionary alloc] init];
+        NSString *userId=[[UserInfo SharedInfo]objectForKey:@"userId"];
+        [_paramsDict setValue:userId forKey:@"userId"];
+        BeaconObj *beaconObjid = [self.registeredBeacons objectAtIndex:[indexPath row]];
+        NSString *minorVal = [NSString stringWithFormat:@"%@",beaconObjid.minorId];
+        [_paramsDict setValue:minorVal forKey:@"minorValue"];
+        [_serviceAPI sendHttpRequestServiceWithParameters:_paramsDict];
     }
 }
 //- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{

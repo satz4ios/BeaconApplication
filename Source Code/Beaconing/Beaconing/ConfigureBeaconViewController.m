@@ -83,10 +83,8 @@
     [_paramsDict setValue:self.minorTxtField.text forKey:@"minorValue"];
     [_paramsDict setValue:self.beaconDescTxtField.text forKey:@"beaconDescription"];
     [_paramsDict setValue:self.beaconTagTxtField.text forKey:@"beaconTag"];
-    
-#warning add user id for created by 
-    [_paramsDict setValue:@"1" forKey:@"createdBy"];
-    
+    NSString *userId=[[UserInfo SharedInfo]objectForKey:@"userId"];
+    [_paramsDict setValue:userId forKey:@"createdBy"];
     [_serviceAPI sendHttpRequestServiceWithParameters:_paramsDict];
 }  
 
@@ -104,9 +102,8 @@
     [_paramsDict setValue:self.minorTxtField.text forKey:@"minorValue"];
     [_paramsDict setValue:self.beaconDescTxtField.text forKey:@"beaconDescription"];
     [_paramsDict setValue:self.beaconTagTxtField.text forKey:@"beaconTag"];
-    
-#warning add user id for created by
-    [_paramsDict setValue:@"1" forKey:@"createdBy"];
+    NSString *userId=[[UserInfo SharedInfo]objectForKey:@"userId"];
+    [_paramsDict setValue:userId forKey:@"createdBy"];
     
     [_serviceAPI sendHttpRequestServiceWithParameters:_paramsDict];
 }
@@ -120,8 +117,8 @@
     [_actiivityView hide:YES];
     NSString *message = dictionary[@"message"];
     
-    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@""
-                                                    message:message
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Alert"
+                                                    message:@"Successfully Registered"
                                                    delegate:self
                                           cancelButtonTitle:@"ok"
                                           otherButtonTitles:nil, nil];
@@ -159,7 +156,7 @@
     [self resignKeyboard];
     
     _actiivityView= [MBProgressHUD showHUDAddedTo:self.view animated:YES];
-    _actiivityView.labelText = @"Updating...";
+    _actiivityView.labelText = @"Registering Beacon...";
     _actiivityView.dimBackground = YES;
 
     
@@ -173,7 +170,7 @@
         [_actiivityView hide:YES];
         
         UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@""
-                                                        message:@"Pls fill all the details."
+                                                        message:@"Please fill all the details."
                                                        delegate:nil
                                               cancelButtonTitle:@"ok"
                                               otherButtonTitles:nil, nil];
