@@ -247,7 +247,7 @@
     if (buttonIndex == 1) {
         // Selected User consumer //
         _userTypeValue=2;
-        _userTypeFld.text=@"   Normal User";
+        _userTypeFld.text=@"   Customer";
         [_businesNameFld setText:nil];
         [_contactFld setText:nil];
         [UIView animateWithDuration:0.5 animations:^{

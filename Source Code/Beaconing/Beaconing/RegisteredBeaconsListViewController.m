@@ -26,7 +26,6 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    self.registeredBeacons  = [[NSMutableArray alloc] init];
     [self makeWSCallToGetListOfBeacons];
 
 
@@ -47,8 +46,8 @@
     NSMutableDictionary *_paramsDict = [[NSMutableDictionary alloc] init];
     NSString *userId=[[UserInfo SharedInfo]objectForKey:@"userId"];
     NSString *userType=[[UserInfo SharedInfo] objectForKey:@"userType"];
-    [_paramsDict setValue:@"1" forKey:@"userId"];
-    [_paramsDict setValue:@"1" forKey:@"userType"];
+    [_paramsDict setValue:userId forKey:@"userId"];
+    [_paramsDict setValue:userType forKey:@"userType"];
     [_serviceAPI sendHttpRequestServiceWithParameters:_paramsDict];
     
     
@@ -60,9 +59,13 @@
     
     if ([[dictionary objectForKey:@"errorCode"]isEqualToString:@"400"]) {
         [busyView hide:YES];
-
+        UIAlertView *_noBeaconsAlert = [[UIAlertView alloc]initWithTitle:@"Alert" message:@"Oppss.!! NoBeacons Registered Yet" delegate:self cancelButtonTitle:@"Ok" otherButtonTitles:nil, nil];
+        _noBeaconsAlert.tag=956;
+        [_noBeaconsAlert show];
+        
     } else {
         [busyView hide:YES];
+        self.registeredBeacons  = [[NSMutableArray alloc] init];
         NSArray *_listOfBeacons = [dictionary objectForKey:@"beaconDetails"];
         for (NSDictionary *_beaconDict in _listOfBeacons) {
             BeaconObj *tempObj = [[BeaconObj alloc] init];
@@ -181,7 +184,7 @@
         busyView.dimBackground = YES;
         busyView.delegate = self;
         
-        NSString *urlStr = GetListOfBeacons;
+        NSString *urlStr = DeleteBeacon;
         ServiceCallAPI *_serviceAPI = [[ServiceCallAPI alloc]initWithService:urlStr];
         _serviceAPI.apiDelegate=self;
         NSMutableDictionary *_paramsDict = [[NSMutableDictionary alloc] init];
@@ -196,6 +199,11 @@
 //- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
 //    return 130;
 //}
+-(void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex {
+    if (alertView.tag==956) {
+        [self.navigationController popViewControllerAnimated:YES];
+    }
+}
 - (IBAction)onTapBackBtn:(id)sender {
     
     [self.navigationController popViewControllerAnimated:YES];

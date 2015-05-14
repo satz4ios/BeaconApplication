@@ -74,7 +74,7 @@
 
 -(void)makeWSCallForAddOrEditBeacon{
 
-    NSString *urlStr = AddOrEditBeacon;
+    NSString *urlStr = AddBeacon;
     ServiceCallAPI *_serviceAPI = [[ServiceCallAPI alloc]initWithService:urlStr];
     _serviceAPI.apiDelegate=self;
     NSMutableDictionary *_paramsDict = [[NSMutableDictionary alloc] init];
@@ -93,7 +93,7 @@
     
     //http://gotocontactsonline.com/beaconapp/beaconconfig.php?uuId=1234&majorValue=12&minorValue=0.5&beaconDescription=test&beaconTag=test&createdBy=1
     
-    NSString *urlStr = AddOrEditBeacon;
+    NSString *urlStr = UpdateBeacon;
     ServiceCallAPI *_serviceAPI = [[ServiceCallAPI alloc]initWithService:urlStr];
     _serviceAPI.apiDelegate=self;
     NSMutableDictionary *_paramsDict = [[NSMutableDictionary alloc] init];
