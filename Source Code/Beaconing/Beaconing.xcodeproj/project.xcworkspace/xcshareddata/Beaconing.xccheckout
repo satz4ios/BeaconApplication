@@ -7,14 +7,14 @@
 	<key>IDESourceControlProjectIdentifier</key>
 	<string>6ECCFCDB-1D4A-40B9-8115-A88C04868A3C</string>
 	<key>IDESourceControlProjectName</key>
-	<string>Beaconing</string>
+	<string>project</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
 		<key>AAB934AA0BF33B2BE4079FEBBFB0AC2163AD4077</key>
 		<string>https://github.com/satz4ios/BeaconApplication.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>Source Code/Beaconing/Beaconing.xcodeproj</string>
+	<string>Source Code/Beaconing/Beaconing.xcodeproj/project.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>AAB934AA0BF33B2BE4079FEBBFB0AC2163AD4077</key>
@@ -34,7 +34,7 @@
 			<key>IDESourceControlWCCIdentifierKey</key>
 			<string>AAB934AA0BF33B2BE4079FEBBFB0AC2163AD4077</string>
 			<key>IDESourceControlWCCName</key>
-			<string>BeaconApplication</string>
+			<string>BeaconApplication_LatestWCopy</string>
 		</dict>
 	</array>
 </dict>

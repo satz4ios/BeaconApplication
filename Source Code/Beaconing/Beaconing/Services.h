@@ -30,6 +30,7 @@
 #define RegisterUser                     (Beaconing_API_Endpoint_Host @"registration.php");
 #define LoginUser                        (Beaconing_API_Endpoint_Host @"login.php");
 #define forgotPassword                   (Beaconing_API_Endpoint_Host @"forgetpassword.php");
+#define getUserDetails                   (Beaconing_API_Endpoint_Host @"getuserdetails.php");
 
 #define AddBeacon                        (Beaconing_API_Endpoint_Host @"createbeacon.php");
 #define UpdateBeacon                     (Beaconing_API_Endpoint_Host @"updatebeacon.php");
@@ -38,4 +39,7 @@
 
 #define CreateCoupon                     (Beaconing_API_Endpoint_Host @"addcoupon.php");
 #define GetListofCoupons                 (Beaconing_API_Endpoint_Host @"updatecoupon.php")
+#define DeleteCoupon                     (Beaconing_API_Endpoint_Host @"deletecoupon.php")
+
+#define getConsumerCoupon                (Beaconing_API_Endpoint_Host @"consumerservice.php")
 #endif

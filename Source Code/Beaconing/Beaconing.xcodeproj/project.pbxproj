@@ -25,27 +25,33 @@
 		000855481AB6BBA600E0C566 /* UIProgressView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 000855351AB6BBA600E0C566 /* UIProgressView+AFNetworking.m */; };
 		000855491AB6BBA600E0C566 /* UIRefreshControl+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 000855371AB6BBA600E0C566 /* UIRefreshControl+AFNetworking.m */; };
 		0008554A1AB6BBA600E0C566 /* UIWebView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 000855391AB6BBA600E0C566 /* UIWebView+AFNetworking.m */; };
+		000B839F1B13697100F4CE5D /* splash-bg.png in Resources */ = {isa = PBXBuildFile; fileRef = 000B839E1B13697100F4CE5D /* splash-bg.png */; };
+		000B83A11B136A4000F4CE5D /* Logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 000B83A01B136A4000F4CE5D /* Logo.png */; };
+		000B83A41B13739800F4CE5D /* remember-me-active.png in Resources */ = {isa = PBXBuildFile; fileRef = 000B83A21B13739800F4CE5D /* remember-me-active.png */; };
+		000B83A51B13739800F4CE5D /* remember-me-visible.png in Resources */ = {isa = PBXBuildFile; fileRef = 000B83A31B13739800F4CE5D /* remember-me-visible.png */; };
 		00306C751AC17BBC00A7217F /* back.png in Resources */ = {isa = PBXBuildFile; fileRef = 00306C6B1AC17BBC00A7217F /* back.png */; };
 		00306C761AC17BBC00A7217F /* login-btn.png in Resources */ = {isa = PBXBuildFile; fileRef = 00306C6C1AC17BBC00A7217F /* login-btn.png */; };
 		00306C771AC17BBC00A7217F /* login-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 00306C6D1AC17BBC00A7217F /* login-icon.png */; };
 		00306C781AC17BBC00A7217F /* Login.png in Resources */ = {isa = PBXBuildFile; fileRef = 00306C6E1AC17BBC00A7217F /* Login.png */; };
-		00306C7A1AC17BBC00A7217F /* remember-me-active.png in Resources */ = {isa = PBXBuildFile; fileRef = 00306C701AC17BBC00A7217F /* remember-me-active.png */; };
-		00306C7B1AC17BBC00A7217F /* remember-me-visible.png in Resources */ = {isa = PBXBuildFile; fileRef = 00306C711AC17BBC00A7217F /* remember-me-visible.png */; };
 		00306C7C1AC17BBC00A7217F /* signup-btn.png in Resources */ = {isa = PBXBuildFile; fileRef = 00306C721AC17BBC00A7217F /* signup-btn.png */; };
 		00306C7D1AC17BBC00A7217F /* signup-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 00306C731AC17BBC00A7217F /* signup-icon.png */; };
 		00306C7E1AC17BBC00A7217F /* txt-field.png in Resources */ = {isa = PBXBuildFile; fileRef = 00306C741AC17BBC00A7217F /* txt-field.png */; };
 		00306C821AC17BC800A7217F /* Signup.png in Resources */ = {isa = PBXBuildFile; fileRef = 00306C7F1AC17BC800A7217F /* Signup.png */; };
-		00306C831AC17BC800A7217F /* splash-bg.png in Resources */ = {isa = PBXBuildFile; fileRef = 00306C801AC17BC800A7217F /* splash-bg.png */; };
 		00306C841AC17BC800A7217F /* Splash-screen.png in Resources */ = {isa = PBXBuildFile; fileRef = 00306C811AC17BC800A7217F /* Splash-screen.png */; };
+		003C9B0B1B1AFF8500601065 /* inner-bg.png in Resources */ = {isa = PBXBuildFile; fileRef = 003C9B0A1B1AFF8500601065 /* inner-bg.png */; };
+		003C9B0D1B1B004C00601065 /* coupon-bg.png in Resources */ = {isa = PBXBuildFile; fileRef = 003C9B0C1B1B004C00601065 /* coupon-bg.png */; };
+		003C9B101B1B06B100601065 /* coupon-des-field.png in Resources */ = {isa = PBXBuildFile; fileRef = 003C9B0E1B1B06B100601065 /* coupon-des-field.png */; };
+		003C9B111B1B06B100601065 /* coupon-field.png in Resources */ = {isa = PBXBuildFile; fileRef = 003C9B0F1B1B06B100601065 /* coupon-field.png */; };
+		003C9B131B1B13B900601065 /* close.png in Resources */ = {isa = PBXBuildFile; fileRef = 003C9B121B1B13B900601065 /* close.png */; };
+		003C9B151B1B13C600601065 /* headline-saperator.png in Resources */ = {isa = PBXBuildFile; fileRef = 003C9B141B1B13C600601065 /* headline-saperator.png */; };
+		003C9B171B1B143300601065 /* list-saperator.png in Resources */ = {isa = PBXBuildFile; fileRef = 003C9B161B1B143300601065 /* list-saperator.png */; };
 		004903D91ACFDED7003A3293 /* UserInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 004903D81ACFDED7003A3293 /* UserInfo.m */; };
-		0069A27C1AD2853500D7DD1A /* Logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 0069A27B1AD2853500D7DD1A /* Logo.png */; };
 		0069A2821AD2896000D7DD1A /* Raleway-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0069A27D1AD2896000D7DD1A /* Raleway-Bold.ttf */; };
 		0069A2831AD2896000D7DD1A /* Raleway-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0069A27E1AD2896000D7DD1A /* Raleway-ExtraBold.ttf */; };
 		0069A2841AD2896000D7DD1A /* Raleway-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0069A27F1AD2896000D7DD1A /* Raleway-ExtraLight.ttf */; };
 		0069A2851AD2896000D7DD1A /* Raleway-Heavy.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0069A2801AD2896000D7DD1A /* Raleway-Heavy.ttf */; };
 		0069A2861AD2896000D7DD1A /* Raleway-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0069A2811AD2896000D7DD1A /* Raleway-Thin.ttf */; };
 		0076B6FC1AE4C5B700E8EE08 /* CreateCouponViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0076B6FB1AE4C5B700E8EE08 /* CreateCouponViewController.m */; };
-		0076B7001AE4C9F400E8EE08 /* couponBg.png in Resources */ = {isa = PBXBuildFile; fileRef = 0076B6FF1AE4C9F400E8EE08 /* couponBg.png */; };
 		007D52ED1ACD15170026E607 /* icon_120*120.png in Resources */ = {isa = PBXBuildFile; fileRef = 007D52EA1ACD15170026E607 /* icon_120*120.png */; };
 		007D52EE1ACD15170026E607 /* icon_152*152.png in Resources */ = {isa = PBXBuildFile; fileRef = 007D52EB1ACD15170026E607 /* icon_152*152.png */; };
 		007D52EF1ACD15170026E607 /* icon_180*180.png in Resources */ = {isa = PBXBuildFile; fileRef = 007D52EC1ACD15170026E607 /* icon_180*180.png */; };
@@ -132,21 +138,28 @@
 		000855371AB6BBA600E0C566 /* UIRefreshControl+AFNetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIRefreshControl+AFNetworking.m"; sourceTree = "<group>"; };
 		000855381AB6BBA600E0C566 /* UIWebView+AFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIWebView+AFNetworking.h"; sourceTree = "<group>"; };
 		000855391AB6BBA600E0C566 /* UIWebView+AFNetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIWebView+AFNetworking.m"; sourceTree = "<group>"; };
+		000B839E1B13697100F4CE5D /* splash-bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "splash-bg.png"; sourceTree = "<group>"; };
+		000B83A01B136A4000F4CE5D /* Logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Logo.png; sourceTree = "<group>"; };
+		000B83A21B13739800F4CE5D /* remember-me-active.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "remember-me-active.png"; sourceTree = "<group>"; };
+		000B83A31B13739800F4CE5D /* remember-me-visible.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "remember-me-visible.png"; sourceTree = "<group>"; };
 		00306C6B1AC17BBC00A7217F /* back.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = back.png; sourceTree = "<group>"; };
 		00306C6C1AC17BBC00A7217F /* login-btn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "login-btn.png"; sourceTree = "<group>"; };
 		00306C6D1AC17BBC00A7217F /* login-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "login-icon.png"; sourceTree = "<group>"; };
 		00306C6E1AC17BBC00A7217F /* Login.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Login.png; sourceTree = "<group>"; };
-		00306C701AC17BBC00A7217F /* remember-me-active.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "remember-me-active.png"; sourceTree = "<group>"; };
-		00306C711AC17BBC00A7217F /* remember-me-visible.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "remember-me-visible.png"; sourceTree = "<group>"; };
 		00306C721AC17BBC00A7217F /* signup-btn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "signup-btn.png"; sourceTree = "<group>"; };
 		00306C731AC17BBC00A7217F /* signup-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "signup-icon.png"; sourceTree = "<group>"; };
 		00306C741AC17BBC00A7217F /* txt-field.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "txt-field.png"; sourceTree = "<group>"; };
 		00306C7F1AC17BC800A7217F /* Signup.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Signup.png; sourceTree = "<group>"; };
-		00306C801AC17BC800A7217F /* splash-bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "splash-bg.png"; sourceTree = "<group>"; };
 		00306C811AC17BC800A7217F /* Splash-screen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Splash-screen.png"; sourceTree = "<group>"; };
+		003C9B0A1B1AFF8500601065 /* inner-bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "inner-bg.png"; sourceTree = "<group>"; };
+		003C9B0C1B1B004C00601065 /* coupon-bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "coupon-bg.png"; sourceTree = "<group>"; };
+		003C9B0E1B1B06B100601065 /* coupon-des-field.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "coupon-des-field.png"; sourceTree = "<group>"; };
+		003C9B0F1B1B06B100601065 /* coupon-field.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "coupon-field.png"; sourceTree = "<group>"; };
+		003C9B121B1B13B900601065 /* close.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = close.png; sourceTree = "<group>"; };
+		003C9B141B1B13C600601065 /* headline-saperator.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "headline-saperator.png"; sourceTree = "<group>"; };
+		003C9B161B1B143300601065 /* list-saperator.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "list-saperator.png"; sourceTree = "<group>"; };
 		004903D71ACFDED7003A3293 /* UserInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserInfo.h; sourceTree = "<group>"; };
 		004903D81ACFDED7003A3293 /* UserInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserInfo.m; sourceTree = "<group>"; };
-		0069A27B1AD2853500D7DD1A /* Logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Logo.png; sourceTree = "<group>"; };
 		0069A27D1AD2896000D7DD1A /* Raleway-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Raleway-Bold.ttf"; sourceTree = "<group>"; };
 		0069A27E1AD2896000D7DD1A /* Raleway-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Raleway-ExtraBold.ttf"; sourceTree = "<group>"; };
 		0069A27F1AD2896000D7DD1A /* Raleway-ExtraLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Raleway-ExtraLight.ttf"; sourceTree = "<group>"; };
@@ -154,7 +167,6 @@
 		0069A2811AD2896000D7DD1A /* Raleway-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Raleway-Thin.ttf"; sourceTree = "<group>"; };
 		0076B6FA1AE4C5B700E8EE08 /* CreateCouponViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CreateCouponViewController.h; sourceTree = "<group>"; };
 		0076B6FB1AE4C5B700E8EE08 /* CreateCouponViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CreateCouponViewController.m; sourceTree = "<group>"; };
-		0076B6FF1AE4C9F400E8EE08 /* couponBg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = couponBg.png; sourceTree = "<group>"; };
 		007D52EA1ACD15170026E607 /* icon_120*120.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_120*120.png"; sourceTree = "<group>"; };
 		007D52EB1ACD15170026E607 /* icon_152*152.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_152*152.png"; sourceTree = "<group>"; };
 		007D52EC1ACD15170026E607 /* icon_180*180.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_180*180.png"; sourceTree = "<group>"; };
@@ -311,8 +323,17 @@
 		00306C6A1AC17B7E00A7217F /* Image files */ = {
 			isa = PBXGroup;
 			children = (
-				0076B6FF1AE4C9F400E8EE08 /* couponBg.png */,
-				0069A27B1AD2853500D7DD1A /* Logo.png */,
+				003C9B161B1B143300601065 /* list-saperator.png */,
+				003C9B141B1B13C600601065 /* headline-saperator.png */,
+				003C9B121B1B13B900601065 /* close.png */,
+				003C9B0E1B1B06B100601065 /* coupon-des-field.png */,
+				003C9B0F1B1B06B100601065 /* coupon-field.png */,
+				003C9B0C1B1B004C00601065 /* coupon-bg.png */,
+				003C9B0A1B1AFF8500601065 /* inner-bg.png */,
+				000B83A21B13739800F4CE5D /* remember-me-active.png */,
+				000B83A31B13739800F4CE5D /* remember-me-visible.png */,
+				000B83A01B136A4000F4CE5D /* Logo.png */,
+				000B839E1B13697100F4CE5D /* splash-bg.png */,
 				008405421ACF824D00269E8F /* Title-background.png */,
 				007D52F01ACD25EE0026E607 /* add.-beacon.png */,
 				007D52F11ACD25EE0026E607 /* beacon-config.png */,
@@ -324,14 +345,11 @@
 				007D52EC1ACD15170026E607 /* icon_180*180.png */,
 				00A90C1C1ACBB6DF00209F4F /* Splash-screen-bg.png */,
 				00306C7F1AC17BC800A7217F /* Signup.png */,
-				00306C801AC17BC800A7217F /* splash-bg.png */,
 				00306C811AC17BC800A7217F /* Splash-screen.png */,
 				00306C6B1AC17BBC00A7217F /* back.png */,
 				00306C6C1AC17BBC00A7217F /* login-btn.png */,
 				00306C6D1AC17BBC00A7217F /* login-icon.png */,
 				00306C6E1AC17BBC00A7217F /* Login.png */,
-				00306C701AC17BBC00A7217F /* remember-me-active.png */,
-				00306C711AC17BBC00A7217F /* remember-me-visible.png */,
 				00306C721AC17BBC00A7217F /* signup-btn.png */,
 				00306C731AC17BBC00A7217F /* signup-icon.png */,
 				00306C741AC17BBC00A7217F /* txt-field.png */,
@@ -559,35 +577,41 @@
 				00306C751AC17BBC00A7217F /* back.png in Resources */,
 				00306C781AC17BBC00A7217F /* Login.png in Resources */,
 				4F7F01BF1AB3E9B700019BF3 /* Main.storyboard in Resources */,
+				003C9B111B1B06B100601065 /* coupon-field.png in Resources */,
 				00A90C1D1ACBB6DF00209F4F /* Splash-screen-bg.png in Resources */,
-				00306C831AC17BC800A7217F /* splash-bg.png in Resources */,
 				00306C7E1AC17BBC00A7217F /* txt-field.png in Resources */,
 				00306C7C1AC17BBC00A7217F /* signup-btn.png in Resources */,
 				00E14DAA1AC51F2C00153155 /* Raleway-Medium.ttf in Resources */,
 				0069A2851AD2896000D7DD1A /* Raleway-Heavy.ttf in Resources */,
+				000B83A41B13739800F4CE5D /* remember-me-active.png in Resources */,
 				007D52EE1ACD15170026E607 /* icon_152*152.png in Resources */,
 				007D52F91ACD25EE0026E607 /* help-us.png in Resources */,
 				0069A2821AD2896000D7DD1A /* Raleway-Bold.ttf in Resources */,
 				00306C761AC17BBC00A7217F /* login-btn.png in Resources */,
+				003C9B151B1B13C600601065 /* headline-saperator.png in Resources */,
 				007D52F61ACD25EE0026E607 /* beacon-config.png in Resources */,
 				0069A2841AD2896000D7DD1A /* Raleway-ExtraLight.ttf in Resources */,
-				0069A27C1AD2853500D7DD1A /* Logo.png in Resources */,
-				00306C7B1AC17BBC00A7217F /* remember-me-visible.png in Resources */,
 				008405431ACF824D00269E8F /* Title-background.png in Resources */,
 				0069A2861AD2896000D7DD1A /* Raleway-Thin.ttf in Resources */,
 				007D52F71ACD25EE0026E607 /* contact.png in Resources */,
 				4F7F01C11AB3E9B700019BF3 /* Images.xcassets in Resources */,
+				000B83A11B136A4000F4CE5D /* Logo.png in Resources */,
 				007D52EF1ACD15170026E607 /* icon_180*180.png in Resources */,
+				000B839F1B13697100F4CE5D /* splash-bg.png in Resources */,
 				007D52F81ACD25EE0026E607 /* create-coupon.png in Resources */,
 				00E14DAB1AC51F2C00153155 /* Raleway-Regular.ttf in Resources */,
-				0076B7001AE4C9F400E8EE08 /* couponBg.png in Resources */,
+				003C9B171B1B143300601065 /* list-saperator.png in Resources */,
 				00306C841AC17BC800A7217F /* Splash-screen.png in Resources */,
 				00306C7D1AC17BBC00A7217F /* signup-icon.png in Resources */,
-				00306C7A1AC17BBC00A7217F /* remember-me-active.png in Resources */,
 				0069A2831AD2896000D7DD1A /* Raleway-ExtraBold.ttf in Resources */,
+				003C9B0D1B1B004C00601065 /* coupon-bg.png in Resources */,
 				00306C821AC17BC800A7217F /* Signup.png in Resources */,
+				003C9B131B1B13B900601065 /* close.png in Resources */,
+				003C9B0B1B1AFF8500601065 /* inner-bg.png in Resources */,
 				007D52F51ACD25EE0026E607 /* add.-beacon.png in Resources */,
+				003C9B101B1B06B100601065 /* coupon-des-field.png in Resources */,
 				00A90C211ACBC32E00209F4F /* Launch Screen.xib in Resources */,
+				000B83A51B13739800F4CE5D /* remember-me-visible.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

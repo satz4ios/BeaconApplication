@@ -63,7 +63,7 @@
                                                                              attributes:@{NSUnderlineStyleAttributeName: @(NSUnderlineStyleSingle)
                                                                                           }]];
     [_forgotPwdBtn.titleLabel setAttributedText:attributedString];
-    [_forgotPwdBtn.titleLabel setFont:[UIFont fontWithName:@"Raleway-Medium" size:14]];
+    [_forgotPwdBtn.titleLabel setFont:[UIFont fontWithName:@"Raleway-SemiBold" size:14]];
     
 }
 - (IBAction)back:(id)sender {

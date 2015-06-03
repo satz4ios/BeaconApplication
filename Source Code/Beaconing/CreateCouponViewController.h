@@ -11,7 +11,7 @@
 #import "ServiceCallAPI.h"
 @interface CreateCouponViewController : UIViewController<UITextFieldDelegate,APIserviceProto,MBProgressHUDDelegate>
 @property (weak, nonatomic) IBOutlet UITextField *couponTaglineFld;
-@property (weak, nonatomic) IBOutlet UITextField *couponDescripFld;
+@property (weak, nonatomic) IBOutlet UITextView *couponDescripFld;
 - (IBAction)couponDoneClick:(id)sender;
 
 @end

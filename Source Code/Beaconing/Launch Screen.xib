@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6724" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6711"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
@@ -12,32 +12,33 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="splash-bg.png" translatesAutoresizingMaskIntoConstraints="NO" id="S9w-vc-cgV">
-                    <rect key="frame" x="0.0" y="0.0" width="480" height="480"/>
+                    <rect key="frame" x="0.0" y="0.0" width="482" height="482"/>
                 </imageView>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Logo" translatesAutoresizingMaskIntoConstraints="NO" id="fJf-Fw-l6z">
-                    <rect key="frame" x="120" y="121" width="240" height="210"/>
+                    <rect key="frame" x="64" y="129" width="353" height="61"/>
                     <constraints>
-                        <constraint firstAttribute="width" constant="240" id="FcA-GF-6YV"/>
-                        <constraint firstAttribute="height" constant="210" id="gj9-aM-Aht"/>
+                        <constraint firstAttribute="width" constant="353" id="FcA-GF-6YV"/>
+                        <constraint firstAttribute="height" constant="61" id="gj9-aM-Aht"/>
                     </constraints>
                 </imageView>
             </subviews>
             <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
             <constraints>
                 <constraint firstItem="S9w-vc-cgV" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="6ux-M3-jlt"/>
+                <constraint firstAttribute="centerX" secondItem="fJf-Fw-l6z" secondAttribute="centerX" id="Elp-zQ-Skd"/>
                 <constraint firstItem="S9w-vc-cgV" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="Fon-Oe-4gA"/>
-                <constraint firstAttribute="centerY" secondItem="fJf-Fw-l6z" secondAttribute="centerY" constant="14" id="XEM-kH-5lv"/>
-                <constraint firstAttribute="bottom" secondItem="S9w-vc-cgV" secondAttribute="bottom" id="ZUb-eu-aF5"/>
-                <constraint firstItem="fJf-Fw-l6z" firstAttribute="centerX" secondItem="S9w-vc-cgV" secondAttribute="centerX" id="inj-9P-rKY"/>
-                <constraint firstAttribute="trailing" secondItem="S9w-vc-cgV" secondAttribute="trailing" id="lJ4-U8-b2L"/>
+                <constraint firstAttribute="centerY" secondItem="fJf-Fw-l6z" secondAttribute="centerY" constant="80.5" id="XEM-kH-5lv"/>
+                <constraint firstAttribute="bottom" secondItem="S9w-vc-cgV" secondAttribute="bottom" constant="-2" id="ZUb-eu-aF5"/>
+                <constraint firstItem="fJf-Fw-l6z" firstAttribute="centerX" secondItem="S9w-vc-cgV" secondAttribute="centerX" constant="-0.5" id="inj-9P-rKY"/>
+                <constraint firstAttribute="trailing" secondItem="S9w-vc-cgV" secondAttribute="trailing" constant="-2" id="lJ4-U8-b2L"/>
             </constraints>
             <nil key="simulatedStatusBarMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-            <point key="canvasLocation" x="404" y="445"/>
+            <point key="canvasLocation" x="308" y="443"/>
         </view>
     </objects>
     <resources>
-        <image name="Logo" width="689" height="613"/>
+        <image name="Logo" width="969" height="162"/>
         <image name="splash-bg.png" width="1242" height="2048"/>
     </resources>
 </document>
