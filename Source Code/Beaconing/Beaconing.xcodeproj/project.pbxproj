@@ -38,6 +38,7 @@
 		00306C7E1AC17BBC00A7217F /* txt-field.png in Resources */ = {isa = PBXBuildFile; fileRef = 00306C741AC17BBC00A7217F /* txt-field.png */; };
 		00306C821AC17BC800A7217F /* Signup.png in Resources */ = {isa = PBXBuildFile; fileRef = 00306C7F1AC17BC800A7217F /* Signup.png */; };
 		00306C841AC17BC800A7217F /* Splash-screen.png in Resources */ = {isa = PBXBuildFile; fileRef = 00306C811AC17BC800A7217F /* Splash-screen.png */; };
+		00334A741B20AFCD00EA615D /* Coupon-CustomCellBg.png in Resources */ = {isa = PBXBuildFile; fileRef = 00334A731B20AFCD00EA615D /* Coupon-CustomCellBg.png */; };
 		003C9B0B1B1AFF8500601065 /* inner-bg.png in Resources */ = {isa = PBXBuildFile; fileRef = 003C9B0A1B1AFF8500601065 /* inner-bg.png */; };
 		003C9B0D1B1B004C00601065 /* coupon-bg.png in Resources */ = {isa = PBXBuildFile; fileRef = 003C9B0C1B1B004C00601065 /* coupon-bg.png */; };
 		003C9B101B1B06B100601065 /* coupon-des-field.png in Resources */ = {isa = PBXBuildFile; fileRef = 003C9B0E1B1B06B100601065 /* coupon-des-field.png */; };
@@ -151,6 +152,7 @@
 		00306C741AC17BBC00A7217F /* txt-field.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "txt-field.png"; sourceTree = "<group>"; };
 		00306C7F1AC17BC800A7217F /* Signup.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Signup.png; sourceTree = "<group>"; };
 		00306C811AC17BC800A7217F /* Splash-screen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Splash-screen.png"; sourceTree = "<group>"; };
+		00334A731B20AFCD00EA615D /* Coupon-CustomCellBg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Coupon-CustomCellBg.png"; sourceTree = "<group>"; };
 		003C9B0A1B1AFF8500601065 /* inner-bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "inner-bg.png"; sourceTree = "<group>"; };
 		003C9B0C1B1B004C00601065 /* coupon-bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "coupon-bg.png"; sourceTree = "<group>"; };
 		003C9B0E1B1B06B100601065 /* coupon-des-field.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "coupon-des-field.png"; sourceTree = "<group>"; };
@@ -323,6 +325,7 @@
 		00306C6A1AC17B7E00A7217F /* Image files */ = {
 			isa = PBXGroup;
 			children = (
+				00334A731B20AFCD00EA615D /* Coupon-CustomCellBg.png */,
 				003C9B161B1B143300601065 /* list-saperator.png */,
 				003C9B141B1B13C600601065 /* headline-saperator.png */,
 				003C9B121B1B13B900601065 /* close.png */,
@@ -610,6 +613,7 @@
 				003C9B0B1B1AFF8500601065 /* inner-bg.png in Resources */,
 				007D52F51ACD25EE0026E607 /* add.-beacon.png in Resources */,
 				003C9B101B1B06B100601065 /* coupon-des-field.png in Resources */,
+				00334A741B20AFCD00EA615D /* Coupon-CustomCellBg.png in Resources */,
 				00A90C211ACBC32E00209F4F /* Launch Screen.xib in Resources */,
 				000B83A51B13739800F4CE5D /* remember-me-visible.png in Resources */,
 			);
