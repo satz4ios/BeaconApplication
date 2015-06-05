@@ -67,6 +67,7 @@
 		008EE1311ACAA935009DCAA8 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 008EE1301ACAA935009DCAA8 /* MBProgressHUD.m */; };
 		009771CF1ACD15F0007DF037 /* RegisteredBeaconsListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 009771CE1ACD15F0007DF037 /* RegisteredBeaconsListViewController.m */; };
 		0099BD651AC2DB8300F82851 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0099BD641AC2DB8300F82851 /* LoginViewController.m */; };
+		00A6100B1B21EE0E0055938E /* CouponBeaconTaggingPopupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 00A6100A1B21EE0E0055938E /* CouponBeaconTaggingPopupViewController.m */; };
 		00A90C1D1ACBB6DF00209F4F /* Splash-screen-bg.png in Resources */ = {isa = PBXBuildFile; fileRef = 00A90C1C1ACBB6DF00209F4F /* Splash-screen-bg.png */; };
 		00A90C211ACBC32E00209F4F /* Launch Screen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 00A90C201ACBC32E00209F4F /* Launch Screen.xib */; };
 		00A9A8A81AC3E4C300D4A439 /* NearbyBeaconListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 00A9A8A71AC3E4C300D4A439 /* NearbyBeaconListViewController.m */; };
@@ -189,6 +190,8 @@
 		009771D01ACD1615007DF037 /* BeaconConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BeaconConstants.h; sourceTree = "<group>"; };
 		0099BD631AC2DB8300F82851 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LoginViewController.h; path = Beaconing/LoginViewController.h; sourceTree = "<group>"; };
 		0099BD641AC2DB8300F82851 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LoginViewController.m; path = Beaconing/LoginViewController.m; sourceTree = "<group>"; };
+		00A610091B21EE0E0055938E /* CouponBeaconTaggingPopupViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CouponBeaconTaggingPopupViewController.h; path = Beaconing/CouponBeaconTaggingPopupViewController.h; sourceTree = "<group>"; };
+		00A6100A1B21EE0E0055938E /* CouponBeaconTaggingPopupViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CouponBeaconTaggingPopupViewController.m; path = Beaconing/CouponBeaconTaggingPopupViewController.m; sourceTree = "<group>"; };
 		00A90C1C1ACBB6DF00209F4F /* Splash-screen-bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Splash-screen-bg.png"; sourceTree = "<group>"; };
 		00A90C201ACBC32E00209F4F /* Launch Screen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = "Launch Screen.xib"; path = "../Launch Screen.xib"; sourceTree = "<group>"; };
 		00A9A8A61AC3E4C300D4A439 /* NearbyBeaconListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NearbyBeaconListViewController.h; path = Beaconing/NearbyBeaconListViewController.h; sourceTree = "<group>"; };
@@ -383,6 +386,8 @@
 				009771CE1ACD15F0007DF037 /* RegisteredBeaconsListViewController.m */,
 				0076B6FA1AE4C5B700E8EE08 /* CreateCouponViewController.h */,
 				0076B6FB1AE4C5B700E8EE08 /* CreateCouponViewController.m */,
+				00A610091B21EE0E0055938E /* CouponBeaconTaggingPopupViewController.h */,
+				00A6100A1B21EE0E0055938E /* CouponBeaconTaggingPopupViewController.m */,
 			);
 			name = ViewControllers;
 			path = ..;
@@ -635,6 +640,7 @@
 			files = (
 				000855421AB6BBA600E0C566 /* AFURLSessionManager.m in Sources */,
 				4F7F01BC1AB3E9B700019BF3 /* ViewController.m in Sources */,
+				00A6100B1B21EE0E0055938E /* CouponBeaconTaggingPopupViewController.m in Sources */,
 				008EE12D1ACA7F04009DCAA8 /* UICustomActionSheet.m in Sources */,
 				4F7F01DE1AB3F95800019BF3 /* AdminDashboardViewController.m in Sources */,
 				0008553D1AB6BBA600E0C566 /* AFNetworkReachabilityManager.m in Sources */,
