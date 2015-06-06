@@ -74,6 +74,8 @@
 		00A9A8B41AC40FFF00D4A439 /* BeaconManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 00A9A8B21AC40FFF00D4A439 /* BeaconManager.m */; };
 		00A9A8B81AC4103100D4A439 /* BeaconObj.m in Sources */ = {isa = PBXBuildFile; fileRef = 00A9A8B71AC4103100D4A439 /* BeaconObj.m */; };
 		00A9A8BE1AC42F9D00D4A439 /* ConfigureBeaconViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 00A9A8BD1AC42F9D00D4A439 /* ConfigureBeaconViewController.m */; };
+		00C1DCF71B233AD3005CCA77 /* TaggedCouponsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 00C1DCF61B233AD3005CCA77 /* TaggedCouponsViewController.m */; };
+		00C1DCFA1B2340B7005CCA77 /* CouponObj.m in Sources */ = {isa = PBXBuildFile; fileRef = 00C1DCF91B2340B7005CCA77 /* CouponObj.m */; };
 		00E14DAA1AC51F2C00153155 /* Raleway-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 00E14DA81AC51F2C00153155 /* Raleway-Medium.ttf */; };
 		00E14DAB1AC51F2C00153155 /* Raleway-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 00E14DA91AC51F2C00153155 /* Raleway-Regular.ttf */; };
 		00E14DAD1AC5327100153155 /* Raleway-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 00E14DAC1AC5327100153155 /* Raleway-SemiBold.ttf */; };
@@ -202,6 +204,10 @@
 		00A9A8B71AC4103100D4A439 /* BeaconObj.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BeaconObj.m; sourceTree = "<group>"; };
 		00A9A8BC1AC42F9D00D4A439 /* ConfigureBeaconViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ConfigureBeaconViewController.h; path = Beaconing/ConfigureBeaconViewController.h; sourceTree = "<group>"; };
 		00A9A8BD1AC42F9D00D4A439 /* ConfigureBeaconViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ConfigureBeaconViewController.m; path = Beaconing/ConfigureBeaconViewController.m; sourceTree = "<group>"; };
+		00C1DCF51B233AD3005CCA77 /* TaggedCouponsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TaggedCouponsViewController.h; path = Beaconing/TaggedCouponsViewController.h; sourceTree = "<group>"; };
+		00C1DCF61B233AD3005CCA77 /* TaggedCouponsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TaggedCouponsViewController.m; path = Beaconing/TaggedCouponsViewController.m; sourceTree = "<group>"; };
+		00C1DCF81B2340B7005CCA77 /* CouponObj.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CouponObj.h; sourceTree = "<group>"; };
+		00C1DCF91B2340B7005CCA77 /* CouponObj.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CouponObj.m; sourceTree = "<group>"; };
 		00E14DA81AC51F2C00153155 /* Raleway-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Raleway-Medium.ttf"; sourceTree = "<group>"; };
 		00E14DA91AC51F2C00153155 /* Raleway-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Raleway-Regular.ttf"; sourceTree = "<group>"; };
 		00E14DAC1AC5327100153155 /* Raleway-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Raleway-SemiBold.ttf"; sourceTree = "<group>"; };
@@ -388,6 +394,8 @@
 				0076B6FB1AE4C5B700E8EE08 /* CreateCouponViewController.m */,
 				00A610091B21EE0E0055938E /* CouponBeaconTaggingPopupViewController.h */,
 				00A6100A1B21EE0E0055938E /* CouponBeaconTaggingPopupViewController.m */,
+				00C1DCF51B233AD3005CCA77 /* TaggedCouponsViewController.h */,
+				00C1DCF61B233AD3005CCA77 /* TaggedCouponsViewController.m */,
 			);
 			name = ViewControllers;
 			path = ..;
@@ -433,6 +441,8 @@
 			children = (
 				00A9A8B61AC4103100D4A439 /* BeaconObj.h */,
 				00A9A8B71AC4103100D4A439 /* BeaconObj.m */,
+				00C1DCF81B2340B7005CCA77 /* CouponObj.h */,
+				00C1DCF91B2340B7005CCA77 /* CouponObj.m */,
 			);
 			path = DataModels;
 			sourceTree = "<group>";
@@ -664,8 +674,10 @@
 				008EE12E1ACA7F04009DCAA8 /* UIImageEffects.m in Sources */,
 				4F7F01B61AB3E9B700019BF3 /* main.m in Sources */,
 				00A9A8B41AC40FFF00D4A439 /* BeaconManager.m in Sources */,
+				00C1DCF71B233AD3005CCA77 /* TaggedCouponsViewController.m in Sources */,
 				000855451AB6BBA600E0C566 /* UIAlertView+AFNetworking.m in Sources */,
 				0008554A1AB6BBA600E0C566 /* UIWebView+AFNetworking.m in Sources */,
+				00C1DCFA1B2340B7005CCA77 /* CouponObj.m in Sources */,
 				00A9A8A81AC3E4C300D4A439 /* NearbyBeaconListViewController.m in Sources */,
 				000855441AB6BBA600E0C566 /* UIActivityIndicatorView+AFNetworking.m in Sources */,
 				0008553B1AB6BBA600E0C566 /* AFHTTPRequestOperationManager.m in Sources */,

@@ -10,6 +10,8 @@
 #import "NearbyBeaconListViewController.h"
 #import "RegisteredBeaconsListViewController.h"
 #import "CreateCouponViewController.h"
+#import "TaggedCouponsViewController.h"
+
 @interface AdminDashboardViewController () {
     NSMutableArray *_listOfMenu;
     NSMutableArray *_listOfMenuImages;
@@ -72,7 +74,12 @@
         CreateCouponViewController *_createCoupon = [_mainStoryboard instantiateViewControllerWithIdentifier:@"CouponController"];
         [self.navigationController pushViewController:_createCoupon animated:YES];
         
-    } else if (indexPath.row==6) {
+    }
+    else if (indexPath.row==3) {
+    TaggedCouponsViewController *_taggedCouponVC = [_mainStoryboard instantiateViewControllerWithIdentifier:@"TaggedCouponsViewController"];
+    [self.navigationController pushViewController:_taggedCouponVC animated:YES];
+    
+    }else if (indexPath.row==6) {
         UICustomActionSheet* actionSheet = [[UICustomActionSheet alloc] initWithTitle:@"Settings" delegate:nil buttonTitles:@[@"Cancel",@"Log Out",@"View Profile",]];
         actionSheet.delegate=self;
         [actionSheet setButtonColors:@[[UIColor redColor]]];
