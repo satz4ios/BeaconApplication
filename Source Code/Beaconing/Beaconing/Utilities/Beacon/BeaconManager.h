@@ -37,6 +37,7 @@
 -(void)stopRangingRegion:(CLRegion*)region;
 -(void)startMonitoringKontactBeacons;
 -(void)stopMonitoringAndRangingKontactBeacons;
+-(void)stopRangingKontactBeacon;
 
 
 @end

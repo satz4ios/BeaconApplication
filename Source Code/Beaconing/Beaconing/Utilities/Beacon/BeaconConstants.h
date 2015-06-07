@@ -8,6 +8,7 @@
 
 #ifndef Beaconing_BeaconConstants_h
 #define Beaconing_BeaconConstants_h
-
+#define KONTACTBEACON_UUID @"F7826DA6-4FA2-4E98-8024-BC5B71E0893E"
+#define KONTACTBEACON_RGN_ID @"KONTACTBEACON_RGN_ID"
 
 #endif

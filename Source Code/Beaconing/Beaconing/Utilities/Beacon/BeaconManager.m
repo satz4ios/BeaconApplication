@@ -10,8 +10,7 @@
 #import "BeaconConstants.h"
 #import "AppDelegate.h"
 
-#define KONTACTBEACON_UUID @"F7826DA6-4FA2-4E98-8024-BC5B71E0893E"
-#define KONTACTBEACON_RGN_ID @"KONTACTBEACON_RGN_ID"
+
 
 @interface BeaconManager()<CLLocationManagerDelegate>{
     
@@ -66,12 +65,12 @@
 -(void)stopMonitoringAndRangingKontactBeacons{
     if ([self.rgnsToMonitor count]>0) {
         [self stopMonitoringRegions:self.rgnsToMonitor];
-        [self stopRangingINGBeacon];
+        [self stopRangingKontactBeacon];
     }
 
 }
 
--(void)stopRangingINGBeacon{
+-(void)stopRangingKontactBeacon{
 
     [self.rgnsToMonitor enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
         [self stopRangingRegion:obj];
@@ -108,7 +107,7 @@
 - (void)locationManager:(CLLocationManager*)manager didEnterRegion:(CLRegion*)region
 {
     if ([[UIApplication sharedApplication] applicationState] == UIApplicationStateBackground){
- //       [(AppDelegate*)[[UIApplication sharedApplication] delegate] extendBackgroundRunningTime];
+        [(AppDelegate*)[[UIApplication sharedApplication] delegate] extendBackgroundRunningTime];
     }
     
     [manager startRangingBeaconsInRegion:(CLBeaconRegion*)region];
