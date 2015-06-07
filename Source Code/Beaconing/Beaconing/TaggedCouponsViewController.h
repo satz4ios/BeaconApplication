@@ -7,7 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "MBProgressHUD.h"
+#import "ServiceCallAPI.h"
 
-@interface TaggedCouponsViewController : UIViewController
+@interface TaggedCouponsViewController : UIViewController<APIserviceProto,MBProgressHUDDelegate,UIAlertViewDelegate>
 
 @end

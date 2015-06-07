@@ -8,9 +8,14 @@
 
 #import "TaggedCouponsViewController.h"
 #import "CouponObj.h"
+#import "UserInfo.h"
+#import "ServiceCallAPI.h"
+#import "Services.h"
 
+@interface TaggedCouponsViewController () {
+    MBProgressHUD *busyView;
 
-@interface TaggedCouponsViewController ()
+}
 
 @property (weak, nonatomic) IBOutlet UITableView *couponsListView;
 @property (nonatomic,strong) NSMutableArray *taggedCoupons;
@@ -50,6 +55,28 @@
     [_couponsListView setBackgroundView:nil];
     [_couponsListView setBackgroundColor:[UIColor clearColor]];
 
+    
+}
+-(void)makeWSCallToGetListOfBeacons {
+    
+    busyView = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+    busyView.labelText = @"Please Wait..";
+    busyView.dimBackground = YES;
+    busyView.delegate = self;
+    
+    NSString *urlStr = GetListofCoupons;
+    ServiceCallAPI *_serviceAPI = [[ServiceCallAPI alloc]initWithService:urlStr];
+    _serviceAPI.apiDelegate=self;
+    NSMutableDictionary *_paramsDict = [[NSMutableDictionary alloc] init];
+    NSString *userId=[[UserInfo SharedInfo]objectForKey:@"userId"];
+    NSString *userType=[[UserInfo SharedInfo] objectForKey:@"userType"];
+    [_paramsDict setValue:userId forKey:@"userId"];
+    [_paramsDict setValue:userType forKey:@"userType"];
+    [_serviceAPI sendHttpRequestServiceWithParameters:_paramsDict];
+}
+
+-(void)recievedServiceCallData:(NSDictionary *)dictionary {
+    
     
 }
 #pragma mark TableView delegates

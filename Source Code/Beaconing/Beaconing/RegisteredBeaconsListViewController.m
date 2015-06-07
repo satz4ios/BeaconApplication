@@ -27,9 +27,6 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     [self makeWSCallToGetListOfBeacons];
-
-
-    
 }
 
 
@@ -39,7 +36,7 @@
     busyView.labelText = @"Please Wait..";
     busyView.dimBackground = YES;
     busyView.delegate = self;
-
+    
     NSString *urlStr = GetListOfBeacons;
     ServiceCallAPI *_serviceAPI = [[ServiceCallAPI alloc]initWithService:urlStr];
     _serviceAPI.apiDelegate=self;
@@ -49,9 +46,8 @@
     [_paramsDict setValue:userId forKey:@"userId"];
     [_paramsDict setValue:userType forKey:@"userType"];
     [_serviceAPI sendHttpRequestServiceWithParameters:_paramsDict];
-    
-    
 }
+
 -(void)makeWSCallToDeleteBeaconList {
     
 }
