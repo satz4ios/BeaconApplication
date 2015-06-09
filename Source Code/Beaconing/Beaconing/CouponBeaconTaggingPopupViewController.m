@@ -64,14 +64,13 @@
     
     self.navigationController.navigationBar.hidden = YES;
     
-    //[self detectBluetoothWithOSAlert:YES];
+    /*
     
-    
-   /*     for (int idx =0; idx<5; idx++) {
+       for (int idx =0; idx<5; idx++) {
             BeaconObj *tempObj = [[BeaconObj alloc] init];
             tempObj.Uuid = @"123-123-asdasassd-123-asdaads";
-            tempObj.majorId = @"123";
-            tempObj.minorId = @"123";
+            tempObj.majorId = @"1213";
+            tempObj.minorId = @"121313";
     
             [self.registeredBeacons addObject:tempObj];
         }
@@ -178,15 +177,14 @@
     busyView.labelText = @"Please Wait..";
     busyView.dimBackground = YES;
     busyView.delegate = self;
-    
-    NSString *urlStr = GetListOfBeacons;
+//    http://gotocontactsonline.com/beaconapp/beaconwithoutcoupon.php?userId=1
+    NSString *urlStr = GetBeaconWihoutCoupon;
     ServiceCallAPI *_serviceAPI = [[ServiceCallAPI alloc]initWithService:urlStr];
     _serviceAPI.apiDelegate=self;
     NSMutableDictionary *_paramsDict = [[NSMutableDictionary alloc] init];
     NSString *userId=[[UserInfo SharedInfo]objectForKey:@"userId"];
-    NSString *userType=[[UserInfo SharedInfo] objectForKey:@"userType"];
     [_paramsDict setValue:userId forKey:@"userId"];
-    [_paramsDict setValue:userType forKey:@"userType"];
+
     [_serviceAPI sendHttpRequestServiceWithParameters:_paramsDict];
     
     

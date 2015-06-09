@@ -108,7 +108,8 @@
      NSMutableDictionary *_paramsDict = [[NSMutableDictionary alloc] init];
      NSString *userId=[[UserInfo SharedInfo]objectForKey:@"userId"];
      //        NSString *userType=[[UserInfo SharedInfo] objectForKey:@"userType"];
-     [_paramsDict setValue:userId forKey:@"uuId"];
+     [_paramsDict setValue:userId forKey:@"userId"];
+    [_paramsDict setValue:[beacon Uuid] forKey:@"uuId"];
      [_paramsDict setValue:self.couponDescripFld.text forKey:@"couponDescription"];
      [_paramsDict setValue:self.couponTaglineFld.text forKey:@"couponTagline"];
      [_paramsDict setValue:[beacon majorId] forKey:@"majorValue"];
@@ -119,13 +120,21 @@
 
 -(void)recievedServiceCallData:(NSDictionary *)dictionary {
 
+    [busyView hide:YES];
     if ([[dictionary objectForKey:@"errorCode"]isEqualToString:@"400"]) {
-        [busyView hide:YES];
+
 
         [[[UIAlertView alloc]initWithTitle:@"Error" message:[dictionary objectForKey:@"message"] delegate:nil
                              cancelButtonTitle:@"Ok" otherButtonTitles:nil, nil]show];
             
         
+    }
+    else if ([[dictionary objectForKey:@"errorCode"]isEqualToString:@"200"]) {
+        
+        [[[UIAlertView alloc]initWithTitle:@"" message:[dictionary objectForKey:@"message"] delegate:self
+                         cancelButtonTitle:@"Ok" otherButtonTitles:nil, nil]show];
+        
+       
     }
     
     else {
@@ -141,4 +150,9 @@
 }
 
 
+#pragma mark Alertview delegate
+
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex{
+    [[self navigationController] popViewControllerAnimated:YES];
+}
 @end

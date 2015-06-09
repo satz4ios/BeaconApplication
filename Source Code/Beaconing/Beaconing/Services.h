@@ -41,5 +41,8 @@
 #define GetListofCoupons                 (Beaconing_API_Endpoint_Host @"updatecoupon.php")
 #define DeleteCoupon                     (Beaconing_API_Endpoint_Host @"deletecoupon.php")
 
-#define getConsumerCoupon                (Beaconing_API_Endpoint_Host @"consumerservice.php")
+#define GetConsumerCoupon                (Beaconing_API_Endpoint_Host @"consumerservice.php")
+
+#define GetBeaconWihoutCoupon               (Beaconing_API_Endpoint_Host @"beaconwithoutcoupon.php")
+
 #endif

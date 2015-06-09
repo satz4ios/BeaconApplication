@@ -12,6 +12,7 @@
 #import "ServiceCallAPI.h"
 #import "Services.h"
 #import "NormalUserViewController.h"
+#import "UserInfo.h"
 
 
 @interface AppDelegate ()<BeaconManagerDelegate,APIserviceProto>
@@ -28,12 +29,20 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
     // Override point for customization after application launch.
+    
+
+
+    
     [self doInitializationForBeaconFeature];
+
+    sleep(5);
+
+    //dummy testing
+//        CLBeacon *beacon = [[CLBeacon alloc] init];
+//    [self sendWSRequestToFetchCouponDataForBeacon:beacon];
+
     
-    //sleep(5);
-    
-    
-    UIUserNotificationType types = UIUserNotificationTypeBadge |
+    /*UIUserNotificationType types = UIUserNotificationTypeBadge |
     UIUserNotificationTypeSound | UIUserNotificationTypeAlert |UIUserNotificationTypeBadge;
     
     UIUserNotificationSettings *mySettings =
@@ -46,7 +55,7 @@
     notify.fireDate = [[NSDate alloc]initWithTimeInterval:60 sinceDate:[NSDate date]];
     [[UIApplication sharedApplication] scheduleLocalNotification:notify];
     
-    
+    */
     
     
     
@@ -213,7 +222,7 @@
                 
                 
                 [contentArray writeToFile:plistPath atomically:YES];
-                [self sendWSRequestToFetchCouponData];
+                [self sendWSRequestToFetchCouponDataForBeacon:foundBeacon];
                                             
                 
                 
@@ -253,8 +262,26 @@
 
 #pragma mark Beacon Feature Service
 
--(void)sendWSRequestToFetchCouponData
+-(void)sendWSRequestToFetchCouponDataForBeacon:(CLBeacon*)beacon
 {
+    
+    
+    NSString *urlStr = GetConsumerCoupon;
+    ServiceCallAPI *_serviceAPI = [[ServiceCallAPI alloc]initWithService:urlStr];
+    _serviceAPI.apiDelegate=self;
+    NSMutableDictionary *_paramsDict = [[NSMutableDictionary alloc] init];
+    NSString *userId=[[UserInfo SharedInfo]objectForKey:@"userId"];
+   // http://gotocontactsonline.com/beaconapp/consumerservice.php?userId=1&userType=1&minorValue=23
+    NSString *userType=[[UserInfo SharedInfo]objectForKey:@"userType"];
+    [_paramsDict setValue:userId forKey:@"userId"];
+    [_paramsDict setValue:userType forKey:@"userType"];
+    //[_paramsDict setValue:[[beacon minor] stringValue] forKey:@"minorValue"];
+    [_paramsDict setValue:@"123" forKey:@"minorValue"];
+    
+    
+    
+    [_serviceAPI sendHttpRequestServiceWithParameters:_paramsDict];
+    
 }
 
 
@@ -298,6 +325,8 @@
 #pragma mark API protocols
 
 -(void)recievedServiceCallData:(NSDictionary *)dictionary{
+    
+    
     [self intimateUserWithMsg:@""andUserInfo:@{}];
 }
 -(void)recievedServiceCallWithError:(NSError *)ErrorMessage{
