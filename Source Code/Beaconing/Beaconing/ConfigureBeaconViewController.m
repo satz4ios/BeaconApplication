@@ -84,7 +84,7 @@
     [_paramsDict setValue:self.beaconDescTxtField.text forKey:@"beaconDescription"];
     [_paramsDict setValue:self.beaconTagTxtField.text forKey:@"beaconTag"];
     NSString *userId=[[UserInfo SharedInfo]objectForKey:@"userId"];
-    [_paramsDict setValue:userId forKey:@"createdBy"];
+    [_paramsDict setValue:userId forKey:@"userId"];
     [_serviceAPI sendHttpRequestServiceWithParameters:_paramsDict];
 }  
 
@@ -103,7 +103,7 @@
     [_paramsDict setValue:self.beaconDescTxtField.text forKey:@"beaconDescription"];
     [_paramsDict setValue:self.beaconTagTxtField.text forKey:@"beaconTag"];
     NSString *userId=[[UserInfo SharedInfo]objectForKey:@"userId"];
-    [_paramsDict setValue:userId forKey:@"createdBy"];
+    [_paramsDict setValue:userId forKey:@"userId"];
     
     [_serviceAPI sendHttpRequestServiceWithParameters:_paramsDict];
 }
