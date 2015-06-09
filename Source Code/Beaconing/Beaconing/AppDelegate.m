@@ -11,6 +11,8 @@
 #import "BeaconConstants.h"
 #import "ServiceCallAPI.h"
 #import "Services.h"
+#import "NormalUserViewController.h"
+
 
 @interface AppDelegate ()<BeaconManagerDelegate,APIserviceProto>
 
@@ -28,7 +30,37 @@
     // Override point for customization after application launch.
     [self doInitializationForBeaconFeature];
     
-    sleep(5);
+    //sleep(5);
+    
+    
+    UIUserNotificationType types = UIUserNotificationTypeBadge |
+    UIUserNotificationTypeSound | UIUserNotificationTypeAlert |UIUserNotificationTypeBadge;
+    
+    UIUserNotificationSettings *mySettings =
+    [UIUserNotificationSettings settingsForTypes:types categories:nil];
+    
+    [[UIApplication sharedApplication] registerUserNotificationSettings:mySettings];
+    
+    UILocalNotification *notify = [[UILocalNotification alloc] init];
+    [notify setAlertBody:@"test"];
+    notify.fireDate = [[NSDate alloc]initWithTimeInterval:60 sinceDate:[NSDate date]];
+    [[UIApplication sharedApplication] scheduleLocalNotification:notify];
+    
+    
+    
+    
+    
+    // If application is launched due to  notification,present another view controller.
+    UILocalNotification *notification = [launchOptions objectForKey:UIApplicationLaunchOptionsLocalNotificationKey];
+    
+    if (notification)
+    {
+        
+        [self launchViewControllerForNotification];
+
+
+    }
+    
     return YES;
 }
 
@@ -54,6 +86,16 @@
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
 
+- (void)application:(UIApplication *)application didReceiveLocalNotification:(UILocalNotification *)notification{
+    [self launchViewControllerForNotification];
+}
+
+-(void)launchViewControllerForNotification{
+    UIStoryboard *mainStoryboard = [UIStoryboard    storyboardWithName:@"Main" bundle:[NSBundle mainBundle]];
+    NormalUserViewController *viewController = [mainStoryboard instantiateViewControllerWithIdentifier:@"NormalUserViewController"];
+    
+    [self.window.rootViewController presentViewController:viewController animated:YES completion:NULL];
+}
 #pragma mark Background task
 - (void)extendBackgroundRunningTime {
     if (_backgroundTask != UIBackgroundTaskInvalid) {
