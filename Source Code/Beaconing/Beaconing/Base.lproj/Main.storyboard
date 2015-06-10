@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -1664,27 +1664,6 @@
                                     </mask>
                                 </variation>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6lE-1R-tId" userLabel="BackButton">
-                                <rect key="frame" x="18" y="27" width="35" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="30" id="fUT-JU-75h"/>
-                                    <constraint firstAttribute="width" constant="35" id="fYZ-SK-jVK"/>
-                                    <constraint firstAttribute="height" constant="30" id="hXI-pY-FLS"/>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="35" id="pSD-gn-4gg"/>
-                                </constraints>
-                                <state key="normal" backgroundImage="Backbtnimage">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <variation key="default">
-                                    <mask key="constraints">
-                                        <exclude reference="fUT-JU-75h"/>
-                                        <exclude reference="pSD-gn-4gg"/>
-                                    </mask>
-                                </variation>
-                                <connections>
-                                    <action selector="backClick:" destination="x3B-gD-rTH" eventType="touchUpInside" id="tNa-3G-mK0"/>
-                                </connections>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Received Deals" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kw8-6F-cVV">
                                 <rect key="frame" x="0.0" y="19" width="600" height="36"/>
                                 <constraints>
@@ -1762,28 +1741,22 @@
                             <constraint firstItem="kw8-6F-cVV" firstAttribute="top" secondItem="2TH-6k-9I6" secondAttribute="top" constant="19" id="3fh-ld-oWy"/>
                             <constraint firstAttribute="trailing" secondItem="kw8-6F-cVV" secondAttribute="trailing" id="Cut-S8-Vlj"/>
                             <constraint firstItem="4DX-PW-koc" firstAttribute="top" secondItem="okP-vi-fEJ" secondAttribute="bottom" id="DPt-aB-EUY"/>
-                            <constraint firstAttribute="centerY" secondItem="6lE-1R-tId" secondAttribute="centerY" id="EQO-IY-29F"/>
                             <constraint firstItem="RiS-3M-354" firstAttribute="leading" secondItem="2TH-6k-9I6" secondAttribute="leading" id="I4U-qh-zFj"/>
                             <constraint firstAttribute="centerY" secondItem="kw8-6F-cVV" secondAttribute="centerY" id="MB2-2d-IC4"/>
                             <constraint firstItem="5Wt-AS-dPQ" firstAttribute="leading" secondItem="2TH-6k-9I6" secondAttribute="leading" id="MBk-Uy-qqc"/>
                             <constraint firstItem="okP-vi-fEJ" firstAttribute="leading" secondItem="2TH-6k-9I6" secondAttribute="leading" id="R0N-La-jF1"/>
-                            <constraint firstItem="6lE-1R-tId" firstAttribute="top" secondItem="aDV-Gs-rfh" secondAttribute="bottom" constant="7" id="R9g-U8-OgK"/>
                             <constraint firstItem="kw8-6F-cVV" firstAttribute="leading" secondItem="2TH-6k-9I6" secondAttribute="leading" id="UMK-qG-Gk1"/>
                             <constraint firstAttribute="trailing" secondItem="5Wt-AS-dPQ" secondAttribute="trailing" id="Urx-Mw-Y6g"/>
                             <constraint firstAttribute="trailing" secondItem="RiS-3M-354" secondAttribute="trailing" id="X5h-5X-DDm"/>
                             <constraint firstItem="RiS-3M-354" firstAttribute="top" secondItem="2TH-6k-9I6" secondAttribute="top" id="cok-tM-wTE"/>
                             <constraint firstItem="4DX-PW-koc" firstAttribute="top" secondItem="5Wt-AS-dPQ" secondAttribute="bottom" id="g0p-Xe-0yF"/>
                             <constraint firstItem="5Wt-AS-dPQ" firstAttribute="top" secondItem="aDV-Gs-rfh" secondAttribute="bottom" id="koO-zG-fkL"/>
-                            <constraint firstItem="6lE-1R-tId" firstAttribute="top" secondItem="aDV-Gs-rfh" secondAttribute="bottom" constant="7" id="nyQ-WL-RnD"/>
                             <constraint firstAttribute="trailing" secondItem="okP-vi-fEJ" secondAttribute="trailing" id="svv-AD-Ff7"/>
-                            <constraint firstItem="6lE-1R-tId" firstAttribute="leading" secondItem="2TH-6k-9I6" secondAttribute="leading" constant="18" id="wFK-QI-Xp9"/>
                             <constraint firstItem="okP-vi-fEJ" firstAttribute="top" secondItem="RiS-3M-354" secondAttribute="bottom" id="xk6-ED-juO"/>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
                                 <exclude reference="MB2-2d-IC4"/>
-                                <exclude reference="EQO-IY-29F"/>
-                                <exclude reference="nyQ-WL-RnD"/>
                             </mask>
                         </variation>
                     </view>
@@ -1793,7 +1766,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Yc4-Ce-mSf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="965" y="906"/>
+            <point key="canvasLocation" x="965" y="852"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="DmP-h6-aDZ">

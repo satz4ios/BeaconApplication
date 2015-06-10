@@ -119,7 +119,7 @@
         } else if ([[dictionary objectForKey:@"message"]isEqualToString:@"Please activate your account from your email id"]) {
             [[[UIAlertView alloc]initWithTitle:@"Validation Error" message:@"Please activate your account from your Email ID and try again " delegate:nil
                              cancelButtonTitle:@"Ok" otherButtonTitles:nil, nil]show];
-        }
+        } 
     }else {
         for (NSDictionary *_array in [dictionary objectForKey:@"userDetails"]) {
             _dictArray=_array;

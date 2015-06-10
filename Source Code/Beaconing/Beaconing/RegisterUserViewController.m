@@ -222,13 +222,20 @@
 
 -(void)recievedServiceCallData:(NSDictionary *)dictionary {
     
-    if ([dictionary objectForKey:@"errorCode"]&&[[dictionary objectForKey:@"message"] isEqualToString:@"Successfully Registered"]) {
+    if ([[dictionary objectForKey:@"errorCode"]isEqualToString:@"400"]) {
+        [busyView hide:YES];
+
+        if ([[dictionary objectForKey:@"message"]isEqualToString:@"User Already Exists"]) {
+            [[[UIAlertView alloc]initWithTitle:@"User Error" message:@"User with same Email Id already exists. Please use alternative Email ID" delegate:nil
+                             cancelButtonTitle:@"Ok" otherButtonTitles:nil, nil]show];
+        }
+    }
+    else {
         [busyView hide:YES];
         UIAlertView *_alertView = [[UIAlertView alloc]initWithTitle:@"Alert" message:@"Successfully Registered" delegate:self cancelButtonTitle:@"Ok" otherButtonTitles:nil,nil];
         _alertView.tag=125;
         [_alertView show];
     }
-    
 }
 -(IBAction)ShowUserTypeActionSheet:(id)sender {
     
