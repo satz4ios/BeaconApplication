@@ -55,6 +55,9 @@
     
     if (_launcedFrom == EditBeaconFlow) {
         [_actionBtn setTitle:@" Save " forState:UIControlStateNormal];
+        [self.beaconTagTxtField setText:_selectedBeacon._beaconTagLine];
+        [self.beaconDescTxtField setText:_selectedBeacon._beaconDescription];
+    
     }
     
     _actionBtn.layer.cornerRadius = 5.0;
@@ -93,6 +96,8 @@
     
     //http://gotocontactsonline.com/beaconapp/beaconconfig.php?uuId=1234&majorValue=12&minorValue=0.5&beaconDescription=test&beaconTag=test&createdBy=1
     
+    
+    
     NSString *urlStr = UpdateBeacon;
     ServiceCallAPI *_serviceAPI = [[ServiceCallAPI alloc]initWithService:urlStr];
     _serviceAPI.apiDelegate=self;
@@ -100,10 +105,11 @@
     [_paramsDict setValue:self.uuidTxtField.text forKey:@"uuId"];
     [_paramsDict setValue:self.majorTxtField.text forKey:@"majorValue"];
     [_paramsDict setValue:self.minorTxtField.text forKey:@"minorValue"];
+    
     [_paramsDict setValue:self.beaconDescTxtField.text forKey:@"beaconDescription"];
     [_paramsDict setValue:self.beaconTagTxtField.text forKey:@"beaconTag"];
     NSString *userId=[[UserInfo SharedInfo]objectForKey:@"userId"];
-    [_paramsDict setValue:userId forKey:@"userId"];
+    [_paramsDict setValue:userId forKey:@"createdBy"];
     
     [_serviceAPI sendHttpRequestServiceWithParameters:_paramsDict];
 }
@@ -118,7 +124,7 @@
     NSString *message = dictionary[@"message"];
     
     UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Alert"
-                                                    message:@"Successfully Registered"
+                                                    message:message
                                                    delegate:self
                                           cancelButtonTitle:@"ok"
                                           otherButtonTitles:nil, nil];
@@ -182,13 +188,13 @@
         
     }
     else{
-        [self makeWSCallForAddOrEditBeacon];
-/*        if (_launcedFrom == AddBeaconFlow) {
-            [self makeWSCallForAddingBeacon];
+        //[self makeWSCallForAddOrEditBeacon];
+       if (_launcedFrom == AddBeaconFlow) {
+            [self makeWSCallForAddOrEditBeacon];
         }
         else{
             [self makeWSCallForEditBeacon];
-        }*/
+        }
         
     }
 }

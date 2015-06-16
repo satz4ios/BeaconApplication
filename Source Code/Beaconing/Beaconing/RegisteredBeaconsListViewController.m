@@ -55,7 +55,8 @@
     
     if ([[dictionary objectForKey:@"errorCode"]isEqualToString:@"400"]) {
         [busyView hide:YES];
-        UIAlertView *_noBeaconsAlert = [[UIAlertView alloc]initWithTitle:@"Alert" message:@"Oppss.!! NoBeacons Registered Yet" delegate:self cancelButtonTitle:@"Ok" otherButtonTitles:nil, nil];
+            NSString *message = dictionary[@"message"];
+        UIAlertView *_noBeaconsAlert = [[UIAlertView alloc]initWithTitle:@"Alert" message:message delegate:self cancelButtonTitle:@"Ok" otherButtonTitles:nil, nil];
         _noBeaconsAlert.tag=956;
         [_noBeaconsAlert show];
         

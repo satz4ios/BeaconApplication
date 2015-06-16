@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -1626,6 +1626,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="actionBtn" destination="y48-2V-7zz" id="QiM-p1-VOn"/>
                         <outlet property="beaconDescTxtField" destination="8cc-bp-xsV" id="Olo-Sl-pkv"/>
                         <outlet property="beaconTagTxtField" destination="a4n-Q9-cKC" id="YMq-HB-onw"/>
                         <outlet property="majorTxtField" destination="WSE-6w-rdX" id="fy3-LO-R8V"/>

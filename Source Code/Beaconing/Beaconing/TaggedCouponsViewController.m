@@ -79,6 +79,10 @@
     
     
 }
+-(void)recievedServiceCallWithError:(NSError *)ErrorMessage{
+    
+}
+
 #pragma mark TableView delegates
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{

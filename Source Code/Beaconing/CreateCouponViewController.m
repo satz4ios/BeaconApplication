@@ -52,6 +52,8 @@
 
 - (IBAction)couponDoneClick:(id)sender {
     
+    [_couponDescripFld resignFirstResponder];
+    [_couponTaglineFld resignFirstResponder];
     if (self.couponTaglineFld.text.length==0||self.couponDescripFld.text.length==0) {
        [[[UIAlertView alloc]initWithTitle:@"Alert" message:@"Please provide the coupon detail and click done" delegate:nil cancelButtonTitle:@"Ok" otherButtonTitles:nil, nil]show];
     } else {
