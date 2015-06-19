@@ -11,6 +11,7 @@
 #import "UserInfo.h"
 #import "ServiceCallAPI.h"
 #import "Services.h"
+#import "CouponObj.h"
 
 @interface TaggedCouponsViewController () {
     MBProgressHUD *busyView;
@@ -27,7 +28,9 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    _taggedCoupons = [[NSMutableArray alloc] init];
+//    _taggedCoupons = [[NSMutableArray alloc] init];
+    
+    [self makeWSCallToGetListOfCoupons];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -50,20 +53,32 @@
         
     }
     
-    [_couponsListView reloadData];
+   // [_couponsListView reloadData];
     
     [_couponsListView setBackgroundView:nil];
     [_couponsListView setBackgroundColor:[UIColor clearColor]];
 
     
 }
--(void)makeWSCallToGetListOfBeacons {
+-(void)makeWSCallToGetListOfCoupons {
     
     busyView = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
     busyView.labelText = @"Please Wait..";
     busyView.dimBackground = YES;
     busyView.delegate = self;
     
+    /*NSString *urlStr = GetListOfBeacons;
+    ServiceCallAPI *_serviceAPI = [[ServiceCallAPI alloc]initWithService:urlStr];
+    _serviceAPI.apiDelegate=self;
+    NSMutableDictionary *_paramsDict = [[NSMutableDictionary alloc] init];
+    NSString *userId=[[UserInfo SharedInfo]objectForKey:@"userId"];
+    NSString *userType=[[UserInfo SharedInfo] objectForKey:@"userType"];
+    [_paramsDict setValue:userId forKey:@"userId"];
+    [_paramsDict setValue:userType forKey:@"userType"];
+    [_serviceAPI sendHttpRequestServiceWithParameters:_paramsDict];*/
+
+    
+    //url: http://gotocontactsonline.com/beaconapp/listcoupon.php?userId=1&userType=1
     NSString *urlStr = GetListofCoupons;
     ServiceCallAPI *_serviceAPI = [[ServiceCallAPI alloc]initWithService:urlStr];
     _serviceAPI.apiDelegate=self;
@@ -76,6 +91,40 @@
 }
 
 -(void)recievedServiceCallData:(NSDictionary *)dictionary {
+  
+    if ([[dictionary objectForKey:@"errorCode"]isEqualToString:@"400"]) {
+        [busyView hide:YES];
+        NSString *message = dictionary[@"message"];
+        UIAlertView *_noBeaconsAlert = [[UIAlertView alloc]initWithTitle:@"Alert" message:message delegate:self cancelButtonTitle:@"Ok" otherButtonTitles:nil, nil];
+        _noBeaconsAlert.tag=956;
+        [_noBeaconsAlert show];
+        
+    } else {
+        [busyView hide:YES];
+        self.taggedCoupons  = [[NSMutableArray alloc] init];
+        NSArray *_listOfBeacons = [dictionary objectForKey:@"beaconDetails"];
+        for (NSDictionary *_beaconDict in _listOfBeacons) {
+            CouponObj *tempObj = [[CouponObj alloc] init];
+            tempObj.couponId = [_beaconDict objectForKey:@"couponId"];
+            tempObj.couponTitle = [_beaconDict objectForKey:@"couponTagline"];
+            tempObj.couponDesc = [_beaconDict objectForKey:@"couponDescription"];
+            tempObj.beaconMajorId = [_beaconDict objectForKey:@"majorValue"];
+            tempObj.beaconMinorId = [_beaconDict objectForKey:@"minorValue"];
+            /*
+             "couponId": "5",
+             "uuId": "112",
+             "couponDescription": "test",
+             "couponTagline": "test",
+             "majorValue": "11",
+             "minorValue": "37",
+             "createdDate": "2015-04-22",
+             "userId": "1"
+             */
+            [self.taggedCoupons addObject:tempObj];
+        }
+        [self.couponsListView reloadData];
+    }
+
     
     
 }

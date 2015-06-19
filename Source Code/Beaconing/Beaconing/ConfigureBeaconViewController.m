@@ -94,8 +94,9 @@
 
 -(void)makeWSCallForEditBeacon{
     
-    //http://gotocontactsonline.com/beaconapp/beaconconfig.php?uuId=1234&majorValue=12&minorValue=0.5&beaconDescription=test&beaconTag=test&createdBy=1
     
+    
+   // http://www.gotocontactsonline.com/beaconapp/updatebeacon.php?uuId=1&majorValue=1&minorValue=1&beaconDescription=test&beaconTag=test&userId=1&beaconId=18
     
     
     NSString *urlStr = UpdateBeacon;
@@ -109,7 +110,8 @@
     [_paramsDict setValue:self.beaconDescTxtField.text forKey:@"beaconDescription"];
     [_paramsDict setValue:self.beaconTagTxtField.text forKey:@"beaconTag"];
     NSString *userId=[[UserInfo SharedInfo]objectForKey:@"userId"];
-    [_paramsDict setValue:userId forKey:@"createdBy"];
+    [_paramsDict setValue:userId forKey:@"userId"];
+    [_paramsDict setValue:self.selectedBeacon.identifier forKey:@"beaconId"];
     
     [_serviceAPI sendHttpRequestServiceWithParameters:_paramsDict];
 }

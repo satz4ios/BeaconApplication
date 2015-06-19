@@ -38,7 +38,7 @@
 #define DeleteBeacon                     (Beaconing_API_Endpoint_Host @"deletebeacon.php");
 
 #define CreateCoupon                     (Beaconing_API_Endpoint_Host @"addcoupon.php");
-#define GetListofCoupons                 (Beaconing_API_Endpoint_Host @"updatecoupon.php")
+#define GetListofCoupons                 (Beaconing_API_Endpoint_Host @"listcoupon.php")
 #define DeleteCoupon                     (Beaconing_API_Endpoint_Host @"deletecoupon.php")
 
 #define GetConsumerCoupon                (Beaconing_API_Endpoint_Host @"consumerservice.php")

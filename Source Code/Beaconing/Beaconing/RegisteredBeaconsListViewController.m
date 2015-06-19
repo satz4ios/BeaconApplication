@@ -71,6 +71,7 @@
             tempObj.minorId = [_beaconDict objectForKey:@"minorValue"];
             tempObj._beaconDescription = [_beaconDict objectForKey:@"beaconDescription"];
             tempObj._beaconTagLine =[_beaconDict objectForKey:@"beaconTag"];
+            tempObj.identifier = [_beaconDict objectForKey:@"beaconId"];
             [self.registeredBeacons addObject:tempObj];
         }
         [self.beaconListTv reloadData];
