@@ -218,7 +218,15 @@
 }
 
 -(void)recievedServiceCallWithError:(NSError *)ErrorMessage{
+    [busyView hide:YES];
     
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@""
+                                                    message:ErrorMessage.localizedDescription
+                                                   delegate:nil
+                                          cancelButtonTitle:@"ok"
+                                          otherButtonTitles:nil, nil];
+    [alert   show];
+
 }
 
 @end

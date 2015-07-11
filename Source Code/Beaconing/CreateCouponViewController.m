@@ -40,6 +40,12 @@
     [textField resignFirstResponder];
     return YES;
 }
+
+- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
+    [_couponDescripFld resignFirstResponder];
+    [_couponTaglineFld resignFirstResponder];
+}
+
 /*
 #pragma mark - Navigation
 
@@ -148,6 +154,15 @@
 
 
 -(void)recievedServiceCallWithError:(NSError *)ErrorMessage {
+    [busyView hide:YES];
+    
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@""
+                                                    message:ErrorMessage.localizedDescription
+                                                   delegate:nil
+                                          cancelButtonTitle:@"ok"
+                                          otherButtonTitles:nil, nil];
+    [alert   show];
+
     
 }
 
