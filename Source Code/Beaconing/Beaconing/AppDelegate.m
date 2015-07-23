@@ -33,7 +33,7 @@
 
 
     
-    [self doInitializationForBeaconFeature];
+   // [self doInitializationForBeaconFeature];
 
     sleep(5);
 

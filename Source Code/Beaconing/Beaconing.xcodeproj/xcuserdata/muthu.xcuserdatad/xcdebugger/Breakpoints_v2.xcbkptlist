@@ -15,7 +15,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "114"
             endingLineNumber = "114"
-            landmarkName = "-recievedServiceCallData:"
+            landmarkName = "-makeWSCallForEditBeacon"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -31,7 +31,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "132"
             endingLineNumber = "132"
-            landmarkName = "-recievedServiceCallWithError:"
+            landmarkName = "-recievedServiceCallData:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -47,7 +47,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "92"
             endingLineNumber = "92"
-            landmarkName = "-makeWSCallForEditBeacon"
+            landmarkName = "-makeWSCallForAddOrEditBeacon"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -63,8 +63,8 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "75"
             endingLineNumber = "75"
-            landmarkName = "-makeWSCallForAddOrEditBeacon"
-            landmarkType = "5">
+            landmarkName = "@implementation ConfigureBeaconViewController"
+            landmarkType = "3">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -89,12 +89,12 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Beaconing/LoginViewController.m"
-            timestampString = "453051534.148333"
+            filePath = "Beaconing/RegisteredBeaconsListViewController.m"
+            timestampString = "453052052.899941"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "111"
-            endingLineNumber = "111"
+            startingLineNumber = "58"
+            endingLineNumber = "58"
             landmarkName = "-recievedServiceCallData:"
             landmarkType = "5">
          </BreakpointContent>
@@ -105,13 +105,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Beaconing/RegisteredBeaconsListViewController.m"
-            timestampString = "453052052.899941"
+            filePath = "Beaconing/AppDelegate.m"
+            timestampString = "459335761.274586"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "58"
-            endingLineNumber = "58"
-            landmarkName = "-recievedServiceCallData:"
+            startingLineNumber = "244"
+            endingLineNumber = "244"
+            landmarkName = "-intimateUserWithMsg:andUserInfo:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
