@@ -72,7 +72,7 @@
 
 - (IBAction)loginUser:(id)sender {
     
-    busyView = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+        busyView = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
     busyView.labelText = @"Logging In";
     busyView.dimBackground = YES;
     busyView.delegate = self;
@@ -141,9 +141,19 @@
                 UINavigationController *_navigationController = [[UINavigationController alloc]initWithRootViewController:_adminUser];
                 [self presentViewController:_navigationController animated:YES completion:Nil];
             }else {
+                
+                NSString *userId=[_dictArray objectForKey:@"userId"];
+                NSString *userType=[_dictArray objectForKey:@"userType"];
+                [[UserInfo SharedInfo]setObject:userId forKey:@"userId"];
+                [[UserInfo SharedInfo]setObject:userType forKey:@"userType"];
+                
                 _MainStoryboard = [UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]];
                 NormalUserViewController *_normalUser = [_MainStoryboard instantiateViewControllerWithIdentifier:@"NormalUserController"];
+                [_normalUser setLaunchFrom:loginScreen];
                 UINavigationController *_navigationController = [[UINavigationController alloc]initWithRootViewController:_normalUser];
+                
+                [[NSUserDefaults standardUserDefaults] setBool:YES forKey:@"IS_CUSTOMER"];
+                
                 [self presentViewController:_navigationController animated:YES completion:Nil];
                 
             }

@@ -8,7 +8,15 @@
 
 #import <UIKit/UIKit.h>
 
+typedef enum {
+    localNotification,
+    loginScreen
+}LaunchFrom;
+
 @interface NormalUserViewController : UIViewController
+
+@property (nonatomic,strong)NSDictionary *notificationDict;
+@property (nonatomic,assign) LaunchFrom launchFrom;
 - (IBAction)backClick:(id)sender;
 
 @end

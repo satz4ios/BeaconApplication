@@ -31,10 +31,20 @@
     // Override point for customization after application launch.
     
 
-
+//    BOOL isCustomer =  [[NSUserDefaults standardUserDefaults] boolForKey:@"IS_CUSTOMER"];
+//    if (isCustomer) {
+//        [self doInitializationForBeaconFeature];
+//        [_beaconMgr startMonitoringKontactBeacons];
+//    }
     
-   // [self doInitializationForBeaconFeature];
-
+   
+    if ([UIApplication instanceMethodForSelector:@selector(registerUserNotificationSettings:)]) {
+        UIUserNotificationType types = UIUserNotificationTypeBadge | UIUserNotificationTypeSound | UIUserNotificationTypeAlert;
+        UIUserNotificationSettings *mySettings = [UIUserNotificationSettings settingsForTypes:types categories:nil];
+        [[UIApplication sharedApplication] registerUserNotificationSettings:mySettings];
+    }
+    
+    
     sleep(5);
 
     //dummy testing
@@ -65,7 +75,7 @@
     if (notification)
     {
         
-        [self launchViewControllerForNotification];
+        [self launchViewControllerForNotification:notification];
 
 
     }
@@ -96,12 +106,14 @@
 }
 
 - (void)application:(UIApplication *)application didReceiveLocalNotification:(UILocalNotification *)notification{
-    [self launchViewControllerForNotification];
+    [self launchViewControllerForNotification:notification];
 }
 
--(void)launchViewControllerForNotification{
+-(void)launchViewControllerForNotification:(UILocalNotification*)notify{
     UIStoryboard *mainStoryboard = [UIStoryboard    storyboardWithName:@"Main" bundle:[NSBundle mainBundle]];
     NormalUserViewController *viewController = [mainStoryboard instantiateViewControllerWithIdentifier:@"NormalUserViewController"];
+    [viewController setLaunchFrom:localNotification];
+    [viewController setNotificationDict:notify.userInfo];
     
     [self.window.rootViewController presentViewController:viewController animated:YES completion:NULL];
 }
@@ -180,7 +192,7 @@
 -(void)beaconManager:(BeaconManager*)beaconMgr
      didRangeBeacons:(NSArray*)beacons
             inRegion:(CLBeaconRegion*)region{
-    
+
     CLBeacon *foundBeacon = [beacons firstObject];
     
     NSString *uuid = foundBeacon.proximityUUID.UUIDString;
@@ -207,8 +219,8 @@
         
         [contentArray enumerateObjectsUsingBlock:^(NSDictionary *individualBeacon, NSUInteger idx, BOOL *stop) {
             
-            if (individualBeacon[@"Major"] == [beaconRegion.major stringValue]
-            && individualBeacon[@"Minor"] == [beaconRegion.minor stringValue] ) {
+            if ([individualBeacon[@"Major"] isEqualToString:[beaconRegion.major stringValue] ]
+            && [individualBeacon[@"Minor"] isEqualToString: [beaconRegion.minor stringValue]] ) {
                 _alreadyPresent = YES;
                 *stop = YES;
             }
@@ -275,11 +287,10 @@
     NSString *userType=[[UserInfo SharedInfo]objectForKey:@"userType"];
     [_paramsDict setValue:userId forKey:@"userId"];
     [_paramsDict setValue:userType forKey:@"userType"];
-    //[_paramsDict setValue:[[beacon minor] stringValue] forKey:@"minorValue"];
+    [_paramsDict setValue:[[beacon minor] stringValue] forKey:@"minorValue"];
     [_paramsDict setValue:@"123" forKey:@"minorValue"];
     
-    
-    
+
     [_serviceAPI sendHttpRequestServiceWithParameters:_paramsDict];
     
 }
